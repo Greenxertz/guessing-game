@@ -1,0 +1,11 @@
+C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\bin\Debug\music.exe.config
+C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\bin\Debug\music.exe
+C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\bin\Debug\music.pdb
+C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\obj\Debug\music.csproj.AssemblyReference.cache
+C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\obj\Debug\music.Properties.Resources.resources
+C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\obj\Debug\music.csproj.GenerateResource.cache
+C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\obj\Debug\music.csproj.CoreCompileInputs.cache
+C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\obj\Debug\music.exe
+C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\obj\Debug\music.pdb
+C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\obj\Debug\music.Mainmenu.resources
+C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\obj\Debug\music.Login.resources
