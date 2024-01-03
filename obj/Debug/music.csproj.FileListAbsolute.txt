@@ -9,3 +9,17 @@ C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\obj\Debug\music.exe
 C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\obj\Debug\music.pdb
 C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\obj\Debug\music.Mainmenu.resources
 C:\Users\usert-pc\Desktop\Pet Projects\spotify\music\obj\Debug\music.Login.resources
+D:\github-repo\guessing-game\bin\Debug\music.exe.config
+D:\github-repo\guessing-game\bin\Debug\music.exe
+D:\github-repo\guessing-game\bin\Debug\music.pdb
+D:\github-repo\guessing-game\obj\Debug\music.csproj.AssemblyReference.cache
+D:\github-repo\guessing-game\obj\Debug\music.Mainmenu.resources
+D:\github-repo\guessing-game\obj\Debug\music.Properties.Resources.resources
+D:\github-repo\guessing-game\obj\Debug\music.csproj.GenerateResource.cache
+D:\github-repo\guessing-game\obj\Debug\music.csproj.CoreCompileInputs.cache
+D:\github-repo\guessing-game\obj\Debug\music.exe
+D:\github-repo\guessing-game\obj\Debug\music.pdb
+D:\github-repo\guessing-game\bin\Debug\Newtonsoft.Json.dll
+D:\github-repo\guessing-game\bin\Debug\Newtonsoft.Json.xml
+D:\github-repo\guessing-game\obj\Debug\music.csproj.CopyComplete
+D:\github-repo\guessing-game\obj\Debug\music.Login.resources

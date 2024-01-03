@@ -36,7 +36,6 @@
             this.btnclose = new MTcontrols.MTbutton.Button();
             this.pnloptions = new System.Windows.Forms.Panel();
             this.btnGenre = new MTcontrols.MTbutton.Button();
-            this.Year = new MTcontrols.MTbutton.Button();
             this.button1 = new MTcontrols.MTbutton.Button();
             this.lblDarktheme = new System.Windows.Forms.Label();
             this.toggleButton1 = new MTcontrols.MTtoggle.ToggleButton();
@@ -44,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlYear = new System.Windows.Forms.Panel();
             this.btnconfirmyear = new MTcontrols.MTbutton.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpYear = new System.Windows.Forms.GroupBox();
             this.radio7 = new MTcontrols.MTradio.Radio();
             this.radio5 = new MTcontrols.MTradio.Radio();
@@ -57,7 +55,6 @@
             this.pnloptions.SuspendLayout();
             this.Pnlabout.SuspendLayout();
             this.pnlYear.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpYear.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,7 +153,6 @@
             // 
             this.pnloptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.pnloptions.Controls.Add(this.btnGenre);
-            this.pnloptions.Controls.Add(this.Year);
             this.pnloptions.Controls.Add(this.button1);
             this.pnloptions.Controls.Add(this.lblDarktheme);
             this.pnloptions.Controls.Add(this.toggleButton1);
@@ -183,25 +179,6 @@
             this.btnGenre.Text = "Game Mode: Genre";
             this.btnGenre.TextColor = System.Drawing.Color.White;
             this.btnGenre.UseVisualStyleBackColor = false;
-            // 
-            // Year
-            // 
-            this.Year.BackColor = System.Drawing.Color.DimGray;
-            this.Year.BackgroundColor = System.Drawing.Color.DimGray;
-            this.Year.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.Year.BorderRadius = 20;
-            this.Year.BorderSize = 0;
-            this.Year.FlatAppearance.BorderSize = 0;
-            this.Year.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Year.ForeColor = System.Drawing.Color.White;
-            this.Year.Location = new System.Drawing.Point(27, 131);
-            this.Year.Name = "Year";
-            this.Year.Size = new System.Drawing.Size(157, 40);
-            this.Year.TabIndex = 3;
-            this.Year.Text = "Game Mode: Year";
-            this.Year.TextColor = System.Drawing.Color.White;
-            this.Year.UseVisualStyleBackColor = false;
-            this.Year.Click += new System.EventHandler(this.year_Click);
             // 
             // button1
             // 
@@ -271,7 +248,6 @@
             // pnlYear
             // 
             this.pnlYear.Controls.Add(this.btnconfirmyear);
-            this.pnlYear.Controls.Add(this.pictureBox1);
             this.pnlYear.Controls.Add(this.grpYear);
             this.pnlYear.Controls.Add(this.label2);
             this.pnlYear.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -300,14 +276,6 @@
             this.btnconfirmyear.Text = "Start";
             this.btnconfirmyear.TextColor = System.Drawing.Color.White;
             this.btnconfirmyear.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(424, 85);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(295, 232);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // grpYear
             // 
@@ -436,7 +404,6 @@
             this.Pnlabout.PerformLayout();
             this.pnlYear.ResumeLayout(false);
             this.pnlYear.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grpYear.ResumeLayout(false);
             this.grpYear.PerformLayout();
             this.ResumeLayout(false);
@@ -454,12 +421,10 @@
         private System.Windows.Forms.Label lblDarktheme;
         private System.Windows.Forms.PictureBox pboptions;
         private MTcontrols.MTbutton.Button btnGenre;
-        private MTcontrols.MTbutton.Button Year;
         private MTcontrols.MTbutton.Button button1;
         private System.Windows.Forms.Panel Pnlabout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlYear;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox grpYear;
         private MTcontrols.MTradio.Radio radio4;
         private MTcontrols.MTradio.Radio radio3;
