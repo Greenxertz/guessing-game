@@ -23,3 +23,12 @@ D:\github-repo\guessing-game\bin\Debug\Newtonsoft.Json.dll
 D:\github-repo\guessing-game\bin\Debug\Newtonsoft.Json.xml
 D:\github-repo\guessing-game\obj\Debug\music.csproj.CopyComplete
 D:\github-repo\guessing-game\obj\Debug\music.Login.resources
+D:\github-repo\guessing-game\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+D:\github-repo\guessing-game\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+D:\github-repo\guessing-game\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+D:\github-repo\guessing-game\bin\Debug\Microsoft.Web.WebView2.Core.dll
+D:\github-repo\guessing-game\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+D:\github-repo\guessing-game\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+D:\github-repo\guessing-game\bin\Debug\Microsoft.Web.WebView2.Core.xml
+D:\github-repo\guessing-game\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+D:\github-repo\guessing-game\bin\Debug\Microsoft.Web.WebView2.Wpf.xml

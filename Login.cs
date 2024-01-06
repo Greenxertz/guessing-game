@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Net.Http;
 using Newtonsoft.Json.Linq;
+using System.Text.RegularExpressions;
 
 namespace music
 {
@@ -20,7 +21,7 @@ namespace music
     public partial class Login : Form
     {
         public static bool maximise = false;
-        public static string email, password;
+        public static string email, password, accesstoken;
         public Login()
         {
             
@@ -39,9 +40,11 @@ namespace music
         
         private async void btnlogin_Click(object sender, EventArgs e)
         {
-            // Usage example
+            
             var accessToken = await SpotifyAuth.GetAccessToken("3255eb67936e45f2b8c8da7d271abf56", "e59e758328024b31936d750a735f990d");
+            accesstoken = accessToken;
 
+            
             var httpClient = new HttpClient();
             var user = new { username = txtemail.Text, password = txtpassword.Text, access_token = accessToken };
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(user);
@@ -51,7 +54,6 @@ namespace music
             var response = await httpClient.PostAsync(url, data);
 
             string result = await response.Content.ReadAsStringAsync();
-            MessageBox.Show(result);
             if (result == "User registered successfully")
             {
                 this.Close();
@@ -61,7 +63,7 @@ namespace music
      
 
         private void btnmax_Click(object sender, EventArgs e)
-        {
+        {//add functions to maximise button 
             maximise = !maximise;
             if (maximise == true)
             {
@@ -76,6 +78,24 @@ namespace music
         private void btnclose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+       
+
+        private void txtemail_TextChanged(object sender, EventArgs e)
+        {//validate email against normal conventions 
+            string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            Regex regex = new Regex(emailPattern);
+            if (regex.IsMatch(txtemail.Text) == true)
+            {
+                invalidemail.Visible = false;
+                btnlogin.Enabled = true;
+            }
+            else
+            {
+                invalidemail.Visible = true;
+                btnlogin.Enabled = false;
+            }
         }
 
         private void btncancel_Click(object sender, EventArgs e)
@@ -136,28 +156,6 @@ namespace music
         }
         
     }
-    
-
-
-    class file
-    {
-        public static void WriteToFile(string filepath, string data)
-        {
-            try
-            {
-                using (StreamWriter file = File.AppendText(filepath))
-                {
-                    DateTime date = DateTime.Now;
-                    file.WriteLine(date+","+data);
-                    
-                }
-            }
-            catch (IOException e)
-            {
-                MessageBox.Show("Error: " + e.Message);
-            }
-        }
-    }
 
     class SpotifyAuth
     {
@@ -181,7 +179,7 @@ namespace music
                     // Parse the response and return the access token
                     var content = await response.Content.ReadAsStringAsync();
                     var data = JObject.Parse(content);
-                    MessageBox.Show(data["access_token"].ToString());
+                  //  MessageBox.Show(data["access_token"].ToString());
                     return data["access_token"].ToString();
                 }
                 else

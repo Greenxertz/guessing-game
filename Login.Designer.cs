@@ -40,6 +40,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.invalidemail = new System.Windows.Forms.Label();
             this.btncancel = new MTcontrols.MTbutton.Button();
             this.btnlogin = new MTcontrols.MTbutton.Button();
             this.pnlribbon.SuspendLayout();
@@ -152,6 +153,7 @@
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(355, 20);
             this.txtemail.TabIndex = 8;
+            this.txtemail.TextChanged += new System.EventHandler(this.txtemail_TextChanged);
             // 
             // txtpassword
             // 
@@ -190,6 +192,17 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Password:";
             // 
+            // invalidemail
+            // 
+            this.invalidemail.AutoSize = true;
+            this.invalidemail.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.invalidemail.Location = new System.Drawing.Point(105, 288);
+            this.invalidemail.Name = "invalidemail";
+            this.invalidemail.Size = new System.Drawing.Size(44, 15);
+            this.invalidemail.TabIndex = 13;
+            this.invalidemail.Text = "Email:";
+            this.invalidemail.Visible = false;
+            // 
             // btncancel
             // 
             this.btncancel.BackColor = System.Drawing.Color.DimGray;
@@ -217,6 +230,7 @@
             this.btnlogin.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnlogin.BorderRadius = 20;
             this.btnlogin.BorderSize = 0;
+            this.btnlogin.Enabled = false;
             this.btnlogin.FlatAppearance.BorderSize = 0;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -236,6 +250,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkTurquoise;
             this.ClientSize = new System.Drawing.Size(564, 459);
+            this.Controls.Add(this.invalidemail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtpassword);
@@ -271,5 +286,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label invalidemail;
     }
 }

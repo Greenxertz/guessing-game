@@ -35,27 +35,47 @@
             this.btnmax = new MTcontrols.MTbutton.Button();
             this.btnclose = new MTcontrols.MTbutton.Button();
             this.pnloptions = new System.Windows.Forms.Panel();
-            this.btnGenre = new MTcontrols.MTbutton.Button();
+            this.btnYear = new MTcontrols.MTbutton.Button();
             this.button1 = new MTcontrols.MTbutton.Button();
             this.lblDarktheme = new System.Windows.Forms.Label();
             this.toggleButton1 = new MTcontrols.MTtoggle.ToggleButton();
             this.Pnlabout = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlYear = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnconfirmyear = new MTcontrols.MTbutton.Button();
             this.grpYear = new System.Windows.Forms.GroupBox();
-            this.radio7 = new MTcontrols.MTradio.Radio();
-            this.radio5 = new MTcontrols.MTradio.Radio();
-            this.radio4 = new MTcontrols.MTradio.Radio();
-            this.radio3 = new MTcontrols.MTradio.Radio();
-            this.radio2 = new MTcontrols.MTradio.Radio();
+            this.r2020 = new MTcontrols.MTradio.Radio();
+            this.r2010 = new MTcontrols.MTradio.Radio();
+            this.r2000 = new MTcontrols.MTradio.Radio();
+            this.r90 = new MTcontrols.MTradio.Radio();
+            this.r80 = new MTcontrols.MTradio.Radio();
             this.label2 = new System.Windows.Forms.Label();
+            this.pnlgame = new System.Windows.Forms.Panel();
+            this.btnstart = new MTcontrols.MTbutton.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.webplayer = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.btnanswer = new MTcontrols.MTbutton.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.grpAns = new System.Windows.Forms.GroupBox();
+            this.rans4 = new MTcontrols.MTradio.Radio();
+            this.rans2 = new MTcontrols.MTradio.Radio();
+            this.rans3 = new MTcontrols.MTradio.Radio();
+            this.rans1 = new MTcontrols.MTradio.Radio();
+            this.lblRound = new System.Windows.Forms.Label();
             this.pnlribbon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboptions)).BeginInit();
             this.pnloptions.SuspendLayout();
             this.Pnlabout.SuspendLayout();
             this.pnlYear.SuspendLayout();
             this.grpYear.SuspendLayout();
+            this.pnlgame.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webplayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.grpAns.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlribbon
@@ -152,7 +172,7 @@
             // pnloptions
             // 
             this.pnloptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnloptions.Controls.Add(this.btnGenre);
+            this.pnloptions.Controls.Add(this.btnYear);
             this.pnloptions.Controls.Add(this.button1);
             this.pnloptions.Controls.Add(this.lblDarktheme);
             this.pnloptions.Controls.Add(this.toggleButton1);
@@ -162,23 +182,24 @@
             this.pnloptions.Size = new System.Drawing.Size(210, 644);
             this.pnloptions.TabIndex = 4;
             // 
-            // btnGenre
+            // btnYear
             // 
-            this.btnGenre.BackColor = System.Drawing.Color.DimGray;
-            this.btnGenre.BackgroundColor = System.Drawing.Color.DimGray;
-            this.btnGenre.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnGenre.BorderRadius = 20;
-            this.btnGenre.BorderSize = 0;
-            this.btnGenre.FlatAppearance.BorderSize = 0;
-            this.btnGenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenre.ForeColor = System.Drawing.Color.White;
-            this.btnGenre.Location = new System.Drawing.Point(27, 177);
-            this.btnGenre.Name = "btnGenre";
-            this.btnGenre.Size = new System.Drawing.Size(157, 40);
-            this.btnGenre.TabIndex = 4;
-            this.btnGenre.Text = "Game Mode: Genre";
-            this.btnGenre.TextColor = System.Drawing.Color.White;
-            this.btnGenre.UseVisualStyleBackColor = false;
+            this.btnYear.BackColor = System.Drawing.Color.DimGray;
+            this.btnYear.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnYear.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnYear.BorderRadius = 20;
+            this.btnYear.BorderSize = 0;
+            this.btnYear.FlatAppearance.BorderSize = 0;
+            this.btnYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYear.ForeColor = System.Drawing.Color.White;
+            this.btnYear.Location = new System.Drawing.Point(27, 139);
+            this.btnYear.Name = "btnYear";
+            this.btnYear.Size = new System.Drawing.Size(157, 40);
+            this.btnYear.TabIndex = 4;
+            this.btnYear.Text = "Game Mode: Year";
+            this.btnYear.TextColor = System.Drawing.Color.White;
+            this.btnYear.UseVisualStyleBackColor = false;
+            this.btnYear.Click += new System.EventHandler(this.btnYear_Click);
             // 
             // button1
             // 
@@ -233,7 +254,6 @@
             this.Pnlabout.Name = "Pnlabout";
             this.Pnlabout.Size = new System.Drawing.Size(940, 644);
             this.Pnlabout.TabIndex = 5;
-            this.Pnlabout.Visible = false;
             // 
             // label1
             // 
@@ -247,6 +267,7 @@
             // 
             // pnlYear
             // 
+            this.pnlYear.Controls.Add(this.label3);
             this.pnlYear.Controls.Add(this.btnconfirmyear);
             this.pnlYear.Controls.Add(this.grpYear);
             this.pnlYear.Controls.Add(this.label2);
@@ -256,7 +277,18 @@
             this.pnlYear.Size = new System.Drawing.Size(940, 644);
             this.pnlYear.TabIndex = 6;
             this.pnlYear.Visible = false;
-            this.pnlYear.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlYear_Paint);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(63, 111);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(754, 24);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "If a decade is not chosen then all years will be considered for the game.";
             // 
             // btnconfirmyear
             // 
@@ -269,114 +301,326 @@
             this.btnconfirmyear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnconfirmyear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnconfirmyear.ForeColor = System.Drawing.Color.White;
-            this.btnconfirmyear.Location = new System.Drawing.Point(330, 401);
+            this.btnconfirmyear.Location = new System.Drawing.Point(329, 474);
             this.btnconfirmyear.Name = "btnconfirmyear";
             this.btnconfirmyear.Size = new System.Drawing.Size(193, 65);
             this.btnconfirmyear.TabIndex = 3;
             this.btnconfirmyear.Text = "Start";
             this.btnconfirmyear.TextColor = System.Drawing.Color.White;
             this.btnconfirmyear.UseVisualStyleBackColor = false;
+            this.btnconfirmyear.Click += new System.EventHandler(this.btnconfirmyear_Click);
             // 
             // grpYear
             // 
             this.grpYear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.grpYear.Controls.Add(this.radio7);
-            this.grpYear.Controls.Add(this.radio5);
-            this.grpYear.Controls.Add(this.radio4);
-            this.grpYear.Controls.Add(this.radio3);
-            this.grpYear.Controls.Add(this.radio2);
+            this.grpYear.Controls.Add(this.r2020);
+            this.grpYear.Controls.Add(this.r2010);
+            this.grpYear.Controls.Add(this.r2000);
+            this.grpYear.Controls.Add(this.r90);
+            this.grpYear.Controls.Add(this.r80);
             this.grpYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grpYear.Location = new System.Drawing.Point(105, 85);
+            this.grpYear.Location = new System.Drawing.Point(366, 257);
             this.grpYear.Name = "grpYear";
             this.grpYear.Size = new System.Drawing.Size(122, 159);
             this.grpYear.TabIndex = 1;
             this.grpYear.TabStop = false;
             // 
-            // radio7
+            // r2020
             // 
-            this.radio7.AutoSize = true;
-            this.radio7.CheckedColor = System.Drawing.Color.DimGray;
-            this.radio7.Location = new System.Drawing.Point(29, 127);
-            this.radio7.MinimumSize = new System.Drawing.Size(0, 21);
-            this.radio7.Name = "radio7";
-            this.radio7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radio7.Size = new System.Drawing.Size(66, 21);
-            this.radio7.TabIndex = 6;
-            this.radio7.TabStop = true;
-            this.radio7.Text = "2020\'s";
-            this.radio7.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
-            this.radio7.UseVisualStyleBackColor = true;
+            this.r2020.AutoSize = true;
+            this.r2020.CheckedColor = System.Drawing.Color.DimGray;
+            this.r2020.Location = new System.Drawing.Point(29, 127);
+            this.r2020.MinimumSize = new System.Drawing.Size(0, 21);
+            this.r2020.Name = "r2020";
+            this.r2020.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.r2020.Size = new System.Drawing.Size(66, 21);
+            this.r2020.TabIndex = 6;
+            this.r2020.TabStop = true;
+            this.r2020.Text = "2020\'s";
+            this.r2020.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
+            this.r2020.UseVisualStyleBackColor = true;
             // 
-            // radio5
+            // r2010
             // 
-            this.radio5.AutoSize = true;
-            this.radio5.CheckedColor = System.Drawing.Color.DimGray;
-            this.radio5.Location = new System.Drawing.Point(29, 100);
-            this.radio5.MinimumSize = new System.Drawing.Size(0, 21);
-            this.radio5.Name = "radio5";
-            this.radio5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radio5.Size = new System.Drawing.Size(66, 21);
-            this.radio5.TabIndex = 4;
-            this.radio5.TabStop = true;
-            this.radio5.Text = "2010\'s";
-            this.radio5.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
-            this.radio5.UseVisualStyleBackColor = true;
+            this.r2010.AutoSize = true;
+            this.r2010.CheckedColor = System.Drawing.Color.DimGray;
+            this.r2010.Location = new System.Drawing.Point(29, 100);
+            this.r2010.MinimumSize = new System.Drawing.Size(0, 21);
+            this.r2010.Name = "r2010";
+            this.r2010.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.r2010.Size = new System.Drawing.Size(66, 21);
+            this.r2010.TabIndex = 4;
+            this.r2010.TabStop = true;
+            this.r2010.Text = "2010\'s";
+            this.r2010.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
+            this.r2010.UseVisualStyleBackColor = true;
             // 
-            // radio4
+            // r2000
             // 
-            this.radio4.AutoSize = true;
-            this.radio4.CheckedColor = System.Drawing.Color.DimGray;
-            this.radio4.Location = new System.Drawing.Point(29, 73);
-            this.radio4.MinimumSize = new System.Drawing.Size(0, 21);
-            this.radio4.Name = "radio4";
-            this.radio4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radio4.Size = new System.Drawing.Size(66, 21);
-            this.radio4.TabIndex = 3;
-            this.radio4.TabStop = true;
-            this.radio4.Text = "2000\'s";
-            this.radio4.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
-            this.radio4.UseVisualStyleBackColor = true;
+            this.r2000.AutoSize = true;
+            this.r2000.CheckedColor = System.Drawing.Color.DimGray;
+            this.r2000.Location = new System.Drawing.Point(29, 73);
+            this.r2000.MinimumSize = new System.Drawing.Size(0, 21);
+            this.r2000.Name = "r2000";
+            this.r2000.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.r2000.Size = new System.Drawing.Size(66, 21);
+            this.r2000.TabIndex = 3;
+            this.r2000.TabStop = true;
+            this.r2000.Text = "2000\'s";
+            this.r2000.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
+            this.r2000.UseVisualStyleBackColor = true;
             // 
-            // radio3
+            // r90
             // 
-            this.radio3.AutoSize = true;
-            this.radio3.CheckedColor = System.Drawing.Color.DimGray;
-            this.radio3.Location = new System.Drawing.Point(29, 46);
-            this.radio3.MinimumSize = new System.Drawing.Size(0, 21);
-            this.radio3.Name = "radio3";
-            this.radio3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radio3.Size = new System.Drawing.Size(54, 21);
-            this.radio3.TabIndex = 2;
-            this.radio3.TabStop = true;
-            this.radio3.Text = "90\'s";
-            this.radio3.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
-            this.radio3.UseVisualStyleBackColor = true;
+            this.r90.AutoSize = true;
+            this.r90.CheckedColor = System.Drawing.Color.DimGray;
+            this.r90.Location = new System.Drawing.Point(29, 46);
+            this.r90.MinimumSize = new System.Drawing.Size(0, 21);
+            this.r90.Name = "r90";
+            this.r90.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.r90.Size = new System.Drawing.Size(54, 21);
+            this.r90.TabIndex = 2;
+            this.r90.TabStop = true;
+            this.r90.Text = "90\'s";
+            this.r90.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
+            this.r90.UseVisualStyleBackColor = true;
             // 
-            // radio2
+            // r80
             // 
-            this.radio2.AutoSize = true;
-            this.radio2.CheckedColor = System.Drawing.Color.DimGray;
-            this.radio2.Location = new System.Drawing.Point(29, 19);
-            this.radio2.MinimumSize = new System.Drawing.Size(0, 21);
-            this.radio2.Name = "radio2";
-            this.radio2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.radio2.Size = new System.Drawing.Size(52, 21);
-            this.radio2.TabIndex = 1;
-            this.radio2.TabStop = true;
-            this.radio2.Text = "80s";
-            this.radio2.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
-            this.radio2.UseVisualStyleBackColor = true;
-            this.radio2.CheckedChanged += new System.EventHandler(this.radio2_CheckedChanged);
+            this.r80.AutoSize = true;
+            this.r80.CheckedColor = System.Drawing.Color.DimGray;
+            this.r80.Location = new System.Drawing.Point(29, 19);
+            this.r80.MinimumSize = new System.Drawing.Size(0, 21);
+            this.r80.Name = "r80";
+            this.r80.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.r80.Size = new System.Drawing.Size(52, 21);
+            this.r80.TabIndex = 1;
+            this.r80.TabStop = true;
+            this.r80.Text = "80s";
+            this.r80.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
+            this.r80.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 29);
+            this.label2.Location = new System.Drawing.Point(244, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(375, 48);
             this.label2.TabIndex = 0;
             this.label2.Text = "How good are you? \r\nChoose the decade you wanna try: ";
+            // 
+            // pnlgame
+            // 
+            this.pnlgame.Controls.Add(this.lblRound);
+            this.pnlgame.Controls.Add(this.btnstart);
+            this.pnlgame.Controls.Add(this.label7);
+            this.pnlgame.Controls.Add(this.label6);
+            this.pnlgame.Controls.Add(this.label5);
+            this.pnlgame.Controls.Add(this.label4);
+            this.pnlgame.Controls.Add(this.webplayer);
+            this.pnlgame.Controls.Add(this.btnanswer);
+            this.pnlgame.Controls.Add(this.pictureBox1);
+            this.pnlgame.Controls.Add(this.grpAns);
+            this.pnlgame.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlgame.Location = new System.Drawing.Point(210, 40);
+            this.pnlgame.Name = "pnlgame";
+            this.pnlgame.Size = new System.Drawing.Size(940, 644);
+            this.pnlgame.TabIndex = 7;
+            this.pnlgame.Visible = false;
+            // 
+            // btnstart
+            // 
+            this.btnstart.BackColor = System.Drawing.Color.DimGray;
+            this.btnstart.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnstart.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnstart.BorderRadius = 20;
+            this.btnstart.BorderSize = 0;
+            this.btnstart.FlatAppearance.BorderSize = 0;
+            this.btnstart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnstart.ForeColor = System.Drawing.Color.White;
+            this.btnstart.Location = new System.Drawing.Point(366, 558);
+            this.btnstart.Name = "btnstart";
+            this.btnstart.Size = new System.Drawing.Size(150, 40);
+            this.btnstart.TabIndex = 10;
+            this.btnstart.Text = "Start";
+            this.btnstart.TextColor = System.Drawing.Color.White;
+            this.btnstart.UseVisualStyleBackColor = false;
+            this.btnstart.Click += new System.EventHandler(this.btnstart_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(172, 404);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 24);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "00:30";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(90, 380);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 48);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Score:\r\nTime:";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(172, 380);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 24);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "00:30";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(63, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(754, 24);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "If a decade is not chosen then all years will be considered for the game.";
+            // 
+            // webplayer
+            // 
+            this.webplayer.AllowExternalDrop = true;
+            this.webplayer.CreationProperties = null;
+            this.webplayer.DefaultBackgroundColor = System.Drawing.Color.Transparent;
+            this.webplayer.Location = new System.Drawing.Point(67, 92);
+            this.webplayer.Name = "webplayer";
+            this.webplayer.Size = new System.Drawing.Size(293, 259);
+            this.webplayer.TabIndex = 3;
+            this.webplayer.ZoomFactor = 1D;
+            // 
+            // btnanswer
+            // 
+            this.btnanswer.BackColor = System.Drawing.Color.DimGray;
+            this.btnanswer.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnanswer.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnanswer.BorderRadius = 20;
+            this.btnanswer.BorderSize = 0;
+            this.btnanswer.Enabled = false;
+            this.btnanswer.FlatAppearance.BorderSize = 0;
+            this.btnanswer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnanswer.ForeColor = System.Drawing.Color.White;
+            this.btnanswer.Location = new System.Drawing.Point(366, 558);
+            this.btnanswer.Name = "btnanswer";
+            this.btnanswer.Size = new System.Drawing.Size(150, 40);
+            this.btnanswer.TabIndex = 2;
+            this.btnanswer.Text = "Lock in Answer";
+            this.btnanswer.TextColor = System.Drawing.Color.White;
+            this.btnanswer.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(570, 92);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(247, 288);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // grpAns
+            // 
+            this.grpAns.Controls.Add(this.rans4);
+            this.grpAns.Controls.Add(this.rans2);
+            this.grpAns.Controls.Add(this.rans3);
+            this.grpAns.Controls.Add(this.rans1);
+            this.grpAns.Font = new System.Drawing.Font("Bauhaus 93", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpAns.Location = new System.Drawing.Point(176, 439);
+            this.grpAns.Name = "grpAns";
+            this.grpAns.Size = new System.Drawing.Size(578, 100);
+            this.grpAns.TabIndex = 0;
+            this.grpAns.TabStop = false;
+            this.grpAns.Text = "Whats your answer?";
+            // 
+            // rans4
+            // 
+            this.rans4.AutoSize = true;
+            this.rans4.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rans4.Location = new System.Drawing.Point(449, 40);
+            this.rans4.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rans4.Name = "rans4";
+            this.rans4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rans4.Size = new System.Drawing.Size(79, 21);
+            this.rans4.TabIndex = 3;
+            this.rans4.TabStop = true;
+            this.rans4.Text = "radio4";
+            this.rans4.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rans4.UseVisualStyleBackColor = true;
+            // 
+            // rans2
+            // 
+            this.rans2.AutoSize = true;
+            this.rans2.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rans2.Location = new System.Drawing.Point(174, 40);
+            this.rans2.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rans2.Name = "rans2";
+            this.rans2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rans2.Size = new System.Drawing.Size(79, 21);
+            this.rans2.TabIndex = 2;
+            this.rans2.TabStop = true;
+            this.rans2.Text = "radio3";
+            this.rans2.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rans2.UseVisualStyleBackColor = true;
+            // 
+            // rans3
+            // 
+            this.rans3.AutoSize = true;
+            this.rans3.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rans3.Location = new System.Drawing.Point(314, 40);
+            this.rans3.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rans3.Name = "rans3";
+            this.rans3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rans3.Size = new System.Drawing.Size(79, 21);
+            this.rans3.TabIndex = 1;
+            this.rans3.TabStop = true;
+            this.rans3.Text = "radio2";
+            this.rans3.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rans3.UseVisualStyleBackColor = true;
+            // 
+            // rans1
+            // 
+            this.rans1.AutoSize = true;
+            this.rans1.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rans1.Location = new System.Drawing.Point(43, 40);
+            this.rans1.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rans1.Name = "rans1";
+            this.rans1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rans1.Size = new System.Drawing.Size(79, 21);
+            this.rans1.TabIndex = 0;
+            this.rans1.TabStop = true;
+            this.rans1.Text = "radio1";
+            this.rans1.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rans1.UseVisualStyleBackColor = true;
+            // 
+            // lblRound
+            // 
+            this.lblRound.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRound.AutoSize = true;
+            this.lblRound.Font = new System.Drawing.Font("Bauhaus 93", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRound.Location = new System.Drawing.Point(379, 57);
+            this.lblRound.Name = "lblRound";
+            this.lblRound.Size = new System.Drawing.Size(119, 30);
+            this.lblRound.TabIndex = 11;
+            this.lblRound.Text = "Round 1";
             // 
             // Mainmenu
             // 
@@ -386,6 +630,7 @@
             this.BackColor = System.Drawing.Color.DarkTurquoise;
             this.ClientSize = new System.Drawing.Size(1150, 684);
             this.ControlBox = false;
+            this.Controls.Add(this.pnlgame);
             this.Controls.Add(this.pnlYear);
             this.Controls.Add(this.Pnlabout);
             this.Controls.Add(this.pnloptions);
@@ -406,6 +651,12 @@
             this.pnlYear.PerformLayout();
             this.grpYear.ResumeLayout(false);
             this.grpYear.PerformLayout();
+            this.pnlgame.ResumeLayout(false);
+            this.pnlgame.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.webplayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.grpAns.ResumeLayout(false);
+            this.grpAns.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -420,19 +671,35 @@
         private MTcontrols.MTtoggle.ToggleButton toggleButton1;
         private System.Windows.Forms.Label lblDarktheme;
         private System.Windows.Forms.PictureBox pboptions;
-        private MTcontrols.MTbutton.Button btnGenre;
+        private MTcontrols.MTbutton.Button btnYear;
         private MTcontrols.MTbutton.Button button1;
         private System.Windows.Forms.Panel Pnlabout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlYear;
         private System.Windows.Forms.GroupBox grpYear;
-        private MTcontrols.MTradio.Radio radio4;
-        private MTcontrols.MTradio.Radio radio3;
-        private MTcontrols.MTradio.Radio radio2;
+        private MTcontrols.MTradio.Radio r2000;
+        private MTcontrols.MTradio.Radio r90;
+        private MTcontrols.MTradio.Radio r80;
         private System.Windows.Forms.Label label2;
-        private MTcontrols.MTradio.Radio radio7;
-        private MTcontrols.MTradio.Radio radio5;
+        private MTcontrols.MTradio.Radio r2020;
+        private MTcontrols.MTradio.Radio r2010;
         private MTcontrols.MTbutton.Button btnconfirmyear;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel pnlgame;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webplayer;
+        private MTcontrols.MTbutton.Button btnanswer;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox grpAns;
+        private MTcontrols.MTradio.Radio rans4;
+        private MTcontrols.MTradio.Radio rans2;
+        private MTcontrols.MTradio.Radio rans3;
+        private MTcontrols.MTradio.Radio rans1;
+        private MTcontrols.MTbutton.Button btnstart;
+        private System.Windows.Forms.Label lblRound;
     }
 }
 
