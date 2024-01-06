@@ -1,752 +1,797 @@
 {
   "tracks" : {
-    "href" : "https://api.spotify.com/v1/search?query=year%3A+2003&type=track&include_external=audio&market=SA&offset=0&limit=10",
+    "href" : "https://api.spotify.com/v1/search?query=year%3A+2022&type=track&include_external=audio&market=SA&offset=0&limit=10",
     "items" : [ {
+      "album" : {
+        "album_type" : "single",
+        "artists" : [ {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/5GTy5bSjQPeh6SUjy6YMdQ"
+          },
+          "href" : "https://api.spotify.com/v1/artists/5GTy5bSjQPeh6SUjy6YMdQ",
+          "id" : "5GTy5bSjQPeh6SUjy6YMdQ",
+          "name" : "Dhanraj Saurya",
+          "type" : "artist",
+          "uri" : "spotify:artist:5GTy5bSjQPeh6SUjy6YMdQ"
+        }, {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/0rxdEE16SfQUm1u6IY0kLd"
+          },
+          "href" : "https://api.spotify.com/v1/artists/0rxdEE16SfQUm1u6IY0kLd",
+          "id" : "0rxdEE16SfQUm1u6IY0kLd",
+          "name" : "Kishan Mahipal",
+          "type" : "artist",
+          "uri" : "spotify:artist:0rxdEE16SfQUm1u6IY0kLd"
+        }, {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/6LP5NvK7T9nxTtoW3ZNdna"
+          },
+          "href" : "https://api.spotify.com/v1/artists/6LP5NvK7T9nxTtoW3ZNdna",
+          "id" : "6LP5NvK7T9nxTtoW3ZNdna",
+          "name" : "Saurav Maithani",
+          "type" : "artist",
+          "uri" : "spotify:artist:6LP5NvK7T9nxTtoW3ZNdna"
+        } ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/4z3OhpdBT3JGUshsDphXp4"
+        },
+        "href" : "https://api.spotify.com/v1/albums/4z3OhpdBT3JGUshsDphXp4",
+        "id" : "4z3OhpdBT3JGUshsDphXp4",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/ab67616d0000b2732a45947030b26024e9ba1853",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/ab67616d00001e022a45947030b26024e9ba1853",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/ab67616d000048512a45947030b26024e9ba1853",
+          "width" : 64
+        } ],
+        "is_playable" : true,
+        "name" : "Naya Saal Ki Badhe (Happy New Year 2022)",
+        "release_date" : "2022-01-01",
+        "release_date_precision" : "day",
+        "total_tracks" : 1,
+        "type" : "album",
+        "uri" : "spotify:album:4z3OhpdBT3JGUshsDphXp4"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/5GTy5bSjQPeh6SUjy6YMdQ"
+        },
+        "href" : "https://api.spotify.com/v1/artists/5GTy5bSjQPeh6SUjy6YMdQ",
+        "id" : "5GTy5bSjQPeh6SUjy6YMdQ",
+        "name" : "Dhanraj Saurya",
+        "type" : "artist",
+        "uri" : "spotify:artist:5GTy5bSjQPeh6SUjy6YMdQ"
+      }, {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0rxdEE16SfQUm1u6IY0kLd"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0rxdEE16SfQUm1u6IY0kLd",
+        "id" : "0rxdEE16SfQUm1u6IY0kLd",
+        "name" : "Kishan Mahipal",
+        "type" : "artist",
+        "uri" : "spotify:artist:0rxdEE16SfQUm1u6IY0kLd"
+      }, {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6LP5NvK7T9nxTtoW3ZNdna"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6LP5NvK7T9nxTtoW3ZNdna",
+        "id" : "6LP5NvK7T9nxTtoW3ZNdna",
+        "name" : "Saurav Maithani",
+        "type" : "artist",
+        "uri" : "spotify:artist:6LP5NvK7T9nxTtoW3ZNdna"
+      }, {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/10wCwwY81w1HZSIeddeSim"
+        },
+        "href" : "https://api.spotify.com/v1/artists/10wCwwY81w1HZSIeddeSim",
+        "id" : "10wCwwY81w1HZSIeddeSim",
+        "name" : "Bhagchandra Sawan",
+        "type" : "artist",
+        "uri" : "spotify:artist:10wCwwY81w1HZSIeddeSim"
+      }, {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/0snNr8s0DVo36se1N0Go05"
+        },
+        "href" : "https://api.spotify.com/v1/artists/0snNr8s0DVo36se1N0Go05",
+        "id" : "0snNr8s0DVo36se1N0Go05",
+        "name" : "Meena Rana",
+        "type" : "artist",
+        "uri" : "spotify:artist:0snNr8s0DVo36se1N0Go05"
+      }, {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/37W1lQl2UKMIoiIFvhKgmZ"
+        },
+        "href" : "https://api.spotify.com/v1/artists/37W1lQl2UKMIoiIFvhKgmZ",
+        "id" : "37W1lQl2UKMIoiIFvhKgmZ",
+        "name" : "Anisha Ranghar",
+        "type" : "artist",
+        "uri" : "spotify:artist:37W1lQl2UKMIoiIFvhKgmZ"
+      }, {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/5LEVx0mQ6UR1jku8KsiFGv"
+        },
+        "href" : "https://api.spotify.com/v1/artists/5LEVx0mQ6UR1jku8KsiFGv",
+        "id" : "5LEVx0mQ6UR1jku8KsiFGv",
+        "name" : "Aisha Siddiqui",
+        "type" : "artist",
+        "uri" : "spotify:artist:5LEVx0mQ6UR1jku8KsiFGv"
+      }, {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/53IzVIhLadVeWYwhjg11Gy"
+        },
+        "href" : "https://api.spotify.com/v1/artists/53IzVIhLadVeWYwhjg11Gy",
+        "id" : "53IzVIhLadVeWYwhjg11Gy",
+        "name" : "Rajlaxmi Gudiya",
+        "type" : "artist",
+        "uri" : "spotify:artist:53IzVIhLadVeWYwhjg11Gy"
+      }, {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/6ZdLgoAJTr96NlcJqoZBGL"
+        },
+        "href" : "https://api.spotify.com/v1/artists/6ZdLgoAJTr96NlcJqoZBGL",
+        "id" : "6ZdLgoAJTr96NlcJqoZBGL",
+        "name" : "Rohit Chauhan",
+        "type" : "artist",
+        "uri" : "spotify:artist:6ZdLgoAJTr96NlcJqoZBGL"
+      } ],
+      "disc_number" : 1,
+      "duration_ms" : 163872,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "FRS182169628"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/6M10oSeDrAJfAwYaJsecQN"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/6M10oSeDrAJfAwYaJsecQN",
+      "id" : "6M10oSeDrAJfAwYaJsecQN",
+      "is_local" : false,
+      "is_playable" : true,
+      "name" : "Naya Saal Ki Badhe - Happy New Year 2022",
+      "popularity" : 19,
+      "preview_url" : "https://p.scdn.co/mp3-preview/1a69cbcd837596eb37eb96ec67b782667e155595?cid=3255eb67936e45f2b8c8da7d271abf56",
+      "track_number" : 1,
+      "type" : "track",
+      "uri" : "spotify:track:6M10oSeDrAJfAwYaJsecQN"
+    }, {
       "album" : {
         "album_type" : "album",
         "artists" : [ {
           "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/7wCjDgV6nqBsHguQXPAaIM"
+            "spotify" : "https://open.spotify.com/artist/3qm84nBOXUEQ2vnTfUTTFC"
           },
-          "href" : "https://api.spotify.com/v1/artists/7wCjDgV6nqBsHguQXPAaIM",
-          "id" : "7wCjDgV6nqBsHguQXPAaIM",
-          "name" : "Waylon Jennings",
+          "href" : "https://api.spotify.com/v1/artists/3qm84nBOXUEQ2vnTfUTTFC",
+          "id" : "3qm84nBOXUEQ2vnTfUTTFC",
+          "name" : "Guns N' Roses",
           "type" : "artist",
-          "uri" : "spotify:artist:7wCjDgV6nqBsHguQXPAaIM"
-        }, {
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/5W5bDNCqJ1jbCgTxDD0Cb3"
-          },
-          "href" : "https://api.spotify.com/v1/artists/5W5bDNCqJ1jbCgTxDD0Cb3",
-          "id" : "5W5bDNCqJ1jbCgTxDD0Cb3",
-          "name" : "Willie Nelson",
-          "type" : "artist",
-          "uri" : "spotify:artist:5W5bDNCqJ1jbCgTxDD0Cb3"
+          "uri" : "spotify:artist:3qm84nBOXUEQ2vnTfUTTFC"
         } ],
         "external_urls" : {
-          "spotify" : "https://open.spotify.com/album/6GDs0ZZVR2jDV8n4m11KWO"
+          "spotify" : "https://open.spotify.com/album/1nnC02B9bhYh6IVFOoij0k"
         },
-        "href" : "https://api.spotify.com/v1/albums/6GDs0ZZVR2jDV8n4m11KWO",
-        "id" : "6GDs0ZZVR2jDV8n4m11KWO",
+        "href" : "https://api.spotify.com/v1/albums/1nnC02B9bhYh6IVFOoij0k",
+        "id" : "1nnC02B9bhYh6IVFOoij0k",
         "images" : [ {
           "height" : 640,
-          "url" : "https://i.scdn.co/image/ab67616d0000b27303acdaed9bd25f06785c0719",
+          "url" : "https://i.scdn.co/image/ab67616d0000b273273eef956e3293dd0c1b89b1",
           "width" : 640
         }, {
           "height" : 300,
-          "url" : "https://i.scdn.co/image/ab67616d00001e0203acdaed9bd25f06785c0719",
+          "url" : "https://i.scdn.co/image/ab67616d00001e02273eef956e3293dd0c1b89b1",
           "width" : 300
         }, {
           "height" : 64,
-          "url" : "https://i.scdn.co/image/ab67616d0000485103acdaed9bd25f06785c0719",
+          "url" : "https://i.scdn.co/image/ab67616d00004851273eef956e3293dd0c1b89b1",
           "width" : 64
         } ],
         "is_playable" : true,
-        "name" : "Waylon & Willie",
-        "release_date" : "1978-01-01",
+        "name" : "Use Your Illusion (Super Deluxe)",
+        "release_date" : "2022-11-11",
+        "release_date_precision" : "day",
+        "total_tracks" : 77,
+        "type" : "album",
+        "uri" : "spotify:album:1nnC02B9bhYh6IVFOoij0k"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/3qm84nBOXUEQ2vnTfUTTFC"
+        },
+        "href" : "https://api.spotify.com/v1/artists/3qm84nBOXUEQ2vnTfUTTFC",
+        "id" : "3qm84nBOXUEQ2vnTfUTTFC",
+        "name" : "Guns N' Roses",
+        "type" : "artist",
+        "uri" : "spotify:artist:3qm84nBOXUEQ2vnTfUTTFC"
+      } ],
+      "disc_number" : 2,
+      "duration_ms" : 262520,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "USGF19142002"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/7j2Ba8cTyX9plmeJOg5h3W"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/7j2Ba8cTyX9plmeJOg5h3W",
+      "id" : "7j2Ba8cTyX9plmeJOg5h3W",
+      "is_local" : false,
+      "is_playable" : true,
+      "name" : "14 Years - 2022 Remaster",
+      "popularity" : 33,
+      "preview_url" : null,
+      "track_number" : 2,
+      "type" : "track",
+      "uri" : "spotify:track:7j2Ba8cTyX9plmeJOg5h3W"
+    }, {
+      "album" : {
+        "album_type" : "single",
+        "artists" : [ {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/5Vzt7QojPflUmmJ3xYgdsl"
+          },
+          "href" : "https://api.spotify.com/v1/artists/5Vzt7QojPflUmmJ3xYgdsl",
+          "id" : "5Vzt7QojPflUmmJ3xYgdsl",
+          "name" : "Jordie RML",
+          "type" : "artist",
+          "uri" : "spotify:artist:5Vzt7QojPflUmmJ3xYgdsl"
+        }, {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/4swmXg88sxW7fRwCcaxgzO"
+          },
+          "href" : "https://api.spotify.com/v1/artists/4swmXg88sxW7fRwCcaxgzO",
+          "id" : "4swmXg88sxW7fRwCcaxgzO",
+          "name" : "K6IX",
+          "type" : "artist",
+          "uri" : "spotify:artist:4swmXg88sxW7fRwCcaxgzO"
+        } ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/30XJBwCbNb6l2yN2d0qe0q"
+        },
+        "href" : "https://api.spotify.com/v1/albums/30XJBwCbNb6l2yN2d0qe0q",
+        "id" : "30XJBwCbNb6l2yN2d0qe0q",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/ab67616d0000b2730aea7c01704533dd37c7cd64",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/ab67616d00001e020aea7c01704533dd37c7cd64",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/ab67616d000048510aea7c01704533dd37c7cd64",
+          "width" : 64
+        } ],
+        "is_playable" : true,
+        "name" : "End of Year 2022 Freestyle",
+        "release_date" : "2023-12-26",
+        "release_date_precision" : "day",
+        "total_tracks" : 1,
+        "type" : "album",
+        "uri" : "spotify:album:30XJBwCbNb6l2yN2d0qe0q"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/5Vzt7QojPflUmmJ3xYgdsl"
+        },
+        "href" : "https://api.spotify.com/v1/artists/5Vzt7QojPflUmmJ3xYgdsl",
+        "id" : "5Vzt7QojPflUmmJ3xYgdsl",
+        "name" : "Jordie RML",
+        "type" : "artist",
+        "uri" : "spotify:artist:5Vzt7QojPflUmmJ3xYgdsl"
+      }, {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/4swmXg88sxW7fRwCcaxgzO"
+        },
+        "href" : "https://api.spotify.com/v1/artists/4swmXg88sxW7fRwCcaxgzO",
+        "id" : "4swmXg88sxW7fRwCcaxgzO",
+        "name" : "K6IX",
+        "type" : "artist",
+        "uri" : "spotify:artist:4swmXg88sxW7fRwCcaxgzO"
+      } ],
+      "disc_number" : 1,
+      "duration_ms" : 228257,
+      "explicit" : true,
+      "external_ids" : {
+        "isrc" : "TCAHS2381838"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/7bZjHNtJvD55cklyS7slT6"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/7bZjHNtJvD55cklyS7slT6",
+      "id" : "7bZjHNtJvD55cklyS7slT6",
+      "is_local" : false,
+      "is_playable" : true,
+      "name" : "End of Year 2022 Freestyle",
+      "popularity" : 0,
+      "preview_url" : "https://p.scdn.co/mp3-preview/c294ef87b42616d23fa9b083b2f864e9d348ac7a?cid=3255eb67936e45f2b8c8da7d271abf56",
+      "track_number" : 1,
+      "type" : "track",
+      "uri" : "spotify:track:7bZjHNtJvD55cklyS7slT6"
+    }, {
+      "album" : {
+        "album_type" : "album",
+        "artists" : [ {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/3Z6IRCo7umuk8K2XQy0ZDj"
+          },
+          "href" : "https://api.spotify.com/v1/artists/3Z6IRCo7umuk8K2XQy0ZDj",
+          "id" : "3Z6IRCo7umuk8K2XQy0ZDj",
+          "name" : "Busted",
+          "type" : "artist",
+          "uri" : "spotify:artist:3Z6IRCo7umuk8K2XQy0ZDj"
+        } ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/0PnmsYK2gPdPBzctYdi6U0"
+        },
+        "href" : "https://api.spotify.com/v1/albums/0PnmsYK2gPdPBzctYdi6U0",
+        "id" : "0PnmsYK2gPdPBzctYdi6U0",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/ab67616d0000b2736532eef32b29c67816d4b674",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/ab67616d00001e026532eef32b29c67816d4b674",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/ab67616d000048516532eef32b29c67816d4b674",
+          "width" : 64
+        } ],
+        "is_playable" : true,
+        "name" : "Busted",
+        "release_date" : "2002-01-01",
         "release_date_precision" : "day",
         "total_tracks" : 11,
         "type" : "album",
-        "uri" : "spotify:album:6GDs0ZZVR2jDV8n4m11KWO"
+        "uri" : "spotify:album:0PnmsYK2gPdPBzctYdi6U0"
       },
       "artists" : [ {
         "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/7wCjDgV6nqBsHguQXPAaIM"
+          "spotify" : "https://open.spotify.com/artist/3Z6IRCo7umuk8K2XQy0ZDj"
         },
-        "href" : "https://api.spotify.com/v1/artists/7wCjDgV6nqBsHguQXPAaIM",
-        "id" : "7wCjDgV6nqBsHguQXPAaIM",
-        "name" : "Waylon Jennings",
+        "href" : "https://api.spotify.com/v1/artists/3Z6IRCo7umuk8K2XQy0ZDj",
+        "id" : "3Z6IRCo7umuk8K2XQy0ZDj",
+        "name" : "Busted",
         "type" : "artist",
-        "uri" : "spotify:artist:7wCjDgV6nqBsHguQXPAaIM"
-      }, {
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/5W5bDNCqJ1jbCgTxDD0Cb3"
-        },
-        "href" : "https://api.spotify.com/v1/artists/5W5bDNCqJ1jbCgTxDD0Cb3",
-        "id" : "5W5bDNCqJ1jbCgTxDD0Cb3",
-        "name" : "Willie Nelson",
-        "type" : "artist",
-        "uri" : "spotify:artist:5W5bDNCqJ1jbCgTxDD0Cb3"
+        "uri" : "spotify:artist:3Z6IRCo7umuk8K2XQy0ZDj"
       } ],
       "disc_number" : 1,
-      "duration_ms" : 184266,
+      "duration_ms" : 196200,
       "explicit" : false,
       "external_ids" : {
-        "isrc" : "USRN10000383"
+        "isrc" : "GBAAN0201145"
       },
       "external_urls" : {
-        "spotify" : "https://open.spotify.com/track/0sFq478LIo9BFwf2qzMzzF"
+        "spotify" : "https://open.spotify.com/track/0zjB7ewBWnMgQDMQpFzt92"
       },
-      "href" : "https://api.spotify.com/v1/tracks/0sFq478LIo9BFwf2qzMzzF",
-      "id" : "0sFq478LIo9BFwf2qzMzzF",
+      "href" : "https://api.spotify.com/v1/tracks/0zjB7ewBWnMgQDMQpFzt92",
+      "id" : "0zjB7ewBWnMgQDMQpFzt92",
       "is_local" : false,
       "is_playable" : true,
-      "name" : "The Year 2003 Minus 25 - Remastered",
-      "popularity" : 39,
-      "preview_url" : "https://p.scdn.co/mp3-preview/68ed74725dc5a3b28b9ad8d9d47bbfb0081129aa?cid=3255eb67936e45f2b8c8da7d271abf56",
-      "track_number" : 2,
+      "name" : "Year 3000",
+      "popularity" : 61,
+      "preview_url" : null,
+      "track_number" : 5,
       "type" : "track",
-      "uri" : "spotify:track:0sFq478LIo9BFwf2qzMzzF"
+      "uri" : "spotify:track:0zjB7ewBWnMgQDMQpFzt92"
+    }, {
+      "album" : {
+        "album_type" : "single",
+        "artists" : [ {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/1GCnpwVBabVq5UUEsbbexN"
+          },
+          "href" : "https://api.spotify.com/v1/artists/1GCnpwVBabVq5UUEsbbexN",
+          "id" : "1GCnpwVBabVq5UUEsbbexN",
+          "name" : "Gaana Achu",
+          "type" : "artist",
+          "uri" : "spotify:artist:1GCnpwVBabVq5UUEsbbexN"
+        } ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/6JnM8SSDyNkvsjUeVRsLuh"
+        },
+        "href" : "https://api.spotify.com/v1/albums/6JnM8SSDyNkvsjUeVRsLuh",
+        "id" : "6JnM8SSDyNkvsjUeVRsLuh",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/ab67616d0000b273ab1e45e5fe9bd648bd5d4a01",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/ab67616d00001e02ab1e45e5fe9bd648bd5d4a01",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/ab67616d00004851ab1e45e5fe9bd648bd5d4a01",
+          "width" : 64
+        } ],
+        "is_playable" : true,
+        "name" : "NEW YEAR 2022",
+        "release_date" : "2022-04-22",
+        "release_date_precision" : "day",
+        "total_tracks" : 1,
+        "type" : "album",
+        "uri" : "spotify:album:6JnM8SSDyNkvsjUeVRsLuh"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/1GCnpwVBabVq5UUEsbbexN"
+        },
+        "href" : "https://api.spotify.com/v1/artists/1GCnpwVBabVq5UUEsbbexN",
+        "id" : "1GCnpwVBabVq5UUEsbbexN",
+        "name" : "Gaana Achu",
+        "type" : "artist",
+        "uri" : "spotify:artist:1GCnpwVBabVq5UUEsbbexN"
+      } ],
+      "disc_number" : 1,
+      "duration_ms" : 224126,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "FR96X2200321"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/1Gf36LzOmcIn8vcQMrQIm2"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/1Gf36LzOmcIn8vcQMrQIm2",
+      "id" : "1Gf36LzOmcIn8vcQMrQIm2",
+      "is_local" : false,
+      "is_playable" : true,
+      "name" : "NEW YEAR 2022",
+      "popularity" : 18,
+      "preview_url" : "https://p.scdn.co/mp3-preview/098576f74be18f742f66ed61f9a32d170d62eadc?cid=3255eb67936e45f2b8c8da7d271abf56",
+      "track_number" : 1,
+      "type" : "track",
+      "uri" : "spotify:track:1Gf36LzOmcIn8vcQMrQIm2"
     }, {
       "album" : {
         "album_type" : "album",
         "artists" : [ {
           "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/30SZetOBMEael27tboxz7f"
+            "spotify" : "https://open.spotify.com/artist/3WwGRA2o4Ux1RRMYaYDh7N"
           },
-          "href" : "https://api.spotify.com/v1/artists/30SZetOBMEael27tboxz7f",
-          "id" : "30SZetOBMEael27tboxz7f",
-          "name" : "Emmavie",
+          "href" : "https://api.spotify.com/v1/artists/3WwGRA2o4Ux1RRMYaYDh7N",
+          "id" : "3WwGRA2o4Ux1RRMYaYDh7N",
+          "name" : "Mariya Takeuchi",
           "type" : "artist",
-          "uri" : "spotify:artist:30SZetOBMEael27tboxz7f"
+          "uri" : "spotify:artist:3WwGRA2o4Ux1RRMYaYDh7N"
         } ],
         "external_urls" : {
-          "spotify" : "https://open.spotify.com/album/6dP1NZlwdwdzrfnlkNlrTv"
+          "spotify" : "https://open.spotify.com/album/6HSiOQVxo7HrYf05PcLC0S"
         },
-        "href" : "https://api.spotify.com/v1/albums/6dP1NZlwdwdzrfnlkNlrTv",
-        "id" : "6dP1NZlwdwdzrfnlkNlrTv",
+        "href" : "https://api.spotify.com/v1/albums/6HSiOQVxo7HrYf05PcLC0S",
+        "id" : "6HSiOQVxo7HrYf05PcLC0S",
         "images" : [ {
           "height" : 640,
-          "url" : "https://i.scdn.co/image/ab67616d0000b273fb481ccdc9f42d0bfefba995",
+          "url" : "https://i.scdn.co/image/ab67616d0000b2734aef8d189d7406a247d171e1",
           "width" : 640
         }, {
           "height" : 300,
-          "url" : "https://i.scdn.co/image/ab67616d00001e02fb481ccdc9f42d0bfefba995",
+          "url" : "https://i.scdn.co/image/ab67616d00001e024aef8d189d7406a247d171e1",
           "width" : 300
         }, {
           "height" : 64,
-          "url" : "https://i.scdn.co/image/ab67616d00004851fb481ccdc9f42d0bfefba995",
+          "url" : "https://i.scdn.co/image/ab67616d000048514aef8d189d7406a247d171e1",
           "width" : 64
         } ],
         "is_playable" : true,
-        "name" : "What's A Diamond To A Baby - The Remixes Vol. 1",
-        "release_date" : "2022-05-27",
+        "name" : "Quiet Life (30th Anniversary Edition; 2022 Remaster)",
+        "release_date" : "1992-10-22",
+        "release_date_precision" : "day",
+        "total_tracks" : 17,
+        "type" : "album",
+        "uri" : "spotify:album:6HSiOQVxo7HrYf05PcLC0S"
+      },
+      "artists" : [ {
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/artist/3WwGRA2o4Ux1RRMYaYDh7N"
+        },
+        "href" : "https://api.spotify.com/v1/artists/3WwGRA2o4Ux1RRMYaYDh7N",
+        "id" : "3WwGRA2o4Ux1RRMYaYDh7N",
+        "name" : "Mariya Takeuchi",
+        "type" : "artist",
+        "uri" : "spotify:artist:3WwGRA2o4Ux1RRMYaYDh7N"
+      } ],
+      "disc_number" : 1,
+      "duration_ms" : 212533,
+      "explicit" : false,
+      "external_ids" : {
+        "isrc" : "JPWP02270896"
+      },
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/track/381nu5sANgwdRGeMzdcdYS"
+      },
+      "href" : "https://api.spotify.com/v1/tracks/381nu5sANgwdRGeMzdcdYS",
+      "id" : "381nu5sANgwdRGeMzdcdYS",
+      "is_local" : false,
+      "is_playable" : true,
+      "name" : "After Years - 2022 Remaster",
+      "popularity" : 20,
+      "preview_url" : "https://p.scdn.co/mp3-preview/e3933be4fd7aa1bd017112d812eeb1265f6ebf58?cid=3255eb67936e45f2b8c8da7d271abf56",
+      "track_number" : 5,
+      "type" : "track",
+      "uri" : "spotify:track:381nu5sANgwdRGeMzdcdYS"
+    }, {
+      "album" : {
+        "album_type" : "album",
+        "artists" : [ {
+          "external_urls" : {
+            "spotify" : "https://open.spotify.com/artist/3zbJljGiAI4tC60Bsxq0zw"
+          },
+          "href" : "https://api.spotify.com/v1/artists/3zbJljGiAI4tC60Bsxq0zw",
+          "id" : "3zbJljGiAI4tC60Bsxq0zw",
+          "name" : "FRIENDLYICE",
+          "type" : "artist",
+          "uri" : "spotify:artist:3zbJljGiAI4tC60Bsxq0zw"
+        } ],
+        "external_urls" : {
+          "spotify" : "https://open.spotify.com/album/59PIVHRHViDma1TS5969GG"
+        },
+        "href" : "https://api.spotify.com/v1/albums/59PIVHRHViDma1TS5969GG",
+        "id" : "59PIVHRHViDma1TS5969GG",
+        "images" : [ {
+          "height" : 640,
+          "url" : "https://i.scdn.co/image/ab67616d0000b273064701cbe51e17e3bb6d2be1",
+          "width" : 640
+        }, {
+          "height" : 300,
+          "url" : "https://i.scdn.co/image/ab67616d00001e02064701cbe51e17e3bb6d2be1",
+          "width" : 300
+        }, {
+          "height" : 64,
+          "url" : "https://i.scdn.co/image/ab67616d00004851064701cbe51e17e3bb6d2be1",
+          "width" : 64
+        } ],
+        "is_playable" : true,
+        "name" : "Fuera De Tiempo",
+        "release_date" : "2024-01-01",
         "release_date_precision" : "day",
         "total_tracks" : 10,
         "type" : "album",
-        "uri" : "spotify:album:6dP1NZlwdwdzrfnlkNlrTv"
+        "uri" : "spotify:album:59PIVHRHViDma1TS5969GG"
       },
       "artists" : [ {
         "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/30SZetOBMEael27tboxz7f"
+          "spotify" : "https://open.spotify.com/artist/3zbJljGiAI4tC60Bsxq0zw"
         },
-        "href" : "https://api.spotify.com/v1/artists/30SZetOBMEael27tboxz7f",
-        "id" : "30SZetOBMEael27tboxz7f",
-        "name" : "Emmavie",
+        "href" : "https://api.spotify.com/v1/artists/3zbJljGiAI4tC60Bsxq0zw",
+        "id" : "3zbJljGiAI4tC60Bsxq0zw",
+        "name" : "FRIENDLYICE",
         "type" : "artist",
-        "uri" : "spotify:artist:30SZetOBMEael27tboxz7f"
-      }, {
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/7fnUWKPwdb4svzQ7xQF83U"
-        },
-        "href" : "https://api.spotify.com/v1/artists/7fnUWKPwdb4svzQ7xQF83U",
-        "id" : "7fnUWKPwdb4svzQ7xQF83U",
-        "name" : "Ruby Francis",
-        "type" : "artist",
-        "uri" : "spotify:artist:7fnUWKPwdb4svzQ7xQF83U"
+        "uri" : "spotify:artist:3zbJljGiAI4tC60Bsxq0zw"
       } ],
       "disc_number" : 1,
-      "duration_ms" : 173217,
+      "duration_ms" : 97817,
       "explicit" : false,
       "external_ids" : {
-        "isrc" : "QM24S2201327"
+        "isrc" : "QZW9L2377207"
       },
       "external_urls" : {
-        "spotify" : "https://open.spotify.com/track/6sckJJC6Wxq4185J1R2I4p"
+        "spotify" : "https://open.spotify.com/track/43POV0qRkGiN6BR5iyzPK9"
       },
-      "href" : "https://api.spotify.com/v1/tracks/6sckJJC6Wxq4185J1R2I4p",
-      "id" : "6sckJJC6Wxq4185J1R2I4p",
+      "href" : "https://api.spotify.com/v1/tracks/43POV0qRkGiN6BR5iyzPK9",
+      "id" : "43POV0qRkGiN6BR5iyzPK9",
       "is_local" : false,
       "is_playable" : true,
-      "name" : "2003 (Remix)",
-      "popularity" : 20,
-      "preview_url" : "https://p.scdn.co/mp3-preview/d0bcf8235cba22ca4b2ed229100c908c9b52ce8d?cid=3255eb67936e45f2b8c8da7d271abf56",
+      "name" : "New Year 2022",
+      "popularity" : 0,
+      "preview_url" : "https://p.scdn.co/mp3-preview/9888370708ae90e818ab06436b2488d642b4d10c?cid=3255eb67936e45f2b8c8da7d271abf56",
       "track_number" : 7,
       "type" : "track",
-      "uri" : "spotify:track:6sckJJC6Wxq4185J1R2I4p"
+      "uri" : "spotify:track:43POV0qRkGiN6BR5iyzPK9"
     }, {
       "album" : {
-        "album_type" : "album",
+        "album_type" : "compilation",
         "artists" : [ {
           "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/6JMGrupbzJZ3yuQhTGyeHr"
+            "spotify" : "https://open.spotify.com/artist/7gOdHgIoIKoe4i9Tta6qdD"
           },
-          "href" : "https://api.spotify.com/v1/artists/6JMGrupbzJZ3yuQhTGyeHr",
-          "id" : "6JMGrupbzJZ3yuQhTGyeHr",
-          "name" : "Year 200X",
+          "href" : "https://api.spotify.com/v1/artists/7gOdHgIoIKoe4i9Tta6qdD",
+          "id" : "7gOdHgIoIKoe4i9Tta6qdD",
+          "name" : "Jonas Brothers",
           "type" : "artist",
-          "uri" : "spotify:artist:6JMGrupbzJZ3yuQhTGyeHr"
+          "uri" : "spotify:artist:7gOdHgIoIKoe4i9Tta6qdD"
         } ],
         "external_urls" : {
-          "spotify" : "https://open.spotify.com/album/6nUwQK1xQulhHslB6A8qjQ"
+          "spotify" : "https://open.spotify.com/album/6X2HirVqcGXjLBShA8GUW2"
         },
-        "href" : "https://api.spotify.com/v1/albums/6nUwQK1xQulhHslB6A8qjQ",
-        "id" : "6nUwQK1xQulhHslB6A8qjQ",
+        "href" : "https://api.spotify.com/v1/albums/6X2HirVqcGXjLBShA8GUW2",
+        "id" : "6X2HirVqcGXjLBShA8GUW2",
         "images" : [ {
           "height" : 640,
-          "url" : "https://i.scdn.co/image/ab67616d0000b2736657927418fe0aee0ea4d05c",
+          "url" : "https://i.scdn.co/image/ab67616d0000b273f61f60835543b02511652241",
           "width" : 640
         }, {
           "height" : 300,
-          "url" : "https://i.scdn.co/image/ab67616d00001e026657927418fe0aee0ea4d05c",
+          "url" : "https://i.scdn.co/image/ab67616d00001e02f61f60835543b02511652241",
           "width" : 300
         }, {
           "height" : 64,
-          "url" : "https://i.scdn.co/image/ab67616d000048516657927418fe0aee0ea4d05c",
+          "url" : "https://i.scdn.co/image/ab67616d00004851f61f60835543b02511652241",
           "width" : 64
         } ],
         "is_playable" : true,
-        "name" : "We Are Error",
-        "release_date" : "2013-11-28",
+        "name" : "Music From Chasing Happiness",
+        "release_date" : "2019-05-09",
         "release_date_precision" : "day",
-        "total_tracks" : 13,
+        "total_tracks" : 15,
         "type" : "album",
-        "uri" : "spotify:album:6nUwQK1xQulhHslB6A8qjQ"
+        "uri" : "spotify:album:6X2HirVqcGXjLBShA8GUW2"
       },
       "artists" : [ {
         "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/6JMGrupbzJZ3yuQhTGyeHr"
+          "spotify" : "https://open.spotify.com/artist/7gOdHgIoIKoe4i9Tta6qdD"
         },
-        "href" : "https://api.spotify.com/v1/artists/6JMGrupbzJZ3yuQhTGyeHr",
-        "id" : "6JMGrupbzJZ3yuQhTGyeHr",
-        "name" : "Year 200X",
+        "href" : "https://api.spotify.com/v1/artists/7gOdHgIoIKoe4i9Tta6qdD",
+        "id" : "7gOdHgIoIKoe4i9Tta6qdD",
+        "name" : "Jonas Brothers",
         "type" : "artist",
-        "uri" : "spotify:artist:6JMGrupbzJZ3yuQhTGyeHr"
+        "uri" : "spotify:artist:7gOdHgIoIKoe4i9Tta6qdD"
       } ],
       "disc_number" : 1,
-      "duration_ms" : 131253,
+      "duration_ms" : 201960,
       "explicit" : false,
       "external_ids" : {
-        "isrc" : "USE830910942"
+        "isrc" : "USHR10723201"
       },
       "external_urls" : {
-        "spotify" : "https://open.spotify.com/track/0r5y3Ia2Wu3UkenDH2Ulhk"
+        "spotify" : "https://open.spotify.com/track/4zP7ADsgJgHGY6VzxbNp1z"
       },
-      "href" : "https://api.spotify.com/v1/tracks/0r5y3Ia2Wu3UkenDH2Ulhk",
-      "id" : "0r5y3Ia2Wu3UkenDH2Ulhk",
+      "href" : "https://api.spotify.com/v1/tracks/4zP7ADsgJgHGY6VzxbNp1z",
+      "id" : "4zP7ADsgJgHGY6VzxbNp1z",
       "is_local" : false,
       "is_playable" : true,
-      "name" : "Ducktales (the Moon)",
-      "popularity" : 21,
-      "preview_url" : "https://p.scdn.co/mp3-preview/335f66ba1f6a2c5ccada537b772427b8ad04657e?cid=3255eb67936e45f2b8c8da7d271abf56",
-      "track_number" : 2,
+      "name" : "Year 3000",
+      "popularity" : 63,
+      "preview_url" : null,
+      "track_number" : 4,
       "type" : "track",
-      "uri" : "spotify:track:0r5y3Ia2Wu3UkenDH2Ulhk"
-    }, {
-      "album" : {
-        "album_type" : "single",
-        "artists" : [ {
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/06xWdT7g3ZmgLJkpvhSaiH"
-          },
-          "href" : "https://api.spotify.com/v1/artists/06xWdT7g3ZmgLJkpvhSaiH",
-          "id" : "06xWdT7g3ZmgLJkpvhSaiH",
-          "name" : "Shay Whelan",
-          "type" : "artist",
-          "uri" : "spotify:artist:06xWdT7g3ZmgLJkpvhSaiH"
-        } ],
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/album/16oE7lJxNxLFRaWKVjkrp5"
-        },
-        "href" : "https://api.spotify.com/v1/albums/16oE7lJxNxLFRaWKVjkrp5",
-        "id" : "16oE7lJxNxLFRaWKVjkrp5",
-        "images" : [ {
-          "height" : 640,
-          "url" : "https://i.scdn.co/image/ab67616d0000b2730de0dc9445624b476410c7a2",
-          "width" : 640
-        }, {
-          "height" : 300,
-          "url" : "https://i.scdn.co/image/ab67616d00001e020de0dc9445624b476410c7a2",
-          "width" : 300
-        }, {
-          "height" : 64,
-          "url" : "https://i.scdn.co/image/ab67616d000048510de0dc9445624b476410c7a2",
-          "width" : 64
-        } ],
-        "is_playable" : true,
-        "name" : "Strikers",
-        "release_date" : "2020-07-30",
-        "release_date_precision" : "day",
-        "total_tracks" : 4,
-        "type" : "album",
-        "uri" : "spotify:album:16oE7lJxNxLFRaWKVjkrp5"
-      },
-      "artists" : [ {
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/06xWdT7g3ZmgLJkpvhSaiH"
-        },
-        "href" : "https://api.spotify.com/v1/artists/06xWdT7g3ZmgLJkpvhSaiH",
-        "id" : "06xWdT7g3ZmgLJkpvhSaiH",
-        "name" : "Shay Whelan",
-        "type" : "artist",
-        "uri" : "spotify:artist:06xWdT7g3ZmgLJkpvhSaiH"
-      } ],
-      "disc_number" : 1,
-      "duration_ms" : 360857,
-      "explicit" : true,
-      "external_ids" : {
-        "isrc" : "QZNWY2007392"
-      },
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/track/1gT5xRrBDka4LelaGNVljT"
-      },
-      "href" : "https://api.spotify.com/v1/tracks/1gT5xRrBDka4LelaGNVljT",
-      "id" : "1gT5xRrBDka4LelaGNVljT",
-      "is_local" : false,
-      "is_playable" : true,
-      "name" : "2003",
-      "popularity" : 4,
-      "preview_url" : "https://p.scdn.co/mp3-preview/382a13d1dba6c7d5ab6684629cfcbdf5ea7c03ed?cid=3255eb67936e45f2b8c8da7d271abf56",
-      "track_number" : 2,
-      "type" : "track",
-      "uri" : "spotify:track:1gT5xRrBDka4LelaGNVljT"
+      "uri" : "spotify:track:4zP7ADsgJgHGY6VzxbNp1z"
     }, {
       "album" : {
         "album_type" : "album",
         "artists" : [ {
           "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/6JMGrupbzJZ3yuQhTGyeHr"
+            "spotify" : "https://open.spotify.com/artist/0SfsnGyD8FpIN4U4WCkBZ5"
           },
-          "href" : "https://api.spotify.com/v1/artists/6JMGrupbzJZ3yuQhTGyeHr",
-          "id" : "6JMGrupbzJZ3yuQhTGyeHr",
-          "name" : "Year 200X",
+          "href" : "https://api.spotify.com/v1/artists/0SfsnGyD8FpIN4U4WCkBZ5",
+          "id" : "0SfsnGyD8FpIN4U4WCkBZ5",
+          "name" : "Armin van Buuren",
           "type" : "artist",
-          "uri" : "spotify:artist:6JMGrupbzJZ3yuQhTGyeHr"
+          "uri" : "spotify:artist:0SfsnGyD8FpIN4U4WCkBZ5"
         } ],
         "external_urls" : {
-          "spotify" : "https://open.spotify.com/album/6nUwQK1xQulhHslB6A8qjQ"
+          "spotify" : "https://open.spotify.com/album/1dglpJxkFjoXZKjNrA4il1"
         },
-        "href" : "https://api.spotify.com/v1/albums/6nUwQK1xQulhHslB6A8qjQ",
-        "id" : "6nUwQK1xQulhHslB6A8qjQ",
+        "href" : "https://api.spotify.com/v1/albums/1dglpJxkFjoXZKjNrA4il1",
+        "id" : "1dglpJxkFjoXZKjNrA4il1",
         "images" : [ {
           "height" : 640,
-          "url" : "https://i.scdn.co/image/ab67616d0000b2736657927418fe0aee0ea4d05c",
+          "url" : "https://i.scdn.co/image/ab67616d0000b273158b191e28451d4218f6024e",
           "width" : 640
         }, {
           "height" : 300,
-          "url" : "https://i.scdn.co/image/ab67616d00001e026657927418fe0aee0ea4d05c",
+          "url" : "https://i.scdn.co/image/ab67616d00001e02158b191e28451d4218f6024e",
           "width" : 300
         }, {
           "height" : 64,
-          "url" : "https://i.scdn.co/image/ab67616d000048516657927418fe0aee0ea4d05c",
+          "url" : "https://i.scdn.co/image/ab67616d00004851158b191e28451d4218f6024e",
           "width" : 64
         } ],
         "is_playable" : true,
-        "name" : "We Are Error",
-        "release_date" : "2013-11-28",
+        "name" : "A State Of Trance Year Mix 2022 (Mixed by Armin van Buuren)",
+        "release_date" : "2022-12-15",
         "release_date_precision" : "day",
-        "total_tracks" : 13,
+        "total_tracks" : 109,
         "type" : "album",
-        "uri" : "spotify:album:6nUwQK1xQulhHslB6A8qjQ"
+        "uri" : "spotify:album:1dglpJxkFjoXZKjNrA4il1"
       },
       "artists" : [ {
         "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/6JMGrupbzJZ3yuQhTGyeHr"
+          "spotify" : "https://open.spotify.com/artist/366L4EjZXBPYbHs9XDQILZ"
         },
-        "href" : "https://api.spotify.com/v1/artists/6JMGrupbzJZ3yuQhTGyeHr",
-        "id" : "6JMGrupbzJZ3yuQhTGyeHr",
-        "name" : "Year 200X",
+        "href" : "https://api.spotify.com/v1/artists/366L4EjZXBPYbHs9XDQILZ",
+        "id" : "366L4EjZXBPYbHs9XDQILZ",
+        "name" : "Ben Hemsley",
         "type" : "artist",
-        "uri" : "spotify:artist:6JMGrupbzJZ3yuQhTGyeHr"
+        "uri" : "spotify:artist:366L4EjZXBPYbHs9XDQILZ"
       } ],
       "disc_number" : 1,
-      "duration_ms" : 106973,
+      "duration_ms" : 73906,
       "explicit" : false,
       "external_ids" : {
-        "isrc" : "USE830910945"
+        "isrc" : "NLF712209216"
       },
       "external_urls" : {
-        "spotify" : "https://open.spotify.com/track/0qSXoNHcm1sn9kWcAG7WCx"
+        "spotify" : "https://open.spotify.com/track/6l1FhWIfDF6TsCqw0I0FsT"
       },
-      "href" : "https://api.spotify.com/v1/tracks/0qSXoNHcm1sn9kWcAG7WCx",
-      "id" : "0qSXoNHcm1sn9kWcAG7WCx",
+      "href" : "https://api.spotify.com/v1/tracks/6l1FhWIfDF6TsCqw0I0FsT",
+      "id" : "6l1FhWIfDF6TsCqw0I0FsT",
       "is_local" : false,
       "is_playable" : true,
-      "name" : "Ghosts N Goblins",
-      "popularity" : 22,
-      "preview_url" : "https://p.scdn.co/mp3-preview/0b6f391d60ce78355246e33a039475c29333bb9c?cid=3255eb67936e45f2b8c8da7d271abf56",
-      "track_number" : 5,
+      "name" : "Erase Me (Mixed)",
+      "popularity" : 42,
+      "preview_url" : "https://p.scdn.co/mp3-preview/e8bf4f8f94fc53e9558c4dc016c03e821533aa33?cid=3255eb67936e45f2b8c8da7d271abf56",
+      "track_number" : 22,
       "type" : "track",
-      "uri" : "spotify:track:0qSXoNHcm1sn9kWcAG7WCx"
+      "uri" : "spotify:track:6l1FhWIfDF6TsCqw0I0FsT"
     }, {
       "album" : {
         "album_type" : "album",
         "artists" : [ {
           "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/3xYrOi4vfqlqAHYdwtLKhq"
+            "spotify" : "https://open.spotify.com/artist/2Kx7MNY7cI1ENniW7vT30N"
           },
-          "href" : "https://api.spotify.com/v1/artists/3xYrOi4vfqlqAHYdwtLKhq",
-          "id" : "3xYrOi4vfqlqAHYdwtLKhq",
-          "name" : "T-2003",
+          "href" : "https://api.spotify.com/v1/artists/2Kx7MNY7cI1ENniW7vT30N",
+          "id" : "2Kx7MNY7cI1ENniW7vT30N",
+          "name" : "Norah Jones",
           "type" : "artist",
-          "uri" : "spotify:artist:3xYrOi4vfqlqAHYdwtLKhq"
+          "uri" : "spotify:artist:2Kx7MNY7cI1ENniW7vT30N"
         } ],
         "external_urls" : {
-          "spotify" : "https://open.spotify.com/album/6noFgZZSEzFe2ZFGf4POdb"
+          "spotify" : "https://open.spotify.com/album/3ul9GmXlTkmRMh3OciXxFR"
         },
-        "href" : "https://api.spotify.com/v1/albums/6noFgZZSEzFe2ZFGf4POdb",
-        "id" : "6noFgZZSEzFe2ZFGf4POdb",
+        "href" : "https://api.spotify.com/v1/albums/3ul9GmXlTkmRMh3OciXxFR",
+        "id" : "3ul9GmXlTkmRMh3OciXxFR",
         "images" : [ {
           "height" : 640,
-          "url" : "https://i.scdn.co/image/ab67616d0000b2739f53095955a50571edeff2b3",
+          "url" : "https://i.scdn.co/image/ab67616d0000b273f029ff168b1abcfc766c8e8c",
           "width" : 640
         }, {
           "height" : 300,
-          "url" : "https://i.scdn.co/image/ab67616d00001e029f53095955a50571edeff2b3",
+          "url" : "https://i.scdn.co/image/ab67616d00001e02f029ff168b1abcfc766c8e8c",
           "width" : 300
         }, {
           "height" : 64,
-          "url" : "https://i.scdn.co/image/ab67616d000048519f53095955a50571edeff2b3",
+          "url" : "https://i.scdn.co/image/ab67616d00004851f029ff168b1abcfc766c8e8c",
           "width" : 64
         } ],
         "is_playable" : true,
-        "name" : "The Lost Tapes of T-2003",
-        "release_date" : "2023-11-19",
+        "name" : "Come Away With Me (Remastered 2022)",
+        "release_date" : "2002-02-26",
         "release_date_precision" : "day",
         "total_tracks" : 14,
         "type" : "album",
-        "uri" : "spotify:album:6noFgZZSEzFe2ZFGf4POdb"
+        "uri" : "spotify:album:3ul9GmXlTkmRMh3OciXxFR"
       },
       "artists" : [ {
         "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/3xYrOi4vfqlqAHYdwtLKhq"
+          "spotify" : "https://open.spotify.com/artist/2Kx7MNY7cI1ENniW7vT30N"
         },
-        "href" : "https://api.spotify.com/v1/artists/3xYrOi4vfqlqAHYdwtLKhq",
-        "id" : "3xYrOi4vfqlqAHYdwtLKhq",
-        "name" : "T-2003",
+        "href" : "https://api.spotify.com/v1/artists/2Kx7MNY7cI1ENniW7vT30N",
+        "id" : "2Kx7MNY7cI1ENniW7vT30N",
+        "name" : "Norah Jones",
         "type" : "artist",
-        "uri" : "spotify:artist:3xYrOi4vfqlqAHYdwtLKhq"
+        "uri" : "spotify:artist:2Kx7MNY7cI1ENniW7vT30N"
       } ],
       "disc_number" : 1,
-      "duration_ms" : 156038,
+      "duration_ms" : 145413,
       "explicit" : false,
       "external_ids" : {
-        "isrc" : "QZTBD2387801"
+        "isrc" : "USBN20100877"
       },
       "external_urls" : {
-        "spotify" : "https://open.spotify.com/track/4tptc6tj9GxPhhSR6UA8QP"
+        "spotify" : "https://open.spotify.com/track/3B26XqOpSrxKSPKWJCVlwF"
       },
-      "href" : "https://api.spotify.com/v1/tracks/4tptc6tj9GxPhhSR6UA8QP",
-      "id" : "4tptc6tj9GxPhhSR6UA8QP",
+      "href" : "https://api.spotify.com/v1/tracks/3B26XqOpSrxKSPKWJCVlwF",
+      "id" : "3B26XqOpSrxKSPKWJCVlwF",
       "is_local" : false,
       "is_playable" : true,
-      "name" : "2003 Homie",
-      "popularity" : 0,
-      "preview_url" : "https://p.scdn.co/mp3-preview/b79f090a079602d1d296f1277e0c642fdc31094d?cid=3255eb67936e45f2b8c8da7d271abf56",
-      "track_number" : 11,
+      "name" : "Seven Years",
+      "popularity" : 37,
+      "preview_url" : null,
+      "track_number" : 2,
       "type" : "track",
-      "uri" : "spotify:track:4tptc6tj9GxPhhSR6UA8QP"
-    }, {
-      "album" : {
-        "album_type" : "album",
-        "artists" : [ {
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/6JMGrupbzJZ3yuQhTGyeHr"
-          },
-          "href" : "https://api.spotify.com/v1/artists/6JMGrupbzJZ3yuQhTGyeHr",
-          "id" : "6JMGrupbzJZ3yuQhTGyeHr",
-          "name" : "Year 200X",
-          "type" : "artist",
-          "uri" : "spotify:artist:6JMGrupbzJZ3yuQhTGyeHr"
-        } ],
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/album/6nUwQK1xQulhHslB6A8qjQ"
-        },
-        "href" : "https://api.spotify.com/v1/albums/6nUwQK1xQulhHslB6A8qjQ",
-        "id" : "6nUwQK1xQulhHslB6A8qjQ",
-        "images" : [ {
-          "height" : 640,
-          "url" : "https://i.scdn.co/image/ab67616d0000b2736657927418fe0aee0ea4d05c",
-          "width" : 640
-        }, {
-          "height" : 300,
-          "url" : "https://i.scdn.co/image/ab67616d00001e026657927418fe0aee0ea4d05c",
-          "width" : 300
-        }, {
-          "height" : 64,
-          "url" : "https://i.scdn.co/image/ab67616d000048516657927418fe0aee0ea4d05c",
-          "width" : 64
-        } ],
-        "is_playable" : true,
-        "name" : "We Are Error",
-        "release_date" : "2013-11-28",
-        "release_date_precision" : "day",
-        "total_tracks" : 13,
-        "type" : "album",
-        "uri" : "spotify:album:6nUwQK1xQulhHslB6A8qjQ"
-      },
-      "artists" : [ {
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/6JMGrupbzJZ3yuQhTGyeHr"
-        },
-        "href" : "https://api.spotify.com/v1/artists/6JMGrupbzJZ3yuQhTGyeHr",
-        "id" : "6JMGrupbzJZ3yuQhTGyeHr",
-        "name" : "Year 200X",
-        "type" : "artist",
-        "uri" : "spotify:artist:6JMGrupbzJZ3yuQhTGyeHr"
-      } ],
-      "disc_number" : 1,
-      "duration_ms" : 97480,
-      "explicit" : false,
-      "external_ids" : {
-        "isrc" : "USE830910952"
-      },
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/track/4Y2mJptbsUs60BACcmqTZc"
-      },
-      "href" : "https://api.spotify.com/v1/tracks/4Y2mJptbsUs60BACcmqTZc",
-      "id" : "4Y2mJptbsUs60BACcmqTZc",
-      "is_local" : false,
-      "is_playable" : true,
-      "name" : "Mega Man 2 (title)",
-      "popularity" : 18,
-      "preview_url" : "https://p.scdn.co/mp3-preview/d419ffc3b2e1d80de106d068f338f5599f46318a?cid=3255eb67936e45f2b8c8da7d271abf56",
-      "track_number" : 12,
-      "type" : "track",
-      "uri" : "spotify:track:4Y2mJptbsUs60BACcmqTZc"
-    }, {
-      "album" : {
-        "album_type" : "single",
-        "artists" : [ {
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/10ToHaO3orFcPsvvHEhtq2"
-          },
-          "href" : "https://api.spotify.com/v1/artists/10ToHaO3orFcPsvvHEhtq2",
-          "id" : "10ToHaO3orFcPsvvHEhtq2",
-          "name" : "theyunglavish",
-          "type" : "artist",
-          "uri" : "spotify:artist:10ToHaO3orFcPsvvHEhtq2"
-        }, {
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/2AlvD10y94P9hsFPqDn9od"
-          },
-          "href" : "https://api.spotify.com/v1/artists/2AlvD10y94P9hsFPqDn9od",
-          "id" : "2AlvD10y94P9hsFPqDn9od",
-          "name" : "MV-Beats",
-          "type" : "artist",
-          "uri" : "spotify:artist:2AlvD10y94P9hsFPqDn9od"
-        } ],
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/album/25kvig6iXGDYAKH85MLk2S"
-        },
-        "href" : "https://api.spotify.com/v1/albums/25kvig6iXGDYAKH85MLk2S",
-        "id" : "25kvig6iXGDYAKH85MLk2S",
-        "images" : [ {
-          "height" : 640,
-          "url" : "https://i.scdn.co/image/ab67616d0000b273166c5d569c305b9e5ba5c395",
-          "width" : 640
-        }, {
-          "height" : 300,
-          "url" : "https://i.scdn.co/image/ab67616d00001e02166c5d569c305b9e5ba5c395",
-          "width" : 300
-        }, {
-          "height" : 64,
-          "url" : "https://i.scdn.co/image/ab67616d00004851166c5d569c305b9e5ba5c395",
-          "width" : 64
-        } ],
-        "is_playable" : true,
-        "name" : "2003",
-        "release_date" : "2023-10-06",
-        "release_date_precision" : "day",
-        "total_tracks" : 1,
-        "type" : "album",
-        "uri" : "spotify:album:25kvig6iXGDYAKH85MLk2S"
-      },
-      "artists" : [ {
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/10ToHaO3orFcPsvvHEhtq2"
-        },
-        "href" : "https://api.spotify.com/v1/artists/10ToHaO3orFcPsvvHEhtq2",
-        "id" : "10ToHaO3orFcPsvvHEhtq2",
-        "name" : "theyunglavish",
-        "type" : "artist",
-        "uri" : "spotify:artist:10ToHaO3orFcPsvvHEhtq2"
-      }, {
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/2AlvD10y94P9hsFPqDn9od"
-        },
-        "href" : "https://api.spotify.com/v1/artists/2AlvD10y94P9hsFPqDn9od",
-        "id" : "2AlvD10y94P9hsFPqDn9od",
-        "name" : "MV-Beats",
-        "type" : "artist",
-        "uri" : "spotify:artist:2AlvD10y94P9hsFPqDn9od"
-      } ],
-      "disc_number" : 1,
-      "duration_ms" : 117139,
-      "explicit" : false,
-      "external_ids" : {
-        "isrc" : "DEZC62372357"
-      },
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/track/0aZDC9Zup1g1ghDbf3R6kZ"
-      },
-      "href" : "https://api.spotify.com/v1/tracks/0aZDC9Zup1g1ghDbf3R6kZ",
-      "id" : "0aZDC9Zup1g1ghDbf3R6kZ",
-      "is_local" : false,
-      "is_playable" : true,
-      "name" : "2003",
-      "popularity" : 1,
-      "preview_url" : "https://p.scdn.co/mp3-preview/2b88d1d2e57f7275e280e2588b158d28b8b15598?cid=3255eb67936e45f2b8c8da7d271abf56",
-      "track_number" : 1,
-      "type" : "track",
-      "uri" : "spotify:track:0aZDC9Zup1g1ghDbf3R6kZ"
-    }, {
-      "album" : {
-        "album_type" : "album",
-        "artists" : [ {
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/6JMGrupbzJZ3yuQhTGyeHr"
-          },
-          "href" : "https://api.spotify.com/v1/artists/6JMGrupbzJZ3yuQhTGyeHr",
-          "id" : "6JMGrupbzJZ3yuQhTGyeHr",
-          "name" : "Year 200X",
-          "type" : "artist",
-          "uri" : "spotify:artist:6JMGrupbzJZ3yuQhTGyeHr"
-        } ],
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/album/6nUwQK1xQulhHslB6A8qjQ"
-        },
-        "href" : "https://api.spotify.com/v1/albums/6nUwQK1xQulhHslB6A8qjQ",
-        "id" : "6nUwQK1xQulhHslB6A8qjQ",
-        "images" : [ {
-          "height" : 640,
-          "url" : "https://i.scdn.co/image/ab67616d0000b2736657927418fe0aee0ea4d05c",
-          "width" : 640
-        }, {
-          "height" : 300,
-          "url" : "https://i.scdn.co/image/ab67616d00001e026657927418fe0aee0ea4d05c",
-          "width" : 300
-        }, {
-          "height" : 64,
-          "url" : "https://i.scdn.co/image/ab67616d000048516657927418fe0aee0ea4d05c",
-          "width" : 64
-        } ],
-        "is_playable" : true,
-        "name" : "We Are Error",
-        "release_date" : "2013-11-28",
-        "release_date_precision" : "day",
-        "total_tracks" : 13,
-        "type" : "album",
-        "uri" : "spotify:album:6nUwQK1xQulhHslB6A8qjQ"
-      },
-      "artists" : [ {
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/6JMGrupbzJZ3yuQhTGyeHr"
-        },
-        "href" : "https://api.spotify.com/v1/artists/6JMGrupbzJZ3yuQhTGyeHr",
-        "id" : "6JMGrupbzJZ3yuQhTGyeHr",
-        "name" : "Year 200X",
-        "type" : "artist",
-        "uri" : "spotify:artist:6JMGrupbzJZ3yuQhTGyeHr"
-      } ],
-      "disc_number" : 1,
-      "duration_ms" : 114000,
-      "explicit" : false,
-      "external_ids" : {
-        "isrc" : "USE830910948"
-      },
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/track/2HUMceEhjkJoOfn7UsomyX"
-      },
-      "href" : "https://api.spotify.com/v1/tracks/2HUMceEhjkJoOfn7UsomyX",
-      "id" : "2HUMceEhjkJoOfn7UsomyX",
-      "is_local" : false,
-      "is_playable" : true,
-      "name" : "Castlevania III (the Beginning)",
-      "popularity" : 21,
-      "preview_url" : "https://p.scdn.co/mp3-preview/9c240a730f8ba1c7ecacdae426af0fe065476131?cid=3255eb67936e45f2b8c8da7d271abf56",
-      "track_number" : 8,
-      "type" : "track",
-      "uri" : "spotify:track:2HUMceEhjkJoOfn7UsomyX"
-    }, {
-      "album" : {
-        "album_type" : "single",
-        "artists" : [ {
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/6FYMANNdpYv2Y9prysxwCW"
-          },
-          "href" : "https://api.spotify.com/v1/artists/6FYMANNdpYv2Y9prysxwCW",
-          "id" : "6FYMANNdpYv2Y9prysxwCW",
-          "name" : "2003 Toyota Corolla",
-          "type" : "artist",
-          "uri" : "spotify:artist:6FYMANNdpYv2Y9prysxwCW"
-        }, {
-          "external_urls" : {
-            "spotify" : "https://open.spotify.com/artist/3sQcTUb3kuHFAJ8h79iv90"
-          },
-          "href" : "https://api.spotify.com/v1/artists/3sQcTUb3kuHFAJ8h79iv90",
-          "id" : "3sQcTUb3kuHFAJ8h79iv90",
-          "name" : "Terexxa",
-          "type" : "artist",
-          "uri" : "spotify:artist:3sQcTUb3kuHFAJ8h79iv90"
-        } ],
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/album/4GH55v1PxUy7sgeraySkSc"
-        },
-        "href" : "https://api.spotify.com/v1/albums/4GH55v1PxUy7sgeraySkSc",
-        "id" : "4GH55v1PxUy7sgeraySkSc",
-        "images" : [ {
-          "height" : 640,
-          "url" : "https://i.scdn.co/image/ab67616d0000b273acb99b426bd64852d43b1770",
-          "width" : 640
-        }, {
-          "height" : 300,
-          "url" : "https://i.scdn.co/image/ab67616d00001e02acb99b426bd64852d43b1770",
-          "width" : 300
-        }, {
-          "height" : 64,
-          "url" : "https://i.scdn.co/image/ab67616d00004851acb99b426bd64852d43b1770",
-          "width" : 64
-        } ],
-        "is_playable" : true,
-        "name" : "2003 Toyota Corolla (Terexxa Remix)",
-        "release_date" : "2023-05-03",
-        "release_date_precision" : "day",
-        "total_tracks" : 1,
-        "type" : "album",
-        "uri" : "spotify:album:4GH55v1PxUy7sgeraySkSc"
-      },
-      "artists" : [ {
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/6FYMANNdpYv2Y9prysxwCW"
-        },
-        "href" : "https://api.spotify.com/v1/artists/6FYMANNdpYv2Y9prysxwCW",
-        "id" : "6FYMANNdpYv2Y9prysxwCW",
-        "name" : "2003 Toyota Corolla",
-        "type" : "artist",
-        "uri" : "spotify:artist:6FYMANNdpYv2Y9prysxwCW"
-      }, {
-        "external_urls" : {
-          "spotify" : "https://open.spotify.com/artist/3sQcTUb3kuHFAJ8h79iv90"
-        },
-        "href" : "https://api.spotify.com/v1/artists/3sQcTUb3kuHFAJ8h79iv90",
-        "id" : "3sQcTUb3kuHFAJ8h79iv90",
-        "name" : "Terexxa",
-        "type" : "artist",
-        "uri" : "spotify:artist:3sQcTUb3kuHFAJ8h79iv90"
-      } ],
-      "disc_number" : 1,
-      "duration_ms" : 266888,
-      "explicit" : false,
-      "external_ids" : {
-        "isrc" : "QZNW72386379"
-      },
-      "external_urls" : {
-        "spotify" : "https://open.spotify.com/track/6EEmhEMYrcspcQoR86rVVp"
-      },
-      "href" : "https://api.spotify.com/v1/tracks/6EEmhEMYrcspcQoR86rVVp",
-      "id" : "6EEmhEMYrcspcQoR86rVVp",
-      "is_local" : false,
-      "is_playable" : true,
-      "name" : "2003 Toyota Corolla - Terexxa Remix",
-      "popularity" : 6,
-      "preview_url" : "https://p.scdn.co/mp3-preview/4538febe54fa43c325d2aa57978252fdc5d2e2cd?cid=3255eb67936e45f2b8c8da7d271abf56",
-      "track_number" : 1,
-      "type" : "track",
-      "uri" : "spotify:track:6EEmhEMYrcspcQoR86rVVp"
+      "uri" : "spotify:track:3B26XqOpSrxKSPKWJCVlwF"
     } ],
     "limit" : 10,
-    "next" : "https://api.spotify.com/v1/search?query=year%3A+2003&type=track&include_external=audio&market=SA&offset=10&limit=10",
+    "next" : "https://api.spotify.com/v1/search?query=year%3A+2022&type=track&include_external=audio&market=SA&offset=10&limit=10",
     "offset" : 0,
     "previous" : null,
     "total" : 1000

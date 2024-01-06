@@ -14,15 +14,29 @@ using System.Net.Http;
 using static System.Net.WebRequestMethods;
 using System.Runtime.CompilerServices;
 using System.Data.SqlTypes;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System.Diagnostics.PerformanceData;
+using System.Net.NetworkInformation;
 
 namespace music
 {
     public partial class Mainmenu : Form
     {
-        public static string filepath = "songslist.txt";//change path on your computer
         public static bool maximise, options, about, year = false;
-        public static int iyear;
-        public static string URL;
+        public static int iyear;    
+        public static getsong[,] Songs = new getsong[20, 1];
+        public static List<getsong> songsList = new List<getsong>();
+
+        public class getsong
+        {
+            public string Image { get; set; }
+            public string Artist { get; set; }
+            public string Track { get; set; }
+            public string PreviewLink { get; set; }
+        }
+
+
         public Mainmenu()
         {
             Login login = new Login();
@@ -106,8 +120,6 @@ namespace music
             this.WindowState = FormWindowState.Minimized;
         }
 
-    
-
         private void btnYear_Click(object sender, EventArgs e)
         {
             year = !year;
@@ -129,9 +141,13 @@ namespace music
             btnanswer.Enabled = true;
             btnstart.Enabled = false;
             btnstart.Visible = false;
+
+
         }
 
-        private void btnconfirmyear_Click(object sender, EventArgs e)
+      
+
+        private async void btnconfirmyear_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
           
@@ -160,18 +176,27 @@ namespace music
             //spotify access token collected on login
             string accesstoken = Login.accesstoken;
             
-            string apiURL = "https://api.spotify.com/v1/search?q=year%3A+"+ iyear.ToString() +"&type=track&market=sa&limit=10&include_external=audio";
+            string apiURL = "https://api.spotify.com/v1/search?q=year%3A+"+ iyear.ToString() +"&type=track&market=sa&limit=20&include_external=audio";
 
-
-            //  webView21.Source = new Uri("https://p.scdn.co/mp3-preview/80df2f56d0948b2c6d189de331dea8233582adaa?cid=60d4b70f0fff4bcc80d879385c17df64");
-
-            songs(accesstoken, apiURL);
+            await songs(accesstoken, apiURL);
 
             pnlgame.Visible=true;
             pnlgame.BringToFront();
+            StringBuilder sb = new StringBuilder();
+            txttest.Clear();
 
+            foreach (var currentSong in songsList)
+            {
+                sb.AppendLine($"Image: {currentSong.Image}");
+                sb.AppendLine($"Artist: {currentSong.Artist}");
+                sb.AppendLine($"Preview Link: {currentSong.PreviewLink}");
+                sb.AppendLine(); // Add a blank line for separation
+            }
 
-           }
+            // Assuming you have a TextBox named txtSongsList on your form
+            txttest.Text = sb.ToString();
+        }
+
 
 
         static async Task songs(string access, string url)
@@ -189,7 +214,7 @@ namespace music
                 {
                     // Read and print the response content
                     string content = await response.Content.ReadAsStringAsync();
-                    file.WriteToFile(filepath, content);
+                    collectsongs(content);
                 }
                 else
                 {
@@ -199,39 +224,49 @@ namespace music
             }
         }
 
-        class file
-        {
-            public static void WriteToFile(string filepath, string data)
+         private static void collectsongs(string content)
+        {            
+            try
             {
-                try
-                {
-                    // Open the file with FileMode.Truncate to clear its contents
-                    using (FileStream fileStream = new FileStream(filepath, FileMode.Truncate, FileAccess.Write))
-                    {
-                        // Truncate the file, effectively clearing its contents
-                        fileStream.SetLength(0);
-                    }                   
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"An error occurred: {ex.Message}");
-                }
+                songsList.Clear();
+                // Read the JSON content from the file
+                string json = content;
 
-                try
+                // Deserialize the JSON data
+                var data = JsonConvert.DeserializeObject<JObject>(json);
+
+                // Access the relevant information
+                JArray items = data["tracks"]["items"] as JArray;             
+
+                for (int i = 0; i < items.Count; i++)
                 {
-                    using (StreamWriter file = System.IO.File.AppendText(filepath))
-                    {                           
-                        file.Write(data);                        
-                    }
-                }
-                catch (IOException e)
-                {
-                    MessageBox.Show("Error: " + e.Message);
-                }
+                    // Extract image, artist, and preview link
+                    string image = items[i]["album"]["images"][0]["url"].ToString();
+                    string artist = items[i]["artists"][0]["name"].ToString();
+                  //  string trackName = items["name"].ToString(); find a way to make it work 
+                    string previewLink = items[i]["preview_url"].ToString();
+
+                    // Create a Song object and add it to the list
+                    getsong song = new getsong
+                    {
+                        Image = image,
+                        Artist = artist,
+                     //   Track = trackName,
+                        PreviewLink = previewLink
+                    };
+
+                    songsList.Add(song);
+                }           
+                
             }
-        }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+         }
 
     }
+
 
     
 }
