@@ -19,14 +19,20 @@ using Newtonsoft.Json;
 using System.Diagnostics.PerformanceData;
 using System.Net.NetworkInformation;
 using System.Threading;
+using System.Drawing.Imaging;
+using Accord.Imaging.Filters;
+
+
+
 
 
 namespace music
 {
     public partial class Mainmenu : Form
     {
-        public static bool maximise, options, about, year = false;
-        public static int iyear, iscore;    
+        public static bool maximise, options, about, year,genre = false;
+        public static int iyear, iscore;
+        public static string sgenre;
         public static getsong[,] Songs = new getsong[20, 1];
         public static List<getsong> songsList = new List<getsong>();
         private System.Timers.Timer quizTimer;
@@ -48,8 +54,9 @@ namespace music
             login.ShowDialog();
             this.Hide();
             InitializeComponent();
+            pnlfinal.Visible = false;
             quizTimer = new System.Timers.Timer();
-            quizTimer.Interval = 1000; 
+            quizTimer.Interval = 1000;
             quizTimer.Elapsed += QuizTimerElapsed;
             elapsedTimeInSeconds = 0;
         }
@@ -129,11 +136,9 @@ namespace music
                 Pnlabout.BringToFront();
                 Pnlabout.Visible = true;
                 year = false;
+                genre = false;
             }
-            else
-            {
-                Pnlabout.Visible = false;
-            }
+           
         }
 
         private void btnmin_Click(object sender, EventArgs e)
@@ -149,15 +154,13 @@ namespace music
                 pnlYear.BringToFront();
                 pnlYear.Visible = true;
                 about = false;
+                genre=false;
             }
-            else
-            {
-                pnlYear.Visible = false;
-            }
+      
 
         }
 
-        public void SelectRandomSongs()
+        public async void SelectRandomSongs()
         {
             Random random = new Random();
 
@@ -177,14 +180,18 @@ namespace music
 
             // Now 'randomSongs' contains 10 randomly selected songs from 'songsList'
             // You can use this list as needed.
-            startquiz(randomSongs);
+           await startquiz(randomSongs);
 
         }
 
-        public async void startquiz(List<getsong> randomsongs)
+        public async Task startquiz(List<getsong> randomsongs)
         {
+            btnnext.Enabled = false;
+            btnnext.Visible = false;
             var buttonanswer = new TaskCompletionSource<bool>();
+            elapsedTimeInSeconds = 0;
             quizTimer.Start();
+            
             // Attach an event handler to the button's click event
             EventHandler buttonClickHandler = (s, args) => buttonanswer.TrySetResult(true);
             btnanswer.Click += buttonClickHandler;
@@ -193,14 +200,29 @@ namespace music
             int[] pos = new int[4];
             int icount = 1;
             iscore = 0;
-            updatecontrols(icount,"" , randomsongs.Count);
+            updatecontrols(icount,"", randomsongs.Count);
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("incase you want any of the songs in the quiz here is the list.\nAll images and song previews were supplied but spotify.");
+            sb.AppendLine();
 
             foreach (getsong songs in randomsongs)
             {
+                sb.AppendLine($"Artist: {songs.Artist}");
+                sb.AppendLine($"song: {songs.track}");
+                sb.AppendLine();
+
+                HttpClient httpClient = new HttpClient();
                 icount++;
                
                 webplayer.Source = new Uri(songs.PreviewLink);
-                testtxt2.Text = songs.Artist;
+
+                Bitmap pixelatedImage = ApplyPixelateEffect(songs.Image, 20);
+                if (pixelatedImage != null)
+                {
+                    pictureBox1.Image = pixelatedImage;
+                    pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                }       
                 
 
                 List<getsong> otherSongs = randomsongs.Where(song => song != songs).ToList();
@@ -252,20 +274,56 @@ namespace music
                            
                             break;
                     }
-                }
-
-             
-
-
+                }                 
                 await buttonanswer.Task;                        //keep these together 
                 buttonanswer = new TaskCompletionSource<bool>();//
                 updatecontrols(icount, songs.Artist, randomsongs.Count);
+               
+               webplayer.Stop();
             }
 
             btnanswer.Click -= buttonClickHandler;
             quizTimer.Stop();
+            
+            btnnext.Visible = true;
+            btnnext.Enabled = true;      
+            
+            rtxtsong.Text = sb.ToString();
+
+            
         }
 
+        private Bitmap ApplyPixelateEffect(string imageUrl, int pixelationLevel)
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    byte[] imageData = client.GetByteArrayAsync(imageUrl).Result;
+
+                    using (MemoryStream memoryStream = new MemoryStream(imageData))
+                    {
+                        Bitmap originalImage = new Bitmap(memoryStream);
+
+                        int newWidth = originalImage.Width / pixelationLevel;
+                        int newHeight = originalImage.Height / pixelationLevel;
+
+                        // Create a Pixellate filter with the desired grid size
+                        Pixellate pixellateFilter = new Pixellate(pixelationLevel);
+
+                        // Apply the filter to the original image
+                        Bitmap pixelatedImage = pixellateFilter.Apply(originalImage);
+
+                        return pixelatedImage;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error downloading or processing image: {ex.Message}");
+                return null;
+            }
+        }
 
         private void updatecontrols(int icount, string artist, int songcount)
         {
@@ -289,65 +347,73 @@ namespace music
 
         }
 
-        public void writetorich()
+        private async void btncongenre_Click(object sender, EventArgs e)
         {
-
-            StringBuilder sb = new StringBuilder();
-
-            testtxt.Clear();
-            foreach (var currentSong in songsList)
+            switch (true)
             {
-                sb.AppendLine($"Image: {currentSong.Image}");
-                sb.AppendLine($"Artist: {currentSong.Artist}");
-                sb.AppendLine($"song: {currentSong.track}");
-                sb.AppendLine($"Preview Link: {currentSong.PreviewLink}");
-                sb.AppendLine();
-            }           
-            testtxt.Text = sb.ToString();
-        } 
-
-        private bool IsHyperlinkSelected(int selectionStart, int selectionLength)
-        {
-            // You can implement your logic to determine if the selected text is within a hyperlink.
-            // This might involve checking the formatting or any other criteria based on your application.
-
-            // For demonstration purposes, let's assume that a hyperlink is denoted by square brackets.
-            string text = testtxt.Text.Substring(selectionStart, selectionLength);
-            return text.Contains("[") && text.Contains("]");
-        }
-
-        private void testtxt_DoubleClick(object sender, EventArgs e)
-        {
-
-            int selectionStart = testtxt.SelectionStart;
-            int selectionLength = testtxt.SelectionLength;
-
-            
-            if (selectionLength > 0)
-            {
-                string selectedText = testtxt.Text.Substring(selectionStart, selectionLength);
-
-                if (IsHyperlinkSelected(selectionStart, selectionLength))
-                {
-                    webplayer.Source = new Uri(selectedText);
-                }
-                else
-                {                   
-                    webplayer.Source = new Uri(selectedText);
-                }
-
+                case var _ when rrock.Checked:
+                    sgenre= "rock";
+                    break;
+                case var _ when rclassical.Checked:
+                    sgenre = "classical";
+                    break;
+                case var _ when rcountry.Checked:
+                    sgenre = "country";
+                    break;
+                case var _ when rjazz.Checked:
+                    sgenre = "jazz";
+                    break;
+                case var _ when rpop.Checked:
+                    sgenre = "pop";
+                    break;
+                default:
+                 
+                    break;
             }
+
+            //spotify access token collected on login
+            string accesstoken = Login.accesstoken;
+
+            string apiURL = "https://api.spotify.com/v1/search?q=genre%3A"+sgenre+"&type=track%2Cartist&market=sa&limit=20&include_external=audio";
+            
+
+            await songs(accesstoken, apiURL);
+
+            pnlgame.Visible = true;
+            pnlgame.BringToFront();
+
+            songsList.RemoveAll(song => string.IsNullOrEmpty(song.PreviewLink) || songsList.Any(other => other != song && other.PreviewLink == song.PreviewLink));//remove duplicates via link and remove songs without a link 
+            SelectRandomSongs();
         }
 
-        private void btnanswer_Click(object sender, EventArgs e)
+        private void btnnext_Click(object sender, EventArgs e)
         {
-
+            webplayer.Source = new Uri("about:blank");
+            pnlfinal.Visible = true;
+            pnlfinal.BringToFront();
+            lblfinalscore.Text = iscore.ToString();
+            lblfinaltime.Text = lbltime.Text;                      
         }
 
+        private void btngenre_Click(object sender, EventArgs e)
+        {
+            rrock.Checked = true;
+            genre = !genre;
+            if (genre == true)
+            {
+                pnlgenre.BringToFront();
+                pnlgenre.Visible = true;
+                about = false;
+                year = false;
+            }
+           
+           
+
+        }
 
         private async void btnconfirmyear_Click(object sender, EventArgs e)
         {
-            Random rnd = new Random();
+           Random rnd = new Random();
           
             switch (true)
             {
@@ -383,10 +449,8 @@ namespace music
 
             songsList.RemoveAll(song => string.IsNullOrEmpty(song.PreviewLink) || songsList.Any(other => other != song && other.PreviewLink == song.PreviewLink));//remove duplicates via link and remove songs without a link 
             SelectRandomSongs();
-            writetorich();
+           
         }
-
-
 
         static async Task songs(string access, string url)
         {
@@ -413,7 +477,7 @@ namespace music
             }
         }
 
-         private static void collectsongs(string content)
+        private static void collectsongs(string content)
         {            
             try
             {
@@ -451,8 +515,5 @@ namespace music
                 Console.WriteLine($"Error: {ex.Message}");
             }
          }
-    }
-
-
-    
+    }    
 }

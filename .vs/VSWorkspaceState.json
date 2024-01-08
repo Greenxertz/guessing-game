@@ -1,16 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\obj",
-    "\\obj\\Debug",
-    "\\obj\\Release",
-    "\\packages",
-    "\\packages\\FontAwesome.4.7.0",
-    "\\packages\\FontAwesome.4.7.0\\Content",
-    "\\packages\\FontAwesome.4.7.0\\Content\\Content",
-    "\\packages\\FontAwesome.4.7.0\\Content\\fonts",
-    "\\packages\\FontAwesome.4.7.0\\tools"
+    ""
   ],
-  "SelectedNode": "\\music.sln",
   "PreviewInSolutionExplorer": false
 }

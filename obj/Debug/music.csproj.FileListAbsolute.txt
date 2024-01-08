@@ -32,3 +32,14 @@ D:\github-repo\guessing-game\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
 D:\github-repo\guessing-game\bin\Debug\Microsoft.Web.WebView2.Core.xml
 D:\github-repo\guessing-game\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
 D:\github-repo\guessing-game\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
+D:\github-repo\guessing-game\bin\Debug\Accord.dll.config
+D:\github-repo\guessing-game\bin\Debug\Accord.dll
+D:\github-repo\guessing-game\bin\Debug\Accord.Imaging.dll
+D:\github-repo\guessing-game\bin\Debug\Accord.Math.Core.dll
+D:\github-repo\guessing-game\bin\Debug\Accord.Math.dll
+D:\github-repo\guessing-game\bin\Debug\Accord.Statistics.dll
+D:\github-repo\guessing-game\bin\Debug\Accord.xml
+D:\github-repo\guessing-game\bin\Debug\Accord.Imaging.xml
+D:\github-repo\guessing-game\bin\Debug\Accord.Math.xml
+D:\github-repo\guessing-game\bin\Debug\Accord.Math.Core.xml
+D:\github-repo\guessing-game\bin\Debug\Accord.Statistics.xml
