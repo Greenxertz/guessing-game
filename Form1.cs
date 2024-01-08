@@ -18,21 +18,26 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Diagnostics.PerformanceData;
 using System.Net.NetworkInformation;
+using System.Threading;
+
 
 namespace music
 {
     public partial class Mainmenu : Form
     {
         public static bool maximise, options, about, year = false;
-        public static int iyear;    
+        public static int iyear, iscore;    
         public static getsong[,] Songs = new getsong[20, 1];
         public static List<getsong> songsList = new List<getsong>();
-
+        private System.Timers.Timer quizTimer;
+        private int elapsedTimeInSeconds;
+        
+       
         public class getsong
         {
             public string Image { get; set; }
             public string Artist { get; set; }
-            public string Track { get; set; }
+            public string track { get; set; }
             public string PreviewLink { get; set; }
         }
 
@@ -43,8 +48,24 @@ namespace music
             login.ShowDialog();
             this.Hide();
             InitializeComponent();
-            
+            quizTimer = new System.Timers.Timer();
+            quizTimer.Interval = 1000; 
+            quizTimer.Elapsed += QuizTimerElapsed;
+            elapsedTimeInSeconds = 0;
+        }
 
+        private void QuizTimerElapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            // Update the elapsed time (in seconds)
+            elapsedTimeInSeconds++;
+            int minutes = elapsedTimeInSeconds / 60;
+            int seconds = elapsedTimeInSeconds % 60;
+
+            this.Invoke((MethodInvoker)delegate
+            {
+                // Update a label or any other UI element to display the elapsed time
+                lbltime.Text = $"{minutes:D2}:{seconds:D2}";
+            });
         }
 
         private void toggleButton1_CheckedChanged(object sender, EventArgs e)
@@ -136,16 +157,193 @@ namespace music
 
         }
 
-        private void btnstart_Click(object sender, EventArgs e)
+        public void SelectRandomSongs()
         {
-            btnanswer.Enabled = true;
-            btnstart.Enabled = false;
-            btnstart.Visible = false;
+            Random random = new Random();
 
+            // Shuffle the songsList using Fisher-Yates algorithm
+            int n = songsList.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = random.Next(n + 1);
+                var value = songsList[k];
+                songsList[k] = songsList[n];
+                songsList[n] = value;
+            }
+
+            // Take the first 10 elements as random songs
+            List<getsong> randomSongs = songsList.Take(10).ToList();
+
+            // Now 'randomSongs' contains 10 randomly selected songs from 'songsList'
+            // You can use this list as needed.
+            startquiz(randomSongs);
 
         }
 
-      
+        public async void startquiz(List<getsong> randomsongs)
+        {
+            var buttonanswer = new TaskCompletionSource<bool>();
+            quizTimer.Start();
+            // Attach an event handler to the button's click event
+            EventHandler buttonClickHandler = (s, args) => buttonanswer.TrySetResult(true);
+            btnanswer.Click += buttonClickHandler;
+
+            Random random = new Random();
+            int[] pos = new int[4];
+            int icount = 1;
+            iscore = 0;
+            updatecontrols(icount,"" , randomsongs.Count);
+
+            foreach (getsong songs in randomsongs)
+            {
+                icount++;
+               
+                webplayer.Source = new Uri(songs.PreviewLink);
+                testtxt2.Text = songs.Artist;
+                
+
+                List<getsong> otherSongs = randomsongs.Where(song => song != songs).ToList();
+                List<getsong> selectedSongs = new List<getsong> { songs };
+
+                List<string> allArtists = otherSongs.Select(song => song.Artist).ToList();
+
+                // Shuffle the list of all available artists
+                allArtists = allArtists.OrderBy(artist => random.Next()).ToList();
+
+                // Select the first three unique artists for incorrect answers
+                for (int i = 0; i < 3; i++)
+                {
+                    // Make sure the artist is unique
+                    string uniqueArtist = allArtists.FirstOrDefault(artist => !selectedSongs.Select(selectedSong => selectedSong.Artist).Contains(artist));
+
+                    if (uniqueArtist != null)
+                    {
+                        // Add the song with the unique artist to the selectedSongs list
+                        selectedSongs.Add(otherSongs.First(song => song.Artist == uniqueArtist));
+                    }
+                    else
+                    {
+                        throw new Exception(uniqueArtist + " produced to many songs in quiz", new ArgumentException("Duplicate artist names in quiz."));
+                    }
+                }
+
+                // Shuffle the selected songs
+                selectedSongs = selectedSongs.OrderBy(song => random.Next()).ToList();
+
+                // Loop through the positions and assign the artist to the corresponding radio button
+                for (int i = 0; i < selectedSongs.Count; i++)
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            rans1.Text = selectedSongs[i].Artist;
+                            break;
+                        case 1:
+                            rans2.Text = selectedSongs[i].Artist;
+                            break;
+                        case 2:
+                            rans3.Text = selectedSongs[i].Artist;
+                            break;
+                        case 3:
+                            rans4.Text = selectedSongs[i].Artist;
+                            break;
+                        default:
+                           
+                            break;
+                    }
+                }
+
+             
+
+
+                await buttonanswer.Task;                        //keep these together 
+                buttonanswer = new TaskCompletionSource<bool>();//
+                updatecontrols(icount, songs.Artist, randomsongs.Count);
+            }
+
+            btnanswer.Click -= buttonClickHandler;
+            quizTimer.Stop();
+        }
+
+
+        private void updatecontrols(int icount, string artist, int songcount)
+        {
+            if (lblRound.Text != "Round 10" )
+                lblRound.Text = "Round " + icount.ToString();
+            else
+                lblRound.Text = "Game Done!!!";
+
+            foreach (Control control in grpAns.Controls)
+            {
+               
+                if ( control is RadioButton radiobutton)
+                {
+                    if (radiobutton.Text == artist && radiobutton.Checked)
+                        iscore++;
+                    radiobutton.Checked = false;
+                }
+
+            }
+            lblscore.Text = iscore.ToString() + " / " + songcount.ToString() ;
+
+        }
+
+        public void writetorich()
+        {
+
+            StringBuilder sb = new StringBuilder();
+
+            testtxt.Clear();
+            foreach (var currentSong in songsList)
+            {
+                sb.AppendLine($"Image: {currentSong.Image}");
+                sb.AppendLine($"Artist: {currentSong.Artist}");
+                sb.AppendLine($"song: {currentSong.track}");
+                sb.AppendLine($"Preview Link: {currentSong.PreviewLink}");
+                sb.AppendLine();
+            }           
+            testtxt.Text = sb.ToString();
+        } 
+
+        private bool IsHyperlinkSelected(int selectionStart, int selectionLength)
+        {
+            // You can implement your logic to determine if the selected text is within a hyperlink.
+            // This might involve checking the formatting or any other criteria based on your application.
+
+            // For demonstration purposes, let's assume that a hyperlink is denoted by square brackets.
+            string text = testtxt.Text.Substring(selectionStart, selectionLength);
+            return text.Contains("[") && text.Contains("]");
+        }
+
+        private void testtxt_DoubleClick(object sender, EventArgs e)
+        {
+
+            int selectionStart = testtxt.SelectionStart;
+            int selectionLength = testtxt.SelectionLength;
+
+            
+            if (selectionLength > 0)
+            {
+                string selectedText = testtxt.Text.Substring(selectionStart, selectionLength);
+
+                if (IsHyperlinkSelected(selectionStart, selectionLength))
+                {
+                    webplayer.Source = new Uri(selectedText);
+                }
+                else
+                {                   
+                    webplayer.Source = new Uri(selectedText);
+                }
+
+            }
+        }
+
+        private void btnanswer_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         private async void btnconfirmyear_Click(object sender, EventArgs e)
         {
@@ -182,19 +380,10 @@ namespace music
 
             pnlgame.Visible=true;
             pnlgame.BringToFront();
-            StringBuilder sb = new StringBuilder();
-            txttest.Clear();
 
-            foreach (var currentSong in songsList)
-            {
-                sb.AppendLine($"Image: {currentSong.Image}");
-                sb.AppendLine($"Artist: {currentSong.Artist}");
-                sb.AppendLine($"Preview Link: {currentSong.PreviewLink}");
-                sb.AppendLine(); // Add a blank line for separation
-            }
-
-            // Assuming you have a TextBox named txtSongsList on your form
-            txttest.Text = sb.ToString();
+            songsList.RemoveAll(song => string.IsNullOrEmpty(song.PreviewLink) || songsList.Any(other => other != song && other.PreviewLink == song.PreviewLink));//remove duplicates via link and remove songs without a link 
+            SelectRandomSongs();
+            writetorich();
         }
 
 
@@ -243,7 +432,7 @@ namespace music
                     // Extract image, artist, and preview link
                     string image = items[i]["album"]["images"][0]["url"].ToString();
                     string artist = items[i]["artists"][0]["name"].ToString();
-                  //  string trackName = items["name"].ToString(); find a way to make it work 
+                    string trackName = items[i]["name"].ToString(); 
                     string previewLink = items[i]["preview_url"].ToString();
 
                     // Create a Song object and add it to the list
@@ -251,20 +440,17 @@ namespace music
                     {
                         Image = image,
                         Artist = artist,
-                     //   Track = trackName,
+                        track = trackName,
                         PreviewLink = previewLink
                     };
-
                     songsList.Add(song);
-                }           
-                
+                }   
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
             }
          }
-
     }
 
 

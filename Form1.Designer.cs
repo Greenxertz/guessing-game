@@ -32,6 +32,7 @@
             this.pnlribbon = new System.Windows.Forms.Panel();
             this.pboptions = new System.Windows.Forms.PictureBox();
             this.pnloptions = new System.Windows.Forms.Panel();
+            this.testtxt = new System.Windows.Forms.RichTextBox();
             this.lblDarktheme = new System.Windows.Forms.Label();
             this.Pnlabout = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,15 +41,16 @@
             this.grpYear = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlgame = new System.Windows.Forms.Panel();
-            this.lblRound = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.testtxt2 = new System.Windows.Forms.RichTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.webplayer = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.lblRound = new System.Windows.Forms.Label();
+            this.lbltime = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblscore = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpAns = new System.Windows.Forms.GroupBox();
-            this.btnstart = new MTcontrols.MTbutton.Button();
             this.btnanswer = new MTcontrols.MTbutton.Button();
             this.rans4 = new MTcontrols.MTradio.Radio();
             this.rans2 = new MTcontrols.MTradio.Radio();
@@ -66,7 +68,6 @@
             this.btnmin = new MTcontrols.MTbutton.Button();
             this.btnmax = new MTcontrols.MTbutton.Button();
             this.btnclose = new MTcontrols.MTbutton.Button();
-            this.txttest = new System.Windows.Forms.RichTextBox();
             this.pnlribbon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboptions)).BeginInit();
             this.pnloptions.SuspendLayout();
@@ -74,6 +75,7 @@
             this.pnlYear.SuspendLayout();
             this.grpYear.SuspendLayout();
             this.pnlgame.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webplayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpAns.SuspendLayout();
@@ -107,6 +109,7 @@
             // pnloptions
             // 
             this.pnloptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pnloptions.Controls.Add(this.testtxt);
             this.pnloptions.Controls.Add(this.btnYear);
             this.pnloptions.Controls.Add(this.button1);
             this.pnloptions.Controls.Add(this.lblDarktheme);
@@ -116,6 +119,15 @@
             this.pnloptions.Name = "pnloptions";
             this.pnloptions.Size = new System.Drawing.Size(210, 644);
             this.pnloptions.TabIndex = 4;
+            // 
+            // testtxt
+            // 
+            this.testtxt.Location = new System.Drawing.Point(6, 185);
+            this.testtxt.Name = "testtxt";
+            this.testtxt.Size = new System.Drawing.Size(198, 456);
+            this.testtxt.TabIndex = 12;
+            this.testtxt.Text = "";
+            this.testtxt.DoubleClick += new System.EventHandler(this.testtxt_DoubleClick);
             // 
             // lblDarktheme
             // 
@@ -200,14 +212,13 @@
             // 
             // pnlgame
             // 
-            this.pnlgame.Controls.Add(this.txttest);
+            this.pnlgame.Controls.Add(this.testtxt2);
+            this.pnlgame.Controls.Add(this.panel1);
             this.pnlgame.Controls.Add(this.lblRound);
-            this.pnlgame.Controls.Add(this.btnstart);
-            this.pnlgame.Controls.Add(this.label7);
+            this.pnlgame.Controls.Add(this.lbltime);
             this.pnlgame.Controls.Add(this.label6);
-            this.pnlgame.Controls.Add(this.label5);
+            this.pnlgame.Controls.Add(this.lblscore);
             this.pnlgame.Controls.Add(this.label4);
-            this.pnlgame.Controls.Add(this.webplayer);
             this.pnlgame.Controls.Add(this.btnanswer);
             this.pnlgame.Controls.Add(this.pictureBox1);
             this.pnlgame.Controls.Add(this.grpAns);
@@ -218,29 +229,58 @@
             this.pnlgame.TabIndex = 7;
             this.pnlgame.Visible = false;
             // 
+            // testtxt2
+            // 
+            this.testtxt2.Location = new System.Drawing.Point(699, 194);
+            this.testtxt2.Name = "testtxt2";
+            this.testtxt2.Size = new System.Drawing.Size(198, 329);
+            this.testtxt2.TabIndex = 13;
+            this.testtxt2.Text = "";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Controls.Add(this.webplayer);
+            this.panel1.Location = new System.Drawing.Point(43, 75);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(317, 276);
+            this.panel1.TabIndex = 12;
+            // 
+            // webplayer
+            // 
+            this.webplayer.AllowExternalDrop = true;
+            this.webplayer.BackColor = System.Drawing.Color.Black;
+            this.webplayer.CreationProperties = null;
+            this.webplayer.DefaultBackgroundColor = System.Drawing.Color.Transparent;
+            this.webplayer.Location = new System.Drawing.Point(12, 8);
+            this.webplayer.Name = "webplayer";
+            this.webplayer.Size = new System.Drawing.Size(293, 259);
+            this.webplayer.TabIndex = 3;
+            this.webplayer.ZoomFactor = 1D;
+            // 
             // lblRound
             // 
             this.lblRound.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRound.AutoSize = true;
             this.lblRound.Font = new System.Drawing.Font("Bauhaus 93", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRound.Location = new System.Drawing.Point(379, 57);
+            this.lblRound.Location = new System.Drawing.Point(369, 77);
             this.lblRound.Name = "lblRound";
             this.lblRound.Size = new System.Drawing.Size(119, 30);
             this.lblRound.TabIndex = 11;
             this.lblRound.Text = "Round 1";
             // 
-            // label7
+            // lbltime
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbltime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(172, 404);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 24);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "00:30";
+            this.lbltime.AutoSize = true;
+            this.lbltime.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltime.Location = new System.Drawing.Point(172, 404);
+            this.lbltime.Name = "lbltime";
+            this.lbltime.Size = new System.Drawing.Size(71, 24);
+            this.lbltime.TabIndex = 9;
+            this.lbltime.Text = "00:30";
             // 
             // label6
             // 
@@ -254,17 +294,17 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Score:\r\nTime:";
             // 
-            // label5
+            // lblscore
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblscore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(172, 380);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 24);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "00:30";
+            this.lblscore.AutoSize = true;
+            this.lblscore.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblscore.Location = new System.Drawing.Point(172, 380);
+            this.lblscore.Name = "lblscore";
+            this.lblscore.Size = new System.Drawing.Size(71, 24);
+            this.lblscore.TabIndex = 7;
+            this.lblscore.Text = "00:30";
             // 
             // label4
             // 
@@ -274,26 +314,17 @@
             this.label4.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(63, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(754, 24);
+            this.label4.Size = new System.Drawing.Size(835, 48);
             this.label4.TabIndex = 6;
-            this.label4.Text = "If a decade is not chosen then all years will be considered for the game.";
-            // 
-            // webplayer
-            // 
-            this.webplayer.AllowExternalDrop = true;
-            this.webplayer.CreationProperties = null;
-            this.webplayer.DefaultBackgroundColor = System.Drawing.Color.Transparent;
-            this.webplayer.Location = new System.Drawing.Point(67, 92);
-            this.webplayer.Name = "webplayer";
-            this.webplayer.Size = new System.Drawing.Size(293, 259);
-            this.webplayer.TabIndex = 3;
-            this.webplayer.ZoomFactor = 1D;
+            this.label4.Text = "Welcome lets get started, click start for the timer to begin and lets see how lon" +
+    "g\r\n it takes you to get the songs and at the end lets see how many you get right" +
+    "!";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(570, 92);
+            this.pictureBox1.Location = new System.Drawing.Point(522, 75);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(247, 288);
+            this.pictureBox1.Size = new System.Drawing.Size(310, 288);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -304,31 +335,12 @@
             this.grpAns.Controls.Add(this.rans3);
             this.grpAns.Controls.Add(this.rans1);
             this.grpAns.Font = new System.Drawing.Font("Bauhaus 93", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpAns.Location = new System.Drawing.Point(176, 439);
+            this.grpAns.Location = new System.Drawing.Point(125, 455);
             this.grpAns.Name = "grpAns";
-            this.grpAns.Size = new System.Drawing.Size(578, 100);
+            this.grpAns.Size = new System.Drawing.Size(482, 161);
             this.grpAns.TabIndex = 0;
             this.grpAns.TabStop = false;
             this.grpAns.Text = "Whats your answer?";
-            // 
-            // btnstart
-            // 
-            this.btnstart.BackColor = System.Drawing.Color.DimGray;
-            this.btnstart.BackgroundColor = System.Drawing.Color.DimGray;
-            this.btnstart.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnstart.BorderRadius = 20;
-            this.btnstart.BorderSize = 0;
-            this.btnstart.FlatAppearance.BorderSize = 0;
-            this.btnstart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnstart.ForeColor = System.Drawing.Color.White;
-            this.btnstart.Location = new System.Drawing.Point(366, 558);
-            this.btnstart.Name = "btnstart";
-            this.btnstart.Size = new System.Drawing.Size(150, 40);
-            this.btnstart.TabIndex = 10;
-            this.btnstart.Text = "Start";
-            this.btnstart.TextColor = System.Drawing.Color.White;
-            this.btnstart.UseVisualStyleBackColor = false;
-            this.btnstart.Click += new System.EventHandler(this.btnstart_Click);
             // 
             // btnanswer
             // 
@@ -337,23 +349,23 @@
             this.btnanswer.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnanswer.BorderRadius = 20;
             this.btnanswer.BorderSize = 0;
-            this.btnanswer.Enabled = false;
             this.btnanswer.FlatAppearance.BorderSize = 0;
             this.btnanswer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnanswer.ForeColor = System.Drawing.Color.White;
-            this.btnanswer.Location = new System.Drawing.Point(366, 558);
+            this.btnanswer.Location = new System.Drawing.Point(699, 529);
             this.btnanswer.Name = "btnanswer";
             this.btnanswer.Size = new System.Drawing.Size(150, 40);
             this.btnanswer.TabIndex = 2;
             this.btnanswer.Text = "Lock in Answer";
             this.btnanswer.TextColor = System.Drawing.Color.White;
             this.btnanswer.UseVisualStyleBackColor = false;
+            this.btnanswer.Click += new System.EventHandler(this.btnanswer_Click);
             // 
             // rans4
             // 
             this.rans4.AutoSize = true;
             this.rans4.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rans4.Location = new System.Drawing.Point(449, 40);
+            this.rans4.Location = new System.Drawing.Point(43, 111);
             this.rans4.MinimumSize = new System.Drawing.Size(0, 21);
             this.rans4.Name = "rans4";
             this.rans4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -368,7 +380,7 @@
             // 
             this.rans2.AutoSize = true;
             this.rans2.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rans2.Location = new System.Drawing.Point(174, 40);
+            this.rans2.Location = new System.Drawing.Point(43, 84);
             this.rans2.MinimumSize = new System.Drawing.Size(0, 21);
             this.rans2.Name = "rans2";
             this.rans2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -383,7 +395,7 @@
             // 
             this.rans3.AutoSize = true;
             this.rans3.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rans3.Location = new System.Drawing.Point(314, 40);
+            this.rans3.Location = new System.Drawing.Point(43, 57);
             this.rans3.MinimumSize = new System.Drawing.Size(0, 21);
             this.rans3.Name = "rans3";
             this.rans3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -398,7 +410,7 @@
             // 
             this.rans1.AutoSize = true;
             this.rans1.CheckedColor = System.Drawing.Color.MediumSlateBlue;
-            this.rans1.Location = new System.Drawing.Point(43, 40);
+            this.rans1.Location = new System.Drawing.Point(43, 28);
             this.rans1.MinimumSize = new System.Drawing.Size(0, 21);
             this.rans1.Name = "rans1";
             this.rans1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -624,14 +636,6 @@
             this.btnclose.UseVisualStyleBackColor = false;
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
-            // txttest
-            // 
-            this.txttest.Location = new System.Drawing.Point(111, 104);
-            this.txttest.Name = "txttest";
-            this.txttest.Size = new System.Drawing.Size(619, 429);
-            this.txttest.TabIndex = 5;
-            this.txttest.Text = "";
-            // 
             // Mainmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -663,6 +667,7 @@
             this.grpYear.PerformLayout();
             this.pnlgame.ResumeLayout(false);
             this.pnlgame.PerformLayout();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.webplayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grpAns.ResumeLayout(false);
@@ -696,9 +701,9 @@
         private MTcontrols.MTbutton.Button btnconfirmyear;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel pnlgame;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbltime;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblscore;
         private System.Windows.Forms.Label label4;
         private Microsoft.Web.WebView2.WinForms.WebView2 webplayer;
         private MTcontrols.MTbutton.Button btnanswer;
@@ -708,9 +713,10 @@
         private MTcontrols.MTradio.Radio rans2;
         private MTcontrols.MTradio.Radio rans3;
         private MTcontrols.MTradio.Radio rans1;
-        private MTcontrols.MTbutton.Button btnstart;
         private System.Windows.Forms.Label lblRound;
-        private System.Windows.Forms.RichTextBox txttest;
+        private System.Windows.Forms.RichTextBox testtxt;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RichTextBox testtxt2;
     }
 }
 
