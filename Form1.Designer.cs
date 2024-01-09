@@ -35,12 +35,22 @@
             this.btnmax = new MTcontrols.MTbutton.Button();
             this.btnclose = new MTcontrols.MTbutton.Button();
             this.pnloptions = new System.Windows.Forms.Panel();
+            this.btnscore = new MTcontrols.MTbutton.Button();
             this.btngenre = new MTcontrols.MTbutton.Button();
             this.btnYear = new MTcontrols.MTbutton.Button();
-            this.button1 = new MTcontrols.MTbutton.Button();
+            this.btnaboutme = new MTcontrols.MTbutton.Button();
             this.lblDarktheme = new System.Windows.Forms.Label();
             this.toggleButton1 = new MTcontrols.MTtoggle.ToggleButton();
             this.Pnlabout = new System.Windows.Forms.Panel();
+            this.pnlgenre = new System.Windows.Forms.Panel();
+            this.btncongenre = new MTcontrols.MTbutton.Button();
+            this.grpgenre = new System.Windows.Forms.GroupBox();
+            this.rclassical = new MTcontrols.MTradio.Radio();
+            this.rcountry = new MTcontrols.MTradio.Radio();
+            this.rpop = new MTcontrols.MTradio.Radio();
+            this.rjazz = new MTcontrols.MTradio.Radio();
+            this.rrock = new MTcontrols.MTradio.Radio();
+            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlYear = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,12 +63,6 @@
             this.r80 = new MTcontrols.MTradio.Radio();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlgame = new System.Windows.Forms.Panel();
-            this.pnlfinal = new System.Windows.Forms.Panel();
-            this.button3 = new MTcontrols.MTbutton.Button();
-            this.lblfinaltime = new System.Windows.Forms.Label();
-            this.button2 = new MTcontrols.MTbutton.Button();
-            this.lblfinalscore = new System.Windows.Forms.Label();
-            this.lblmessage = new System.Windows.Forms.Label();
             this.btnnext = new MTcontrols.MTbutton.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.webplayer = new Microsoft.Web.WebView2.WinForms.WebView2();
@@ -74,30 +78,38 @@
             this.rans2 = new MTcontrols.MTradio.Radio();
             this.rans3 = new MTcontrols.MTradio.Radio();
             this.rans1 = new MTcontrols.MTradio.Radio();
-            this.pnlgenre = new System.Windows.Forms.Panel();
-            this.btncongenre = new MTcontrols.MTbutton.Button();
-            this.grpgenre = new System.Windows.Forms.GroupBox();
-            this.rclassical = new MTcontrols.MTradio.Radio();
-            this.rcountry = new MTcontrols.MTradio.Radio();
-            this.rpop = new MTcontrols.MTradio.Radio();
-            this.rjazz = new MTcontrols.MTradio.Radio();
-            this.rrock = new MTcontrols.MTradio.Radio();
-            this.label7 = new System.Windows.Forms.Label();
+            this.pnlfinal = new System.Windows.Forms.Panel();
             this.rtxtsong = new System.Windows.Forms.RichTextBox();
+            this.brnnoupload = new MTcontrols.MTbutton.Button();
+            this.lblfinaltime = new System.Windows.Forms.Label();
+            this.btnyesupload = new MTcontrols.MTbutton.Button();
+            this.lblfinalscore = new System.Windows.Forms.Label();
+            this.lblmessage = new System.Windows.Forms.Label();
+            this.pnlscore = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button5 = new MTcontrols.MTbutton.Button();
+            this.button8 = new MTcontrols.MTbutton.Button();
+            this.button4 = new MTcontrols.MTbutton.Button();
+            this.button7 = new MTcontrols.MTbutton.Button();
+            this.button6 = new MTcontrols.MTbutton.Button();
+            this.rtxtScore = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnlribbon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboptions)).BeginInit();
             this.pnloptions.SuspendLayout();
             this.Pnlabout.SuspendLayout();
+            this.pnlgenre.SuspendLayout();
+            this.grpgenre.SuspendLayout();
             this.pnlYear.SuspendLayout();
             this.grpYear.SuspendLayout();
             this.pnlgame.SuspendLayout();
-            this.pnlfinal.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.webplayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpAns.SuspendLayout();
-            this.pnlgenre.SuspendLayout();
-            this.grpgenre.SuspendLayout();
+            this.pnlfinal.SuspendLayout();
+            this.pnlscore.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlribbon
@@ -194,9 +206,10 @@
             // pnloptions
             // 
             this.pnloptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pnloptions.Controls.Add(this.btnscore);
             this.pnloptions.Controls.Add(this.btngenre);
             this.pnloptions.Controls.Add(this.btnYear);
-            this.pnloptions.Controls.Add(this.button1);
+            this.pnloptions.Controls.Add(this.btnaboutme);
             this.pnloptions.Controls.Add(this.lblDarktheme);
             this.pnloptions.Controls.Add(this.toggleButton1);
             this.pnloptions.Dock = System.Windows.Forms.DockStyle.Left;
@@ -204,6 +217,25 @@
             this.pnloptions.Name = "pnloptions";
             this.pnloptions.Size = new System.Drawing.Size(210, 644);
             this.pnloptions.TabIndex = 4;
+            // 
+            // btnscore
+            // 
+            this.btnscore.BackColor = System.Drawing.Color.DimGray;
+            this.btnscore.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnscore.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnscore.BorderRadius = 20;
+            this.btnscore.BorderSize = 0;
+            this.btnscore.FlatAppearance.BorderSize = 0;
+            this.btnscore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnscore.ForeColor = System.Drawing.Color.White;
+            this.btnscore.Location = new System.Drawing.Point(28, 556);
+            this.btnscore.Name = "btnscore";
+            this.btnscore.Size = new System.Drawing.Size(157, 40);
+            this.btnscore.TabIndex = 6;
+            this.btnscore.Text = "Score Page";
+            this.btnscore.TextColor = System.Drawing.Color.White;
+            this.btnscore.UseVisualStyleBackColor = false;
+            this.btnscore.Click += new System.EventHandler(this.btnscore_Click);
             // 
             // btngenre
             // 
@@ -243,24 +275,24 @@
             this.btnYear.UseVisualStyleBackColor = false;
             this.btnYear.Click += new System.EventHandler(this.btnYear_Click);
             // 
-            // button1
+            // btnaboutme
             // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.BackgroundColor = System.Drawing.Color.DimGray;
-            this.button1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.button1.BorderRadius = 20;
-            this.button1.BorderSize = 0;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(27, 85);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 40);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "About Me";
-            this.button1.TextColor = System.Drawing.Color.White;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnaboutme.BackColor = System.Drawing.Color.DimGray;
+            this.btnaboutme.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnaboutme.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnaboutme.BorderRadius = 20;
+            this.btnaboutme.BorderSize = 0;
+            this.btnaboutme.FlatAppearance.BorderSize = 0;
+            this.btnaboutme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaboutme.ForeColor = System.Drawing.Color.White;
+            this.btnaboutme.Location = new System.Drawing.Point(27, 85);
+            this.btnaboutme.Name = "btnaboutme";
+            this.btnaboutme.Size = new System.Drawing.Size(157, 40);
+            this.btnaboutme.TabIndex = 2;
+            this.btnaboutme.Text = "About Me";
+            this.btnaboutme.TextColor = System.Drawing.Color.White;
+            this.btnaboutme.UseVisualStyleBackColor = false;
+            this.btnaboutme.Click += new System.EventHandler(this.btnaboutme_Click_1);
             // 
             // lblDarktheme
             // 
@@ -296,6 +328,140 @@
             this.Pnlabout.Name = "Pnlabout";
             this.Pnlabout.Size = new System.Drawing.Size(940, 644);
             this.Pnlabout.TabIndex = 5;
+            // 
+            // pnlgenre
+            // 
+            this.pnlgenre.Controls.Add(this.btncongenre);
+            this.pnlgenre.Controls.Add(this.grpgenre);
+            this.pnlgenre.Controls.Add(this.label7);
+            this.pnlgenre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlgenre.Location = new System.Drawing.Point(210, 40);
+            this.pnlgenre.Name = "pnlgenre";
+            this.pnlgenre.Size = new System.Drawing.Size(940, 644);
+            this.pnlgenre.TabIndex = 8;
+            this.pnlgenre.Visible = false;
+            // 
+            // btncongenre
+            // 
+            this.btncongenre.BackColor = System.Drawing.Color.DimGray;
+            this.btncongenre.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btncongenre.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btncongenre.BorderRadius = 20;
+            this.btncongenre.BorderSize = 0;
+            this.btncongenre.FlatAppearance.BorderSize = 0;
+            this.btncongenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncongenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncongenre.ForeColor = System.Drawing.Color.White;
+            this.btncongenre.Location = new System.Drawing.Point(329, 474);
+            this.btncongenre.Name = "btncongenre";
+            this.btncongenre.Size = new System.Drawing.Size(193, 65);
+            this.btncongenre.TabIndex = 3;
+            this.btncongenre.Text = "Start";
+            this.btncongenre.TextColor = System.Drawing.Color.White;
+            this.btncongenre.UseVisualStyleBackColor = false;
+            this.btncongenre.Click += new System.EventHandler(this.btncongenre_Click);
+            // 
+            // grpgenre
+            // 
+            this.grpgenre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.grpgenre.Controls.Add(this.rclassical);
+            this.grpgenre.Controls.Add(this.rcountry);
+            this.grpgenre.Controls.Add(this.rpop);
+            this.grpgenre.Controls.Add(this.rjazz);
+            this.grpgenre.Controls.Add(this.rrock);
+            this.grpgenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.grpgenre.Location = new System.Drawing.Point(338, 111);
+            this.grpgenre.Name = "grpgenre";
+            this.grpgenre.Size = new System.Drawing.Size(122, 159);
+            this.grpgenre.TabIndex = 1;
+            this.grpgenre.TabStop = false;
+            // 
+            // rclassical
+            // 
+            this.rclassical.AutoSize = true;
+            this.rclassical.CheckedColor = System.Drawing.Color.DimGray;
+            this.rclassical.Location = new System.Drawing.Point(29, 127);
+            this.rclassical.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rclassical.Name = "rclassical";
+            this.rclassical.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rclassical.Size = new System.Drawing.Size(76, 21);
+            this.rclassical.TabIndex = 6;
+            this.rclassical.TabStop = true;
+            this.rclassical.Text = "Classical";
+            this.rclassical.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
+            this.rclassical.UseVisualStyleBackColor = true;
+            // 
+            // rcountry
+            // 
+            this.rcountry.AutoSize = true;
+            this.rcountry.CheckedColor = System.Drawing.Color.DimGray;
+            this.rcountry.Location = new System.Drawing.Point(29, 100);
+            this.rcountry.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rcountry.Name = "rcountry";
+            this.rcountry.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rcountry.Size = new System.Drawing.Size(71, 21);
+            this.rcountry.TabIndex = 4;
+            this.rcountry.TabStop = true;
+            this.rcountry.Text = "Country";
+            this.rcountry.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
+            this.rcountry.UseVisualStyleBackColor = true;
+            // 
+            // rpop
+            // 
+            this.rpop.AutoSize = true;
+            this.rpop.CheckedColor = System.Drawing.Color.DimGray;
+            this.rpop.Location = new System.Drawing.Point(29, 73);
+            this.rpop.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rpop.Name = "rpop";
+            this.rpop.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rpop.Size = new System.Drawing.Size(54, 21);
+            this.rpop.TabIndex = 3;
+            this.rpop.TabStop = true;
+            this.rpop.Text = "Pop";
+            this.rpop.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
+            this.rpop.UseVisualStyleBackColor = true;
+            // 
+            // rjazz
+            // 
+            this.rjazz.AutoSize = true;
+            this.rjazz.CheckedColor = System.Drawing.Color.DimGray;
+            this.rjazz.Location = new System.Drawing.Point(29, 46);
+            this.rjazz.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rjazz.Name = "rjazz";
+            this.rjazz.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rjazz.Size = new System.Drawing.Size(56, 21);
+            this.rjazz.TabIndex = 2;
+            this.rjazz.TabStop = true;
+            this.rjazz.Text = "Jazz";
+            this.rjazz.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
+            this.rjazz.UseVisualStyleBackColor = true;
+            // 
+            // rrock
+            // 
+            this.rrock.AutoSize = true;
+            this.rrock.CheckedColor = System.Drawing.Color.DimGray;
+            this.rrock.Location = new System.Drawing.Point(29, 19);
+            this.rrock.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rrock.Name = "rrock";
+            this.rrock.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rrock.Size = new System.Drawing.Size(61, 21);
+            this.rrock.TabIndex = 1;
+            this.rrock.TabStop = true;
+            this.rrock.Text = "Rock";
+            this.rrock.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
+            this.rrock.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(244, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(356, 48);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "How good are you? \r\nChoose the genre you wanna try: ";
             // 
             // label1
             // 
@@ -361,9 +527,9 @@
             this.grpYear.Controls.Add(this.r90);
             this.grpYear.Controls.Add(this.r80);
             this.grpYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grpYear.Location = new System.Drawing.Point(366, 257);
+            this.grpYear.Location = new System.Drawing.Point(371, 205);
             this.grpYear.Name = "grpYear";
-            this.grpYear.Size = new System.Drawing.Size(122, 159);
+            this.grpYear.Size = new System.Drawing.Size(123, 159);
             this.grpYear.TabIndex = 1;
             this.grpYear.TabStop = false;
             // 
@@ -472,96 +638,6 @@
             this.pnlgame.Size = new System.Drawing.Size(940, 644);
             this.pnlgame.TabIndex = 7;
             this.pnlgame.Visible = false;
-            // 
-            // pnlfinal
-            // 
-            this.pnlfinal.Controls.Add(this.rtxtsong);
-            this.pnlfinal.Controls.Add(this.button3);
-            this.pnlfinal.Controls.Add(this.lblfinaltime);
-            this.pnlfinal.Controls.Add(this.button2);
-            this.pnlfinal.Controls.Add(this.lblfinalscore);
-            this.pnlfinal.Controls.Add(this.lblmessage);
-            this.pnlfinal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlfinal.Location = new System.Drawing.Point(210, 40);
-            this.pnlfinal.Name = "pnlfinal";
-            this.pnlfinal.Size = new System.Drawing.Size(940, 644);
-            this.pnlfinal.TabIndex = 9;
-            this.pnlfinal.Visible = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.DimGray;
-            this.button3.BackgroundColor = System.Drawing.Color.DimGray;
-            this.button3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.button3.BorderRadius = 20;
-            this.button3.BorderSize = 0;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(254, 386);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(193, 65);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "No";
-            this.button3.TextColor = System.Drawing.Color.White;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // lblfinaltime
-            // 
-            this.lblfinaltime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblfinaltime.AutoSize = true;
-            this.lblfinaltime.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfinaltime.Location = new System.Drawing.Point(333, 240);
-            this.lblfinaltime.Name = "lblfinaltime";
-            this.lblfinaltime.Size = new System.Drawing.Size(36, 24);
-            this.lblfinaltime.TabIndex = 6;
-            this.lblfinaltime.Text = "dd";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DimGray;
-            this.button2.BackgroundColor = System.Drawing.Color.DimGray;
-            this.button2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.button2.BorderRadius = 20;
-            this.button2.BorderSize = 0;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(20, 384);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(193, 65);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Yes";
-            this.button2.TextColor = System.Drawing.Color.White;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // lblfinalscore
-            // 
-            this.lblfinalscore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblfinalscore.AutoSize = true;
-            this.lblfinalscore.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfinalscore.Location = new System.Drawing.Point(137, 215);
-            this.lblfinalscore.Name = "lblfinalscore";
-            this.lblfinalscore.Size = new System.Drawing.Size(36, 24);
-            this.lblfinalscore.TabIndex = 0;
-            this.lblfinalscore.Text = "dd";
-            // 
-            // lblmessage
-            // 
-            this.lblmessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblmessage.AutoSize = true;
-            this.lblmessage.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmessage.Location = new System.Drawing.Point(39, 167);
-            this.lblmessage.Name = "lblmessage";
-            this.lblmessage.Size = new System.Drawing.Size(409, 144);
-            this.lblmessage.TabIndex = 5;
-            this.lblmessage.Text = "Well done on your score!!\r\n\r\nYou got:\r\nYou completed the quiz in:\r\n\r\nDo you want " +
-    "to post your score online?";
             // 
             // btnnext
             // 
@@ -767,139 +843,20 @@
             this.rans1.UnCheckedColor = System.Drawing.Color.Gray;
             this.rans1.UseVisualStyleBackColor = true;
             // 
-            // pnlgenre
+            // pnlfinal
             // 
-            this.pnlgenre.Controls.Add(this.btncongenre);
-            this.pnlgenre.Controls.Add(this.grpgenre);
-            this.pnlgenre.Controls.Add(this.label7);
-            this.pnlgenre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlgenre.Location = new System.Drawing.Point(0, 0);
-            this.pnlgenre.Name = "pnlgenre";
-            this.pnlgenre.Size = new System.Drawing.Size(1150, 684);
-            this.pnlgenre.TabIndex = 8;
-            this.pnlgenre.Visible = false;
-            // 
-            // btncongenre
-            // 
-            this.btncongenre.BackColor = System.Drawing.Color.DimGray;
-            this.btncongenre.BackgroundColor = System.Drawing.Color.DimGray;
-            this.btncongenre.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btncongenre.BorderRadius = 20;
-            this.btncongenre.BorderSize = 0;
-            this.btncongenre.FlatAppearance.BorderSize = 0;
-            this.btncongenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncongenre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncongenre.ForeColor = System.Drawing.Color.White;
-            this.btncongenre.Location = new System.Drawing.Point(329, 474);
-            this.btncongenre.Name = "btncongenre";
-            this.btncongenre.Size = new System.Drawing.Size(193, 65);
-            this.btncongenre.TabIndex = 3;
-            this.btncongenre.Text = "Start";
-            this.btncongenre.TextColor = System.Drawing.Color.White;
-            this.btncongenre.UseVisualStyleBackColor = false;
-            this.btncongenre.Click += new System.EventHandler(this.btncongenre_Click);
-            // 
-            // grpgenre
-            // 
-            this.grpgenre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.grpgenre.Controls.Add(this.rclassical);
-            this.grpgenre.Controls.Add(this.rcountry);
-            this.grpgenre.Controls.Add(this.rpop);
-            this.grpgenre.Controls.Add(this.rjazz);
-            this.grpgenre.Controls.Add(this.rrock);
-            this.grpgenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grpgenre.Location = new System.Drawing.Point(338, 111);
-            this.grpgenre.Name = "grpgenre";
-            this.grpgenre.Size = new System.Drawing.Size(122, 159);
-            this.grpgenre.TabIndex = 1;
-            this.grpgenre.TabStop = false;
-            // 
-            // rclassical
-            // 
-            this.rclassical.AutoSize = true;
-            this.rclassical.CheckedColor = System.Drawing.Color.DimGray;
-            this.rclassical.Location = new System.Drawing.Point(29, 127);
-            this.rclassical.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rclassical.Name = "rclassical";
-            this.rclassical.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rclassical.Size = new System.Drawing.Size(76, 21);
-            this.rclassical.TabIndex = 6;
-            this.rclassical.TabStop = true;
-            this.rclassical.Text = "Classical";
-            this.rclassical.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
-            this.rclassical.UseVisualStyleBackColor = true;
-            // 
-            // rcountry
-            // 
-            this.rcountry.AutoSize = true;
-            this.rcountry.CheckedColor = System.Drawing.Color.DimGray;
-            this.rcountry.Location = new System.Drawing.Point(29, 100);
-            this.rcountry.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rcountry.Name = "rcountry";
-            this.rcountry.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rcountry.Size = new System.Drawing.Size(71, 21);
-            this.rcountry.TabIndex = 4;
-            this.rcountry.TabStop = true;
-            this.rcountry.Text = "Country";
-            this.rcountry.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
-            this.rcountry.UseVisualStyleBackColor = true;
-            // 
-            // rpop
-            // 
-            this.rpop.AutoSize = true;
-            this.rpop.CheckedColor = System.Drawing.Color.DimGray;
-            this.rpop.Location = new System.Drawing.Point(29, 73);
-            this.rpop.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rpop.Name = "rpop";
-            this.rpop.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rpop.Size = new System.Drawing.Size(54, 21);
-            this.rpop.TabIndex = 3;
-            this.rpop.TabStop = true;
-            this.rpop.Text = "Pop";
-            this.rpop.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
-            this.rpop.UseVisualStyleBackColor = true;
-            // 
-            // rjazz
-            // 
-            this.rjazz.AutoSize = true;
-            this.rjazz.CheckedColor = System.Drawing.Color.DimGray;
-            this.rjazz.Location = new System.Drawing.Point(29, 46);
-            this.rjazz.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rjazz.Name = "rjazz";
-            this.rjazz.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rjazz.Size = new System.Drawing.Size(56, 21);
-            this.rjazz.TabIndex = 2;
-            this.rjazz.TabStop = true;
-            this.rjazz.Text = "Jazz";
-            this.rjazz.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
-            this.rjazz.UseVisualStyleBackColor = true;
-            // 
-            // rrock
-            // 
-            this.rrock.AutoSize = true;
-            this.rrock.CheckedColor = System.Drawing.Color.DimGray;
-            this.rrock.Location = new System.Drawing.Point(29, 19);
-            this.rrock.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rrock.Name = "rrock";
-            this.rrock.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rrock.Size = new System.Drawing.Size(61, 21);
-            this.rrock.TabIndex = 1;
-            this.rrock.TabStop = true;
-            this.rrock.Text = "Rock";
-            this.rrock.UnCheckedColor = System.Drawing.Color.DarkSlateGray;
-            this.rrock.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(244, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(356, 48);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "How good are you? \r\nChoose the genre you wanna try: ";
+            this.pnlfinal.Controls.Add(this.rtxtsong);
+            this.pnlfinal.Controls.Add(this.brnnoupload);
+            this.pnlfinal.Controls.Add(this.lblfinaltime);
+            this.pnlfinal.Controls.Add(this.btnyesupload);
+            this.pnlfinal.Controls.Add(this.lblfinalscore);
+            this.pnlfinal.Controls.Add(this.lblmessage);
+            this.pnlfinal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlfinal.Location = new System.Drawing.Point(210, 40);
+            this.pnlfinal.Name = "pnlfinal";
+            this.pnlfinal.Size = new System.Drawing.Size(940, 644);
+            this.pnlfinal.TabIndex = 9;
+            this.pnlfinal.Visible = false;
             // 
             // rtxtsong
             // 
@@ -909,6 +866,219 @@
             this.rtxtsong.TabIndex = 8;
             this.rtxtsong.Text = "";
             // 
+            // brnnoupload
+            // 
+            this.brnnoupload.BackColor = System.Drawing.Color.DimGray;
+            this.brnnoupload.BackgroundColor = System.Drawing.Color.DimGray;
+            this.brnnoupload.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.brnnoupload.BorderRadius = 20;
+            this.brnnoupload.BorderSize = 0;
+            this.brnnoupload.FlatAppearance.BorderSize = 0;
+            this.brnnoupload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.brnnoupload.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brnnoupload.ForeColor = System.Drawing.Color.White;
+            this.brnnoupload.Location = new System.Drawing.Point(254, 386);
+            this.brnnoupload.Name = "brnnoupload";
+            this.brnnoupload.Size = new System.Drawing.Size(193, 65);
+            this.brnnoupload.TabIndex = 7;
+            this.brnnoupload.Text = "No";
+            this.brnnoupload.TextColor = System.Drawing.Color.White;
+            this.brnnoupload.UseVisualStyleBackColor = false;
+            this.brnnoupload.Click += new System.EventHandler(this.btnnoupload_Click);
+            // 
+            // lblfinaltime
+            // 
+            this.lblfinaltime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblfinaltime.AutoSize = true;
+            this.lblfinaltime.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfinaltime.Location = new System.Drawing.Point(333, 240);
+            this.lblfinaltime.Name = "lblfinaltime";
+            this.lblfinaltime.Size = new System.Drawing.Size(36, 24);
+            this.lblfinaltime.TabIndex = 6;
+            this.lblfinaltime.Text = "dd";
+            // 
+            // btnyesupload
+            // 
+            this.btnyesupload.BackColor = System.Drawing.Color.DimGray;
+            this.btnyesupload.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnyesupload.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnyesupload.BorderRadius = 20;
+            this.btnyesupload.BorderSize = 0;
+            this.btnyesupload.FlatAppearance.BorderSize = 0;
+            this.btnyesupload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnyesupload.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnyesupload.ForeColor = System.Drawing.Color.White;
+            this.btnyesupload.Location = new System.Drawing.Point(20, 384);
+            this.btnyesupload.Name = "btnyesupload";
+            this.btnyesupload.Size = new System.Drawing.Size(193, 65);
+            this.btnyesupload.TabIndex = 3;
+            this.btnyesupload.Text = "Yes";
+            this.btnyesupload.TextColor = System.Drawing.Color.White;
+            this.btnyesupload.UseVisualStyleBackColor = false;
+            this.btnyesupload.Click += new System.EventHandler(this.btnyesupload_Click);
+            // 
+            // lblfinalscore
+            // 
+            this.lblfinalscore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblfinalscore.AutoSize = true;
+            this.lblfinalscore.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfinalscore.Location = new System.Drawing.Point(137, 215);
+            this.lblfinalscore.Name = "lblfinalscore";
+            this.lblfinalscore.Size = new System.Drawing.Size(36, 24);
+            this.lblfinalscore.TabIndex = 0;
+            this.lblfinalscore.Text = "dd";
+            // 
+            // lblmessage
+            // 
+            this.lblmessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblmessage.AutoSize = true;
+            this.lblmessage.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmessage.Location = new System.Drawing.Point(39, 167);
+            this.lblmessage.Name = "lblmessage";
+            this.lblmessage.Size = new System.Drawing.Size(409, 144);
+            this.lblmessage.TabIndex = 5;
+            this.lblmessage.Text = "Well done on your score!!\r\n\r\nYou got:\r\nYou completed the quiz in:\r\n\r\nDo you want " +
+    "to post your score online?";
+            // 
+            // pnlscore
+            // 
+            this.pnlscore.Controls.Add(this.panel2);
+            this.pnlscore.Controls.Add(this.rtxtScore);
+            this.pnlscore.Controls.Add(this.label5);
+            this.pnlscore.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlscore.Location = new System.Drawing.Point(210, 40);
+            this.pnlscore.Name = "pnlscore";
+            this.pnlscore.Size = new System.Drawing.Size(940, 644);
+            this.pnlscore.TabIndex = 11;
+            this.pnlscore.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Location = new System.Drawing.Point(528, 85);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 385);
+            this.panel2.TabIndex = 14;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DimGray;
+            this.button5.BackgroundColor = System.Drawing.Color.DimGray;
+            this.button5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.button5.BorderRadius = 20;
+            this.button5.BorderSize = 0;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(26, 96);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(150, 40);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "High Scores";
+            this.button5.TextColor = System.Drawing.Color.White;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.DimGray;
+            this.button8.BackgroundColor = System.Drawing.Color.DimGray;
+            this.button8.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.button8.BorderRadius = 20;
+            this.button8.BorderSize = 0;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(26, 255);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(150, 40);
+            this.button8.TabIndex = 13;
+            this.button8.Text = "Quick Times";
+            this.button8.TextColor = System.Drawing.Color.White;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DimGray;
+            this.button4.BackgroundColor = System.Drawing.Color.DimGray;
+            this.button4.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.button4.BorderRadius = 20;
+            this.button4.BorderSize = 0;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(26, 12);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(150, 40);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "Your Entries";
+            this.button4.TextColor = System.Drawing.Color.White;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.DimGray;
+            this.button7.BackgroundColor = System.Drawing.Color.DimGray;
+            this.button7.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.button7.BorderRadius = 20;
+            this.button7.BorderSize = 0;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(26, 312);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(150, 40);
+            this.button7.TabIndex = 12;
+            this.button7.Text = "Slow Times";
+            this.button7.TextColor = System.Drawing.Color.White;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.DimGray;
+            this.button6.BackgroundColor = System.Drawing.Color.DimGray;
+            this.button6.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.button6.BorderRadius = 20;
+            this.button6.BorderSize = 0;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(26, 151);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(150, 40);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Low Scores";
+            this.button6.TextColor = System.Drawing.Color.White;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // rtxtScore
+            // 
+            this.rtxtScore.Enabled = false;
+            this.rtxtScore.Location = new System.Drawing.Point(38, 54);
+            this.rtxtScore.Name = "rtxtScore";
+            this.rtxtScore.Size = new System.Drawing.Size(310, 470);
+            this.rtxtScore.TabIndex = 8;
+            this.rtxtScore.Text = "";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(63, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(263, 24);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Here is the list of scores:";
+            // 
             // Mainmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -917,13 +1087,14 @@
             this.BackColor = System.Drawing.Color.DarkTurquoise;
             this.ClientSize = new System.Drawing.Size(1150, 684);
             this.ControlBox = false;
+            this.Controls.Add(this.pnlscore);
+            this.Controls.Add(this.pnlgenre);
+            this.Controls.Add(this.Pnlabout);
             this.Controls.Add(this.pnlfinal);
             this.Controls.Add(this.pnlgame);
             this.Controls.Add(this.pnlYear);
-            this.Controls.Add(this.Pnlabout);
             this.Controls.Add(this.pnloptions);
             this.Controls.Add(this.pnlribbon);
-            this.Controls.Add(this.pnlgenre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -936,23 +1107,26 @@
             this.pnloptions.PerformLayout();
             this.Pnlabout.ResumeLayout(false);
             this.Pnlabout.PerformLayout();
+            this.pnlgenre.ResumeLayout(false);
+            this.pnlgenre.PerformLayout();
+            this.grpgenre.ResumeLayout(false);
+            this.grpgenre.PerformLayout();
             this.pnlYear.ResumeLayout(false);
             this.pnlYear.PerformLayout();
             this.grpYear.ResumeLayout(false);
             this.grpYear.PerformLayout();
             this.pnlgame.ResumeLayout(false);
             this.pnlgame.PerformLayout();
-            this.pnlfinal.ResumeLayout(false);
-            this.pnlfinal.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.webplayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grpAns.ResumeLayout(false);
             this.grpAns.PerformLayout();
-            this.pnlgenre.ResumeLayout(false);
-            this.pnlgenre.PerformLayout();
-            this.grpgenre.ResumeLayout(false);
-            this.grpgenre.PerformLayout();
+            this.pnlfinal.ResumeLayout(false);
+            this.pnlfinal.PerformLayout();
+            this.pnlscore.ResumeLayout(false);
+            this.pnlscore.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -968,7 +1142,7 @@
         private System.Windows.Forms.Label lblDarktheme;
         private System.Windows.Forms.PictureBox pboptions;
         private MTcontrols.MTbutton.Button btnYear;
-        private MTcontrols.MTbutton.Button button1;
+        private MTcontrols.MTbutton.Button btnaboutme;
         private System.Windows.Forms.Panel Pnlabout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlYear;
@@ -1009,11 +1183,21 @@
         private MTcontrols.MTbutton.Button btnnext;
         private System.Windows.Forms.Panel pnlfinal;
         private System.Windows.Forms.Label lblmessage;
-        private MTcontrols.MTbutton.Button button2;
+        private MTcontrols.MTbutton.Button btnyesupload;
         private System.Windows.Forms.Label lblfinalscore;
-        private MTcontrols.MTbutton.Button button3;
+        private MTcontrols.MTbutton.Button brnnoupload;
         private System.Windows.Forms.Label lblfinaltime;
         private System.Windows.Forms.RichTextBox rtxtsong;
+        private MTcontrols.MTbutton.Button btnscore;
+        private System.Windows.Forms.Panel pnlscore;
+        private System.Windows.Forms.RichTextBox rtxtScore;
+        private System.Windows.Forms.Label label5;
+        private MTcontrols.MTbutton.Button button6;
+        private MTcontrols.MTbutton.Button button5;
+        private MTcontrols.MTbutton.Button button4;
+        private System.Windows.Forms.Panel panel2;
+        private MTcontrols.MTbutton.Button button8;
+        private MTcontrols.MTbutton.Button button7;
     }
 }
 

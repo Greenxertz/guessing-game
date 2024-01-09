@@ -30,7 +30,7 @@ namespace music
 {
     public partial class Mainmenu : Form
     {
-        public static bool maximise, options, about, year,genre = false;
+        public static bool maximise, options, about, year, genre, score = false;
         public static int iyear, iscore;
         public static string sgenre;
         public static getsong[,] Songs = new getsong[20, 1];
@@ -128,7 +128,7 @@ namespace music
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnaboutme_Click_1(object sender, EventArgs e)
         {
             about = !about;
             if (about == true)
@@ -137,6 +137,7 @@ namespace music
                 Pnlabout.Visible = true;
                 year = false;
                 genre = false;
+                score = false;
             }
            
         }
@@ -155,6 +156,7 @@ namespace music
                 pnlYear.Visible = true;
                 about = false;
                 genre=false;
+                score = false;
             }
       
 
@@ -386,6 +388,38 @@ namespace music
             SelectRandomSongs();
         }
 
+        private void btnnoupload_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you for playing, you will be redirected to the about me page.");
+            btnaboutme_Click_1(sender, e);
+        }
+
+        private void btnyesupload_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnscore_Click(object sender, EventArgs e)
+        {           
+            score = !score;
+            if (score == true)
+            {
+                pnlscore.BringToFront();
+                pnlscore.Visible = true;
+                about = false;
+                year = false;
+                genre = false;
+            }
+            //edit database to have another table,
+            //which include forgein key to users, gamemode(gamemode: genre,rock), time, score. 
+
+
+
+
+
+
+        }
+
         private void btnnext_Click(object sender, EventArgs e)
         {
             webplayer.Source = new Uri("about:blank");
@@ -405,10 +439,8 @@ namespace music
                 pnlgenre.Visible = true;
                 about = false;
                 year = false;
+                score = false;
             }
-           
-           
-
         }
 
         private async void btnconfirmyear_Click(object sender, EventArgs e)
