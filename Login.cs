@@ -20,7 +20,7 @@ namespace music
     public partial class Login : Form
     {
         public static bool maximise, blogin, bsignUp = false;
-        public static string email, password, accesstoken, clients, clientt;
+        public static string email, password, accesstoken, clients, clientt, useremail;
         public Login()
         {
 
@@ -42,7 +42,7 @@ namespace music
         }
 
         private async void dbConnect(string useremail, string userpass, object sender, EventArgs e)
-        {
+        {//connect to database and call relevent urls
             try
             {
                 var httpClient = new HttpClient();
@@ -55,12 +55,13 @@ namespace music
                 var json = Newtonsoft.Json.JsonConvert.SerializeObject(user);
 
                 var checkData = new StringContent(json, Encoding.UTF8, "application/json");
-
+                //check if user exists in database(db)
                 var checkUrl = "http://localhost:3000/userCheck";
                 var checkResponse = await httpClient.PostAsync(checkUrl, checkData);
 
                 string checkResult = await checkResponse.Content.ReadAsStringAsync();
-
+                //if statement used for validation, check if non registered users use login will then direct them to signup 
+                //and if user utilizes signup the program will state that they have an account and direct them to the login page
                 if (blogin == true)
                 {
                     if (checkResult == "User does exist")
@@ -90,6 +91,7 @@ namespace music
                     }
                     else if (checkResult == "User does not exist")
                     {
+                        //if user does not exist, api is called to register the user with data provided
                         var registerData = new StringContent(json, Encoding.UTF8, "application/json");
                         var registerUrl = "http://localhost:3000/signup";
                         try
@@ -110,7 +112,7 @@ namespace music
                             // Handle or log the exception
                             MessageBox.Show($"Error during POST request: {ex.Message}");
                         }
-                    }
+                    }//prevents user from signing in with signup 
                     else if (checkResult == "Incorrect password")
                     {
                         MessageBox.Show("You seem to have an account already");
@@ -118,10 +120,8 @@ namespace music
                         txtpassword.Focus();
                         btncancel2_Click(sender, e);
                     }
-                }                                        
-
-                var encryptedData = DataProtect.Encrypt(useremail, userpass);
-
+                }                                
+                //collect necessary details for spotify from db, more secure method than hard coding details 
                 var dataurl = "http://localhost:3000/spotify-details";
                 var dataresponse = await httpClient.GetAsync(dataurl);
                 string dataresult = await dataresponse.Content.ReadAsStringAsync();
@@ -137,7 +137,7 @@ namespace music
                 }
                 else
                     MessageBox.Show(dataresult);
-
+                //call class to obtain access token from spotify utilising data from the spotify details api call 
                 var accessToken = await SpotifyAuth.GetAccessToken(clientt, clients);
                 accesstoken = accessToken;
                 
@@ -156,7 +156,7 @@ namespace music
         }
 
         private void txtSignEmail_TextChanged(object sender, EventArgs e)
-        {
+        {//validate that an email format is used 
             string emailPattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
             Regex regex = new Regex(emailPattern);
             if (regex.IsMatch(txtSignEmail.Text) == true)
@@ -180,11 +180,13 @@ namespace music
             {
                 lblInvalidPass.Visible = true;
             }
+            //call method to test variables of signup page and unlock the pages final button
             unlockbutton();
         }
 
         private void unlockbutton()
         {
+            //tests to see if all criteria are met and then will enable the sign up button 
             if ((lblInvalidEmail.Visible == false) && (lblInvalidPass.Visible == false) && (txtConfirmPass.Text != "") && (txtSignEmail.Text != ""))
             {
                 btnSignup.Enabled = true;
@@ -193,7 +195,7 @@ namespace music
             {
                 btnSignup.Enabled = false;
             }
-
+            //tests to see if all criteria are met and then will enable the login button 
             if ((txtpassword.Text != "") &&(lblinvalidformat.Visible==false))
             {
                 btnlogin.Enabled = true;
@@ -206,7 +208,7 @@ namespace music
         }
 
         private void btncancel2_Click(object sender, EventArgs e)
-        {
+        {//return to login page and clear all variables
             txtSignEmail.Clear();
             txtSignPass.Clear();
             txtConfirmPass.Clear();
@@ -217,12 +219,12 @@ namespace music
         }
 
         private void txtpassword_TextChanged(object sender, EventArgs e)
-        {
+        {//calls unlock method for login button on text change 
             unlockbutton();
         }
 
         private void txtSignPass_TextChanged(object sender, EventArgs e)
-        {
+        {//displays wether both password and confirm password are not the same and then calls method to enable/disable signup button
             if (txtSignPass.Text == txtConfirmPass.Text)
             {
                 lblInvalidPass.Visible = false;
@@ -240,6 +242,7 @@ namespace music
             password = txtSignPass.Text;
             bsignUp = true;
             blogin = false;
+            //call the connect method
             dbConnect(email, password, sender, e);
         }
 
@@ -258,6 +261,7 @@ namespace music
 
         private void btnclose_Click(object sender, EventArgs e)
         {
+            //close applicaion
             Application.Exit();
         }
 
@@ -273,6 +277,7 @@ namespace music
             {
                 lblinvalidformat.Visible = true;               
             }
+            //calls method to check if button can be enabled or not 
             unlockbutton();
         }
 
@@ -281,57 +286,6 @@ namespace music
             MessageBox.Show("By Canceling you have chosen to close the application, Goodbye!", "Goodbye!");
             Application.Exit();
         }
-    }
-
-    class DataProtect
-    {
-        // Generate a secure random key and IV
-        public class EncryptedData
-        {
-            public string EncryptedEmail { get; set; }
-            public string EncryptedPassword { get; set; }
-        }
-
-        public static EncryptedData Encrypt(string email, string password)
-        {
-            using (Aes aes = Aes.Create())
-            {
-                // Generate a random key and IV for each encryption operation
-                aes.GenerateKey();
-                aes.GenerateIV();
-
-                EncryptedData encryptedData = new EncryptedData();
-
-                // Encrypt Email
-                using (MemoryStream emailMemoryStream = new MemoryStream())
-                {
-                    using (CryptoStream emailCryptoStream = new CryptoStream(emailMemoryStream, aes.CreateEncryptor(), CryptoStreamMode.Write))
-                    {
-                        byte[] emailBytes = Encoding.UTF8.GetBytes(email);
-                        emailCryptoStream.Write(emailBytes, 0, emailBytes.Length);
-                    }
-
-                    byte[] encryptedEmailBytes = emailMemoryStream.ToArray();
-                    encryptedData.EncryptedEmail = Convert.ToBase64String(encryptedEmailBytes);
-                }
-
-                // Encrypt Password
-                using (MemoryStream passwordMemoryStream = new MemoryStream())
-                {
-                    using (CryptoStream passwordCryptoStream = new CryptoStream(passwordMemoryStream, aes.CreateEncryptor(), CryptoStreamMode.Write))
-                    {
-                        byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
-                        passwordCryptoStream.Write(passwordBytes, 0, passwordBytes.Length);
-                    }
-
-                    byte[] encryptedPasswordBytes = passwordMemoryStream.ToArray();
-                    encryptedData.EncryptedPassword = Convert.ToBase64String(encryptedPasswordBytes);
-                }
-
-                return encryptedData;
-            }
-        }
-
     }
 
     class SpotifyAuth

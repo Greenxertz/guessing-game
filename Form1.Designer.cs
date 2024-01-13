@@ -42,6 +42,7 @@
             this.lblDarktheme = new System.Windows.Forms.Label();
             this.toggleButton1 = new MTcontrols.MTtoggle.ToggleButton();
             this.Pnlabout = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlgenre = new System.Windows.Forms.Panel();
             this.btncongenre = new MTcontrols.MTbutton.Button();
             this.grpgenre = new System.Windows.Forms.GroupBox();
@@ -51,7 +52,6 @@
             this.rjazz = new MTcontrols.MTradio.Radio();
             this.rrock = new MTcontrols.MTradio.Radio();
             this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlYear = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnconfirmyear = new MTcontrols.MTbutton.Button();
@@ -86,13 +86,13 @@
             this.lblfinalscore = new System.Windows.Forms.Label();
             this.lblmessage = new System.Windows.Forms.Label();
             this.pnlscore = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button5 = new MTcontrols.MTbutton.Button();
-            this.button8 = new MTcontrols.MTbutton.Button();
-            this.button4 = new MTcontrols.MTbutton.Button();
-            this.button7 = new MTcontrols.MTbutton.Button();
-            this.button6 = new MTcontrols.MTbutton.Button();
             this.rtxtScore = new System.Windows.Forms.RichTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnhighscores = new MTcontrols.MTbutton.Button();
+            this.btnquicktime = new MTcontrols.MTbutton.Button();
+            this.btnYouentry = new MTcontrols.MTbutton.Button();
+            this.btnslowtime = new MTcontrols.MTbutton.Button();
+            this.btnlowscore = new MTcontrols.MTbutton.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pnlribbon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboptions)).BeginInit();
@@ -227,6 +227,7 @@
             this.btnscore.BorderSize = 0;
             this.btnscore.FlatAppearance.BorderSize = 0;
             this.btnscore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnscore.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnscore.ForeColor = System.Drawing.Color.White;
             this.btnscore.Location = new System.Drawing.Point(28, 556);
             this.btnscore.Name = "btnscore";
@@ -246,6 +247,7 @@
             this.btngenre.BorderSize = 0;
             this.btngenre.FlatAppearance.BorderSize = 0;
             this.btngenre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btngenre.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngenre.ForeColor = System.Drawing.Color.White;
             this.btngenre.Location = new System.Drawing.Point(28, 196);
             this.btngenre.Name = "btngenre";
@@ -265,6 +267,7 @@
             this.btnYear.BorderSize = 0;
             this.btnYear.FlatAppearance.BorderSize = 0;
             this.btnYear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYear.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnYear.ForeColor = System.Drawing.Color.White;
             this.btnYear.Location = new System.Drawing.Point(27, 139);
             this.btnYear.Name = "btnYear";
@@ -284,6 +287,7 @@
             this.btnaboutme.BorderSize = 0;
             this.btnaboutme.FlatAppearance.BorderSize = 0;
             this.btnaboutme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnaboutme.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnaboutme.ForeColor = System.Drawing.Color.White;
             this.btnaboutme.Location = new System.Drawing.Point(27, 85);
             this.btnaboutme.Name = "btnaboutme";
@@ -328,6 +332,16 @@
             this.Pnlabout.Name = "Pnlabout";
             this.Pnlabout.Size = new System.Drawing.Size(940, 644);
             this.Pnlabout.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(63, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(789, 288);
+            this.label1.TabIndex = 0;
+            this.label1.Text = resources.GetString("label1.Text");
             // 
             // pnlgenre
             // 
@@ -462,16 +476,6 @@
             this.label7.Size = new System.Drawing.Size(356, 48);
             this.label7.TabIndex = 0;
             this.label7.Text = "How good are you? \r\nChoose the genre you wanna try: ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(797, 288);
-            this.label1.TabIndex = 0;
-            this.label1.Text = resources.GetString("label1.Text");
             // 
             // pnlYear
             // 
@@ -945,8 +949,8 @@
             // 
             // pnlscore
             // 
-            this.pnlscore.Controls.Add(this.panel2);
             this.pnlscore.Controls.Add(this.rtxtScore);
+            this.pnlscore.Controls.Add(this.panel2);
             this.pnlscore.Controls.Add(this.label5);
             this.pnlscore.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlscore.Location = new System.Drawing.Point(210, 40);
@@ -955,127 +959,138 @@
             this.pnlscore.TabIndex = 11;
             this.pnlscore.Visible = false;
             // 
+            // rtxtScore
+            // 
+            this.rtxtScore.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxtScore.Location = new System.Drawing.Point(30, 63);
+            this.rtxtScore.Name = "rtxtScore";
+            this.rtxtScore.ReadOnly = true;
+            this.rtxtScore.Size = new System.Drawing.Size(335, 547);
+            this.rtxtScore.TabIndex = 15;
+            this.rtxtScore.Text = "";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.btnhighscores);
+            this.panel2.Controls.Add(this.btnquicktime);
+            this.panel2.Controls.Add(this.btnYouentry);
+            this.panel2.Controls.Add(this.btnslowtime);
+            this.panel2.Controls.Add(this.btnlowscore);
             this.panel2.Location = new System.Drawing.Point(528, 85);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 385);
             this.panel2.TabIndex = 14;
             // 
-            // button5
+            // btnhighscores
             // 
-            this.button5.BackColor = System.Drawing.Color.DimGray;
-            this.button5.BackgroundColor = System.Drawing.Color.DimGray;
-            this.button5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.button5.BorderRadius = 20;
-            this.button5.BorderSize = 0;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(26, 96);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(150, 40);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "High Scores";
-            this.button5.TextColor = System.Drawing.Color.White;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnhighscores.BackColor = System.Drawing.Color.DimGray;
+            this.btnhighscores.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnhighscores.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnhighscores.BorderRadius = 20;
+            this.btnhighscores.BorderSize = 0;
+            this.btnhighscores.FlatAppearance.BorderSize = 0;
+            this.btnhighscores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnhighscores.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnhighscores.ForeColor = System.Drawing.Color.White;
+            this.btnhighscores.Location = new System.Drawing.Point(26, 96);
+            this.btnhighscores.Name = "btnhighscores";
+            this.btnhighscores.Size = new System.Drawing.Size(150, 40);
+            this.btnhighscores.TabIndex = 10;
+            this.btnhighscores.Text = "High Scores";
+            this.btnhighscores.TextColor = System.Drawing.Color.White;
+            this.btnhighscores.UseVisualStyleBackColor = false;
+            this.btnhighscores.Click += new System.EventHandler(this.btnhighscores_Click);
             // 
-            // button8
+            // btnquicktime
             // 
-            this.button8.BackColor = System.Drawing.Color.DimGray;
-            this.button8.BackgroundColor = System.Drawing.Color.DimGray;
-            this.button8.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.button8.BorderRadius = 20;
-            this.button8.BorderSize = 0;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(26, 255);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(150, 40);
-            this.button8.TabIndex = 13;
-            this.button8.Text = "Quick Times";
-            this.button8.TextColor = System.Drawing.Color.White;
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnquicktime.BackColor = System.Drawing.Color.DimGray;
+            this.btnquicktime.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnquicktime.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnquicktime.BorderRadius = 20;
+            this.btnquicktime.BorderSize = 0;
+            this.btnquicktime.FlatAppearance.BorderSize = 0;
+            this.btnquicktime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnquicktime.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnquicktime.ForeColor = System.Drawing.Color.White;
+            this.btnquicktime.Location = new System.Drawing.Point(26, 255);
+            this.btnquicktime.Name = "btnquicktime";
+            this.btnquicktime.Size = new System.Drawing.Size(150, 40);
+            this.btnquicktime.TabIndex = 13;
+            this.btnquicktime.Text = "Quick Times";
+            this.btnquicktime.TextColor = System.Drawing.Color.White;
+            this.btnquicktime.UseVisualStyleBackColor = false;
+            this.btnquicktime.Click += new System.EventHandler(this.btnquicktime_Click);
             // 
-            // button4
+            // btnYouentry
             // 
-            this.button4.BackColor = System.Drawing.Color.DimGray;
-            this.button4.BackgroundColor = System.Drawing.Color.DimGray;
-            this.button4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.button4.BorderRadius = 20;
-            this.button4.BorderSize = 0;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(26, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 40);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Your Entries";
-            this.button4.TextColor = System.Drawing.Color.White;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnYouentry.BackColor = System.Drawing.Color.DimGray;
+            this.btnYouentry.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnYouentry.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnYouentry.BorderRadius = 20;
+            this.btnYouentry.BorderSize = 0;
+            this.btnYouentry.FlatAppearance.BorderSize = 0;
+            this.btnYouentry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnYouentry.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnYouentry.ForeColor = System.Drawing.Color.White;
+            this.btnYouentry.Location = new System.Drawing.Point(26, 12);
+            this.btnYouentry.Name = "btnYouentry";
+            this.btnYouentry.Size = new System.Drawing.Size(150, 40);
+            this.btnYouentry.TabIndex = 9;
+            this.btnYouentry.Text = "Your Entries";
+            this.btnYouentry.TextColor = System.Drawing.Color.White;
+            this.btnYouentry.UseVisualStyleBackColor = false;
+            this.btnYouentry.Click += new System.EventHandler(this.btnYouentry_Click);
             // 
-            // button7
+            // btnslowtime
             // 
-            this.button7.BackColor = System.Drawing.Color.DimGray;
-            this.button7.BackgroundColor = System.Drawing.Color.DimGray;
-            this.button7.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.button7.BorderRadius = 20;
-            this.button7.BorderSize = 0;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(26, 312);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(150, 40);
-            this.button7.TabIndex = 12;
-            this.button7.Text = "Slow Times";
-            this.button7.TextColor = System.Drawing.Color.White;
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnslowtime.BackColor = System.Drawing.Color.DimGray;
+            this.btnslowtime.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnslowtime.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnslowtime.BorderRadius = 20;
+            this.btnslowtime.BorderSize = 0;
+            this.btnslowtime.FlatAppearance.BorderSize = 0;
+            this.btnslowtime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnslowtime.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnslowtime.ForeColor = System.Drawing.Color.White;
+            this.btnslowtime.Location = new System.Drawing.Point(26, 312);
+            this.btnslowtime.Name = "btnslowtime";
+            this.btnslowtime.Size = new System.Drawing.Size(150, 40);
+            this.btnslowtime.TabIndex = 12;
+            this.btnslowtime.Text = "Slow Times";
+            this.btnslowtime.TextColor = System.Drawing.Color.White;
+            this.btnslowtime.UseVisualStyleBackColor = false;
+            this.btnslowtime.Click += new System.EventHandler(this.btnslowtime_Click);
             // 
-            // button6
+            // btnlowscore
             // 
-            this.button6.BackColor = System.Drawing.Color.DimGray;
-            this.button6.BackgroundColor = System.Drawing.Color.DimGray;
-            this.button6.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.button6.BorderRadius = 20;
-            this.button6.BorderSize = 0;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(26, 151);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(150, 40);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Low Scores";
-            this.button6.TextColor = System.Drawing.Color.White;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // rtxtScore
-            // 
-            this.rtxtScore.Enabled = false;
-            this.rtxtScore.Location = new System.Drawing.Point(38, 54);
-            this.rtxtScore.Name = "rtxtScore";
-            this.rtxtScore.Size = new System.Drawing.Size(310, 470);
-            this.rtxtScore.TabIndex = 8;
-            this.rtxtScore.Text = "";
+            this.btnlowscore.BackColor = System.Drawing.Color.DimGray;
+            this.btnlowscore.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnlowscore.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnlowscore.BorderRadius = 20;
+            this.btnlowscore.BorderSize = 0;
+            this.btnlowscore.FlatAppearance.BorderSize = 0;
+            this.btnlowscore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlowscore.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlowscore.ForeColor = System.Drawing.Color.White;
+            this.btnlowscore.Location = new System.Drawing.Point(26, 151);
+            this.btnlowscore.Name = "btnlowscore";
+            this.btnlowscore.Size = new System.Drawing.Size(150, 40);
+            this.btnlowscore.TabIndex = 11;
+            this.btnlowscore.Text = "Low Scores";
+            this.btnlowscore.TextColor = System.Drawing.Color.White;
+            this.btnlowscore.UseVisualStyleBackColor = false;
+            this.btnlowscore.Click += new System.EventHandler(this.btnlowscore_Click);
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bauhaus 93", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(63, 24);
+            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(74, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(263, 24);
+            this.label5.Size = new System.Drawing.Size(250, 23);
             this.label5.TabIndex = 6;
             this.label5.Text = "Here is the list of scores:";
             // 
@@ -1190,14 +1205,14 @@
         private System.Windows.Forms.RichTextBox rtxtsong;
         private MTcontrols.MTbutton.Button btnscore;
         private System.Windows.Forms.Panel pnlscore;
-        private System.Windows.Forms.RichTextBox rtxtScore;
         private System.Windows.Forms.Label label5;
-        private MTcontrols.MTbutton.Button button6;
-        private MTcontrols.MTbutton.Button button5;
-        private MTcontrols.MTbutton.Button button4;
+        private MTcontrols.MTbutton.Button btnlowscore;
+        private MTcontrols.MTbutton.Button btnhighscores;
+        private MTcontrols.MTbutton.Button btnYouentry;
         private System.Windows.Forms.Panel panel2;
-        private MTcontrols.MTbutton.Button button8;
-        private MTcontrols.MTbutton.Button button7;
+        private MTcontrols.MTbutton.Button btnquicktime;
+        private MTcontrols.MTbutton.Button btnslowtime;
+        private System.Windows.Forms.RichTextBox rtxtScore;
     }
 }
 

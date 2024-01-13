@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pnlribbon = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnmin = new MTcontrols.MTbutton.Button();
+            this.btnmax = new MTcontrols.MTbutton.Button();
+            this.btnclose = new MTcontrols.MTbutton.Button();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,14 +50,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtSignPass = new System.Windows.Forms.TextBox();
             this.txtSignEmail = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btncancel2 = new MTcontrols.MTbutton.Button();
             this.btnSignup = new MTcontrols.MTbutton.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btncancel = new MTcontrols.MTbutton.Button();
             this.btnlogin = new MTcontrols.MTbutton.Button();
-            this.btnmin = new MTcontrols.MTbutton.Button();
-            this.btnmax = new MTcontrols.MTbutton.Button();
-            this.btnclose = new MTcontrols.MTbutton.Button();
             this.pnlribbon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlSignup.SuspendLayout();
@@ -83,6 +83,72 @@
             this.label1.Size = new System.Drawing.Size(295, 24);
             this.label1.TabIndex = 3;
             this.label1.Text = "Welcome to guess the song!";
+            // 
+            // btnmin
+            // 
+            this.btnmin.BackColor = System.Drawing.Color.DimGray;
+            this.btnmin.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnmin.BorderColor = System.Drawing.Color.Black;
+            this.btnmin.BorderRadius = 20;
+            this.btnmin.BorderSize = 2;
+            this.btnmin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnmin.FlatAppearance.BorderSize = 0;
+            this.btnmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmin.ForeColor = System.Drawing.Color.Black;
+            this.btnmin.Location = new System.Drawing.Point(444, 0);
+            this.btnmin.Name = "btnmin";
+            this.btnmin.Size = new System.Drawing.Size(40, 40);
+            this.btnmin.TabIndex = 2;
+            this.btnmin.Text = "--";
+            this.btnmin.TextColor = System.Drawing.Color.Black;
+            this.btnmin.UseVisualStyleBackColor = false;
+            this.btnmin.Click += new System.EventHandler(this.btnmin_Click);
+            // 
+            // btnmax
+            // 
+            this.btnmax.BackColor = System.Drawing.Color.DimGray;
+            this.btnmax.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnmax.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnmax.BackgroundImage")));
+            this.btnmax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnmax.BorderColor = System.Drawing.Color.Black;
+            this.btnmax.BorderRadius = 20;
+            this.btnmax.BorderSize = 2;
+            this.btnmax.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnmax.FlatAppearance.BorderSize = 0;
+            this.btnmax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmax.ForeColor = System.Drawing.Color.White;
+            this.btnmax.Location = new System.Drawing.Point(484, 0);
+            this.btnmax.Name = "btnmax";
+            this.btnmax.Size = new System.Drawing.Size(40, 40);
+            this.btnmax.TabIndex = 0;
+            this.btnmax.TextColor = System.Drawing.Color.White;
+            this.btnmax.UseVisualStyleBackColor = false;
+            this.btnmax.Click += new System.EventHandler(this.btnmax_Click);
+            // 
+            // btnclose
+            // 
+            this.btnclose.BackColor = System.Drawing.Color.DimGray;
+            this.btnclose.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btnclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnclose.BorderColor = System.Drawing.Color.Black;
+            this.btnclose.BorderRadius = 20;
+            this.btnclose.BorderSize = 2;
+            this.btnclose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnclose.FlatAppearance.BorderSize = 0;
+            this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclose.ForeColor = System.Drawing.Color.Black;
+            this.btnclose.Location = new System.Drawing.Point(524, 0);
+            this.btnclose.Name = "btnclose";
+            this.btnclose.Size = new System.Drawing.Size(40, 40);
+            this.btnclose.TabIndex = 1;
+            this.btnclose.Text = "X";
+            this.btnclose.TextColor = System.Drawing.Color.Black;
+            this.btnclose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnclose.UseVisualStyleBackColor = false;
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // txtemail
             // 
@@ -147,9 +213,10 @@
             this.lblsignup.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsignup.Location = new System.Drawing.Point(191, 402);
             this.lblsignup.Name = "lblsignup";
-            this.lblsignup.Size = new System.Drawing.Size(185, 15);
+            this.lblsignup.Size = new System.Drawing.Size(188, 30);
             this.lblsignup.TabIndex = 14;
-            this.lblsignup.Text = "First time playing? Sign up here";
+            this.lblsignup.Text = "First time playing? Sign up here \r\nclick here ";
+            this.lblsignup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblsignup.Click += new System.EventHandler(this.lblsignup_Click);
             // 
             // pnlSignup
@@ -248,16 +315,6 @@
             this.txtSignEmail.TabIndex = 16;
             this.txtSignEmail.TextChanged += new System.EventHandler(this.txtSignEmail_TextChanged);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(110, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(354, 228);
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
             // btncancel2
             // 
             this.btncancel2.BackColor = System.Drawing.Color.DimGray;
@@ -299,6 +356,16 @@
             this.btnSignup.UseVisualStyleBackColor = false;
             this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(110, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(354, 228);
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
             // btncancel
             // 
             this.btncancel.BackColor = System.Drawing.Color.DimGray;
@@ -339,72 +406,6 @@
             this.btnlogin.TextColor = System.Drawing.Color.White;
             this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
-            // 
-            // btnmin
-            // 
-            this.btnmin.BackColor = System.Drawing.Color.DimGray;
-            this.btnmin.BackgroundColor = System.Drawing.Color.DimGray;
-            this.btnmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnmin.BorderColor = System.Drawing.Color.Black;
-            this.btnmin.BorderRadius = 20;
-            this.btnmin.BorderSize = 2;
-            this.btnmin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnmin.FlatAppearance.BorderSize = 0;
-            this.btnmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmin.ForeColor = System.Drawing.Color.Black;
-            this.btnmin.Location = new System.Drawing.Point(444, 0);
-            this.btnmin.Name = "btnmin";
-            this.btnmin.Size = new System.Drawing.Size(40, 40);
-            this.btnmin.TabIndex = 2;
-            this.btnmin.Text = "--";
-            this.btnmin.TextColor = System.Drawing.Color.Black;
-            this.btnmin.UseVisualStyleBackColor = false;
-            this.btnmin.Click += new System.EventHandler(this.btnmin_Click);
-            // 
-            // btnmax
-            // 
-            this.btnmax.BackColor = System.Drawing.Color.DimGray;
-            this.btnmax.BackgroundColor = System.Drawing.Color.DimGray;
-            this.btnmax.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnmax.BackgroundImage")));
-            this.btnmax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnmax.BorderColor = System.Drawing.Color.Black;
-            this.btnmax.BorderRadius = 20;
-            this.btnmax.BorderSize = 2;
-            this.btnmax.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnmax.FlatAppearance.BorderSize = 0;
-            this.btnmax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmax.ForeColor = System.Drawing.Color.White;
-            this.btnmax.Location = new System.Drawing.Point(484, 0);
-            this.btnmax.Name = "btnmax";
-            this.btnmax.Size = new System.Drawing.Size(40, 40);
-            this.btnmax.TabIndex = 0;
-            this.btnmax.TextColor = System.Drawing.Color.White;
-            this.btnmax.UseVisualStyleBackColor = false;
-            this.btnmax.Click += new System.EventHandler(this.btnmax_Click);
-            // 
-            // btnclose
-            // 
-            this.btnclose.BackColor = System.Drawing.Color.DimGray;
-            this.btnclose.BackgroundColor = System.Drawing.Color.DimGray;
-            this.btnclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnclose.BorderColor = System.Drawing.Color.Black;
-            this.btnclose.BorderRadius = 20;
-            this.btnclose.BorderSize = 2;
-            this.btnclose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnclose.FlatAppearance.BorderSize = 0;
-            this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclose.ForeColor = System.Drawing.Color.Black;
-            this.btnclose.Location = new System.Drawing.Point(524, 0);
-            this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(40, 40);
-            this.btnclose.TabIndex = 1;
-            this.btnclose.Text = "X";
-            this.btnclose.TextColor = System.Drawing.Color.Black;
-            this.btnclose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnclose.UseVisualStyleBackColor = false;
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // Login
             // 
