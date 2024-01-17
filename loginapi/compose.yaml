@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  app:
+    depends_on:
+      - mysql
+    build: .
+    command: /wait-for-it.sh mysql:3306 --timeout=60 -- node app.js
+    ports:
+      - "3000:3000" # Map port 3000 on the host to port 3000 in the container
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=secret
+      - MYSQL_DB=spotify_database
+      
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: spotify_database
+    ports:
+      - "3306:3306"
