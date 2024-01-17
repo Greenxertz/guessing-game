@@ -1,0 +1,2 @@
+@echo off
+start "Dockerized Service" cmd /k "docker-compose up"
