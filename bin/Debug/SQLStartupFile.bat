@@ -12,8 +12,5 @@ set "composeFile=loginapi\compose.yaml"
 rem Start Docker container with the YAML file and build if needed
 docker-compose -f %composeFile% up --build -d
 
-rem Wait for a few seconds to allow Docker to start
-timeout /t 10
-
 rem Return to the original directory
 cd %currentDir%
