@@ -14,6 +14,8 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
+
 
 namespace music
 {
@@ -23,8 +25,70 @@ namespace music
         public static string email, password, accesstoken, clients, clientt, useremail;
         public Login()
         {
-
             InitializeComponent();
+       
+            try
+            {
+                string batchFileName = "SQLStartupFile.bat";
+
+                MessageBox.Show("Please wait while we initialize the Database with all app details.");
+                RunBatchFile(batchFileName);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
+        }
+
+        static void RunBatchFile(string batchFileName)
+        {
+          
+            string programDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string batchFilePath = Path.Combine(programDirectory, batchFileName);
+            try
+            {
+                if (!File.Exists(batchFilePath))
+                {
+                    MessageBox.Show($"Error: Batch file not found at {batchFilePath}");
+                    return;
+                }
+
+                string batchDirectory = Path.GetDirectoryName(batchFilePath);
+
+                // Start a new process to run the batch file
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = batchFilePath,
+                    WorkingDirectory = batchDirectory,
+                    UseShellExecute = false, // UseShellExecute set to true for batch files
+                    CreateNoWindow = true
+                };
+
+                Process process = new Process
+                {
+                    StartInfo = psi
+                };
+
+                process.Start();
+                process.WaitForExit();
+
+                if (process.ExitCode != 0)
+                {
+                    MessageBox.Show($"Error: The batch file exited with code {process.ExitCode}");
+                }
+                else if (batchFileName == "SQLStartupFile.bat")
+                {
+                    MessageBox.Show("Database has been initialised.");
+                }else
+                {
+                    MessageBox.Show("Database has been closed.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while running the batch file: {ex.Message}");
+            }
         }
 
         private void btnmin_Click(object sender, EventArgs e)
@@ -261,8 +325,18 @@ namespace music
 
         private void btnclose_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Please whait while we close the Database.");
+            try
+            {
+                RunBatchFile("SQLClosefile.bat");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
             //close applicaion
             Application.Exit();
+            
         }
 
         private void txtemail_TextChanged(object sender, EventArgs e)
@@ -283,7 +357,15 @@ namespace music
 
         private void btncancel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("By Canceling you have chosen to close the application, Goodbye!", "Goodbye!");
+            MessageBox.Show("By Canceling you have chosen to close the application, Goodbye!\n Please Wait while we close the database.", "Goodbye!");
+            try
+            {              
+                RunBatchFile("SQLClosefile.bat");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
             Application.Exit();
         }
     }

@@ -24,7 +24,7 @@ using Accord.Imaging.Filters;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 using System.Net;
-
+using System.Diagnostics;
 
 
 
@@ -59,7 +59,7 @@ namespace music
         }
 
         public Mainmenu()
-        {
+        {      
             Login login = new Login();
             login.ShowDialog();
             this.Hide();
@@ -120,8 +120,62 @@ namespace music
 
         private void btnclose_Click(object sender, EventArgs e)
         {
+            
+            try
+            {
+               RunBatchFile("SQLClosefile.bat");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+            }
             //close application
             Application.Exit();
+        }
+
+        static void RunBatchFile(string batchFileName)
+        {
+            MessageBox.Show("Please whait while we close the Database.");
+
+            string programDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string batchFilePath = Path.Combine(programDirectory, batchFileName);
+            try
+            {
+                if (!System.IO.File.Exists(batchFilePath))
+                {
+                    MessageBox.Show($"Error: Batch file not found at {batchFilePath}");
+                    return;
+                }
+
+                string batchDirectory = Path.GetDirectoryName(batchFilePath);
+
+                // Start a new process to run the batch file
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = batchFilePath,
+                    WorkingDirectory = batchDirectory,
+                    UseShellExecute = false, // UseShellExecute set to true for batch files
+                    CreateNoWindow = true // UseShellExecute set to true for batch files
+                };
+
+                Process process = new Process
+                {
+                    StartInfo = psi
+                };
+
+                process.Start();
+                process.WaitForExit();
+
+                if (process.ExitCode != 0)
+                {
+                    MessageBox.Show($"Error: The batch file exited with code {process.ExitCode}");
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while running the batch file: {ex.Message}");
+            }
         }
 
         private void pboptions_Click(object sender, EventArgs e)

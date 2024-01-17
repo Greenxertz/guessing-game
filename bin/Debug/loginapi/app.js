@@ -19,16 +19,6 @@ const connection = mysql.createConnection({
 const knexConfig = require('./knexfile.js');
 const knex = require('knex')(knexConfig.development); // Assuming you're in development mode
 
-// Example usage
-knex.raw('SELECT 1+1 AS result')
-  .then(() => {
-    console.log('Database connected');
-  })
-  .catch(err => {
-    console.error('Database connection error', err);
-  });
-
-
 // Function to establish connection and run migrations
 async function initializeDatabase() {
   try {
@@ -40,7 +30,6 @@ async function initializeDatabase() {
     await knex.migrate.latest();
     console.log("Database migrations completed successfully.");
 
-    //
     const spotify_details = { 
       clientID: '3255eb67936e45f2b8c8da7d271abf56', // <-- You normally put this in your .env file
       secretID: 'e59e758328024b31936d750a735f990d' // <-- You normally put in your .env file
@@ -57,6 +46,15 @@ async function initializeDatabase() {
     throw error;
   }
 }
+
+//check if database is connected
+knex.raw('SELECT 1+1 AS result')
+  .then(() => {
+    console.log('Database connected');
+  })
+  .catch(err => {
+    console.error('Database connection error', err);
+  });
 
 // Start server and initialize database
 const PORT = 3000;
