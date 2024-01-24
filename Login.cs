@@ -325,7 +325,7 @@ namespace music
 
         private void btnclose_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Please whait while we close the Database.");
+            MessageBox.Show("Please Wait while we close the database.\nThe Application will close automatically");
             try
             {
                 RunBatchFile("SQLClosefile.bat");
@@ -357,7 +357,7 @@ namespace music
 
         private void btncancel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("By Canceling you have chosen to close the application, Goodbye!\n Please Wait while we close the database.", "Goodbye!");
+            MessageBox.Show("By Canceling you have chosen to close the application, Goodbye!\nPlease Wait while we close the database.\nThe Application will close automatically", "Goodbye!");
             try
             {              
                 RunBatchFile("SQLClosefile.bat");

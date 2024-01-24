@@ -43,3 +43,7 @@ D:\github-repo\guessing-game\bin\Debug\Accord.Imaging.xml
 D:\github-repo\guessing-game\bin\Debug\Accord.Math.xml
 D:\github-repo\guessing-game\bin\Debug\Accord.Math.Core.xml
 D:\github-repo\guessing-game\bin\Debug\Accord.Statistics.xml
+D:\github-repo\guessing-game\bin\Debug\music.exe.manifest
+D:\github-repo\guessing-game\bin\Debug\music.application
+D:\github-repo\guessing-game\obj\Debug\music.exe.manifest
+D:\github-repo\guessing-game\obj\Debug\music.application

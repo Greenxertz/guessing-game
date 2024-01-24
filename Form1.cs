@@ -119,8 +119,7 @@ namespace music
         }
 
         private void btnclose_Click(object sender, EventArgs e)
-        {
-            
+        {           
             try
             {
                RunBatchFile("SQLClosefile.bat");
@@ -135,7 +134,7 @@ namespace music
 
         static void RunBatchFile(string batchFileName)
         {
-            MessageBox.Show("Please whait while we close the Database.");
+            MessageBox.Show("Please Wait while we close the database.\nThe Application will close automatically");
 
             string programDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string batchFilePath = Path.Combine(programDirectory, batchFileName);
@@ -155,7 +154,7 @@ namespace music
                     FileName = batchFilePath,
                     WorkingDirectory = batchDirectory,
                     UseShellExecute = false, // UseShellExecute set to true for batch files
-                    CreateNoWindow = true // UseShellExecute set to true for batch files
+                    CreateNoWindow = true //
                 };
 
                 Process process = new Process
@@ -180,7 +179,7 @@ namespace music
 
         private void pboptions_Click(object sender, EventArgs e)
         {
-            //when options image clicked, panel with options appears or disapears, following the materialistric design 
+            //when options image clicked, panel with options appears or disapears, following the material design 
             options = !options;
             if (options == true)
             {
@@ -368,7 +367,7 @@ namespace music
         }
 
         private Bitmap ApplyPixelateEffect(string imageUrl, int pixelationLevel)
-        {//uytilising accorrd nuget package we process the image to have a pixel effect
+        {//uytilising accord nuget package we process the image to have a pixel effect
             try
             {
                 using (HttpClient client = new HttpClient())
